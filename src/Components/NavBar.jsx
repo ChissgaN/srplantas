@@ -10,7 +10,6 @@ import {
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
-  /* Link, */
   Button,
 } from "@nextui-org/react";
 
@@ -44,7 +43,7 @@ export default function NavBar() {
 
         <NavbarContent className="hidden sm:flex gap-10  " justify="center">
           <NavbarItem>
-            <Link href="#">Productos</Link>
+            <Link to="/pages">Productos</Link>
           </NavbarItem>
           <NavbarItem isActive>
             <Link href="#" aria-current="page">
