@@ -1,0 +1,28 @@
+[
+    {
+        "id": 1,
+        "imgProyect": "manzanilla.webp",
+        "tituloCategoria": "AROMÁTICAS"
+    },{
+        "id": 2,
+        "imgProyect": "manzanilla.webp",
+        "tituloCategoria": "BULBOS"
+    },
+    {
+        "id": 3,
+        "imgProyect": "manzanilla.webp",
+        "tituloCategoria": "CESPED"
+    },{
+        "id": 4,
+        "imgProyect": "manzanilla.webp",
+        "tituloCategoria": "HORTALIZAS"
+    },{
+        "id": 5,
+        "imgProyect": "manzanilla.webp",
+        "tituloCategoria": "ORNAMENTALES"
+    },{
+        "id": 6,
+        "imgProyect": "manzanilla.webp",
+        "tituloCategoria": "SUSTRATOS"
+    }
+]
