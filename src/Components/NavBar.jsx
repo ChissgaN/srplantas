@@ -45,6 +45,9 @@ export default function NavBar() {
           <NavbarItem>
             <Link to="/pages">Productos</Link>
           </NavbarItem>
+          <NavbarItem>
+            <Link to="/pages">Categorias</Link>
+          </NavbarItem>
           <NavbarItem isActive>
             <Link href="#" aria-current="page">
               Contacto

@@ -150,11 +150,11 @@ const PagesCards = () => {
       <section className="container mx-auto p-4 w-[85%] flex">
         <div className="container w-[20%] bg-white h-screen py-4 sticky top-[130px]">
           <h2 className="text-xl font-semibold mb-4">Categorías</h2>
-          <ul className="space-y-2">
+          <ul className="space-y-2 cursor-pointer">
             {Object.keys(categorias[0]).map((nombreCategoria, index) => (
               <li
                 key={index}
-                className="flex items-center hover:bg-gray-200 hover:scale-105 rounded-md py-2 transition duration-300 ease-in-out pl-1 cursor-pointer focus:bg-gray-200"
+                className="flex items-center hover:bg-gray-200 hover:scale-105 rounded-md py-2 transition duration-300 ease-in-out pl-1  focus:bg-gray-200"
                 onClick={() => handleCategoryClick(nombreCategoria)}
               >
                 <img
@@ -166,7 +166,7 @@ const PagesCards = () => {
               </li>
             ))}
             <li
-              className="flex items-center hover:bg-gray-200 hover:scale-105 rounded-md py-2 transition duration-300 ease-in-out pl-1 cursor-pointer"
+              className="flex items-center hover:bg-gray-200 hover:scale-105 rounded-md py-2 transition duration-300 ease-in-out pl-1 "
               onClick={() => handleCategoryClick("Mostrar Todo")}
             >
               <span>Mostrar Todo</span>
