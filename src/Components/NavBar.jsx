@@ -21,7 +21,7 @@ export default function NavBar() {
     setCarBuy(!carBuy);
   };
 
-  const menuItems = ["Productos", "Contacto", "Acerca de nosotros"];
+  /* const menuItems = ["Productos", "Contacto", "Acerca de nosotros"]; */
 
   return (
     <div className="">
@@ -78,24 +78,20 @@ export default function NavBar() {
           </NavbarContent>
         }
         <NavbarMenu className="">
-          {menuItems.map((item, index) => (
-            <NavbarMenuItem className="mt-5" key={`${item}-${index}`}>
-              <Link
-                color={
-                  index === 2
-                    ? "primary"
-                    : index === menuItems.length - 1
-                    ? "danger"
-                    : "foreground"
-                }
-                className="w-full"
-                href="#"
-                size="lg"
-              >
-                {item}
-              </Link>
-            </NavbarMenuItem>
-          ))}
+          <NavbarMenuItem className="mt-5 flex flex-col">
+            <Link to="/pages" className="w-full" href="#" size="lg">
+              productos
+            </Link>
+            <Link to="/pages" className="w-full" href="#" size="lg">
+              Categorias
+            </Link>
+            <Link to="/pages" className="w-full" href="#" size="lg">
+              Contac
+            </Link>
+            <Link to="/pages" className="w-full" href="#" size="lg">
+              Acerca de nosotros
+            </Link>
+          </NavbarMenuItem>
         </NavbarMenu>
         {carBuy && (
           <div className=" rounded-md bg-white shadow-md absolute right-9 top-28 z-40">
