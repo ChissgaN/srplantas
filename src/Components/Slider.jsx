@@ -26,35 +26,40 @@ function SliderImg() {
           <img
             src={cultivar}
             className="max-sm:h-[290px] sm:h-[450px] w-full h-[250px]"
-            alt="derek"
+            alt="cultivar"
           />
         </div>
         <div className="my-2 flex">
           <img
             src={sembrar}
             className="max-sm:h-[290px] sm:h-[450px] w-full h-[250px]"
-            alt="derek"
+            alt="cultivar"
+            loading="lazy"
           />
+          
         </div>
         <div className="my-2 flex">
           <img
             src={vegetales}
             className="max-sm:h-[290px] sm:h-[450px] w-full h-[250px]"
-            alt="derek"
+            alt="cultivar"
+            loading="lazy"
           />
         </div>
         <div className="my-2 flex">
           <img
             src={girasoles}
             className="max-sm:h-[290px] sm:h-[450px] w-full h-[250px]"
-            alt="derek"
+            alt="cultivar"
+            loading="lazy"
           />
         </div>
         <div className="my-2 flex">
           <img
             src={Verduras}
             className="max-sm:h-[290px] sm:h-[450px] w-full h-[250px]"
-            alt="derek"
+            alt="verduras"
+            loading="lazy"
           />
         </div>
       </Slider>
