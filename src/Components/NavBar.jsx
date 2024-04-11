@@ -21,7 +21,7 @@ export default function NavBar() {
     setCarBuy(!carBuy);
   };
 
-  /* const menuItems = ["Productos", "Contacto", "Acerca de nosotros"]; */
+ 
 
   return (
     <div className="">

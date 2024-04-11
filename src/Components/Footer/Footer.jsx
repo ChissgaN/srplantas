@@ -6,26 +6,11 @@ import facebook from "/public/footer/facebook.svg";
 import whatssap from "/public/footer/whatssap.svg";
 import arrow from "/public/footer/arrow.svg";
 export default function Footer() {
-  const [formData, setFormData] = useState({
-    input1: "",
-    input2: "",
-    input3: "",
-    input4: "",
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
 
-    // Obtén solo el ID del formulario de Google Forms
     const formId = "1FAIpQLSfsiNmTI6q736lgmMA1wWcHKHXDjZToX2uDNV-lj1FTowIEeA";
     const baseUrl = `https://docs.google.com/forms/d/e/${formId}/viewform?usp=sf_link`;
     const queryParams = new URLSearchParams();
@@ -35,8 +20,6 @@ export default function Footer() {
     }
 
     const googleFormUrl = baseUrl + queryParams.toString();
-
-    // Redirige al usuario a la URL del formulario de Google
     window.open(googleFormUrl);
   };
 
@@ -50,13 +33,13 @@ export default function Footer() {
               Comentarios o Preguntas
             </h1>
 
-            <img src={arrow} alt="" className="w-10 filter hover:invert " />
+            <img src={arrow} alt="arrow"  className="w-10 filter hover:invert " />
 
               <button  onSubmit={handleSubmit}
                 type="submit"
                 className=" transform hover:scale-[1.2] transition duration-300 ease-in-out h-full "
               >
-                <img src={form} alt="" className="w-10 " />
+                <img src={form} alt="form" loading="lazy" className="w-10 " />
               </button>
            
           </div>
@@ -64,17 +47,17 @@ export default function Footer() {
           <div className="flex gap-4 cursor-pointer">
             <img
               src={instagram}
-              alt=""
+              alt="insta"
               className="w-10 transform hover:scale-[1.2] transition duration-300 ease-in-out h-full filter hover:invert hover:red "
             />
             <img
               src={facebook}
-              alt=""
+              alt="face"
               className="w-10 transform hover:scale-[1.2] transition duration-300 ease-in-out h-full filter hover:invert hover:red "
             />
             <img
               src={whatssap}
-              alt=""
+              alt="whatssap"
               className="w-10 transform hover:scale-[1.2] transition duration-300 ease-in-out h-full filter hover:invert hover:red "
             />
           </div>

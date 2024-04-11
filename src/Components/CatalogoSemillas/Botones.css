@@ -2,9 +2,6 @@
     transition-duration: 0.8s;
 }
 
-
-
-
 .contenedor:hover .boton {
     background-color: rgb(31, 107, 57);
     color: #ffffff;

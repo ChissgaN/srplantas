@@ -4,7 +4,7 @@ import Verduras from "../../assets/agricultura/verduras1.jpg";
 import ProductCard from "./ProductCard";
 import categorias from "../../scripts/products";
 import categoria from "../../../public/categorias.json";
-import albaca from "../../assets/categorias/aromaticas/ALBAHACA16AGOSTO2023.webp";
+
 import { Button, ButtonGroup } from "@nextui-org/react";
 import ScrollToTopButton from "../ScrollToTop";
 

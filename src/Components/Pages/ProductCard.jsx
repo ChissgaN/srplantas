@@ -1,6 +1,6 @@
 import React from "react";
-import { Button, ButtonGroup } from "@nextui-org/react";
-import albaca from "../../assets/categorias/aromaticas/ALBAHACA16AGOSTO2023.webp";
+import { Button } from "@nextui-org/react";
+
 const ProductCard = ({ product, openModal }) => {
   const handleClick = () => {
     openModal(product);

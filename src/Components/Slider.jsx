@@ -34,7 +34,6 @@ function SliderImg() {
             src={sembrar}
             className="max-sm:h-[290px] sm:h-[450px] w-full h-[250px]"
             alt="cultivar"
-            loading="lazy"
           />
           
         </div>
@@ -43,7 +42,6 @@ function SliderImg() {
             src={vegetales}
             className="max-sm:h-[290px] sm:h-[450px] w-full h-[250px]"
             alt="cultivar"
-            loading="lazy"
           />
         </div>
         <div className="my-2 flex">
@@ -51,7 +49,6 @@ function SliderImg() {
             src={girasoles}
             className="max-sm:h-[290px] sm:h-[450px] w-full h-[250px]"
             alt="cultivar"
-            loading="lazy"
           />
         </div>
         <div className="my-2 flex">
@@ -59,7 +56,6 @@ function SliderImg() {
             src={Verduras}
             className="max-sm:h-[290px] sm:h-[450px] w-full h-[250px]"
             alt="verduras"
-            loading="lazy"
           />
         </div>
       </Slider>
