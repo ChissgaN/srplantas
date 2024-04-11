@@ -1,28 +1,28 @@
 [
     {
         "id": 1,
-        "imgProyect": "manzanilla.webp",
+        "imgProyect": "./categoria/aromaticas.webp",
         "tituloCategoria": "AROMÁTICAS"
     },{
         "id": 2,
-        "imgProyect": "manzanilla.webp",
+        "imgProyect": "./categoria/bulbos.webp",
         "tituloCategoria": "BULBOS"
     },
     {
         "id": 3,
-        "imgProyect": "manzanilla.webp",
+        "imgProyect": "./categoria/cesped.webp",
         "tituloCategoria": "CESPED"
     },{
         "id": 4,
-        "imgProyect": "manzanilla.webp",
+        "imgProyect": "./categoria/hortalizas.webp",
         "tituloCategoria": "HORTALIZAS"
     },{
         "id": 5,
-        "imgProyect": "manzanilla.webp",
+        "imgProyect": "./categoria/hornamentales.webp",
         "tituloCategoria": "ORNAMENTALES"
     },{
         "id": 6,
-        "imgProyect": "manzanilla.webp",
+        "imgProyect": "./categoria/sustrato.webp",
         "tituloCategoria": "SUSTRATOS"
     }
 ]

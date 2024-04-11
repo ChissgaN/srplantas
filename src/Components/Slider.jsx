@@ -2,11 +2,12 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import cultivar from "../assets/agricultura/pexels-greta-hoffman-7728082.webp";
-import sembrar from "../assets/agricultura/pexels-maarten-van-den-heuvel-2284170.webp";
-import vegetales from "../assets/agricultura/pexels-mark-stebnicki-2252584.webp";
-import girasoles from "../assets/agricultura/pexels-susanne-jutzeler-sujufoto-1169084.webp";
+import sembrar from "../assets/agricultura/sembrar.webp";
+import vegetales from "../assets/agricultura/flores.webp";
+import girasoles from "../assets/agricultura/girasol.webp";
 import Verduras from "../assets/agricultura/verduras1.jpg";
+
+
 
 function SliderImg() {
   const settings = {
@@ -20,42 +21,38 @@ function SliderImg() {
   };
 
   return (
-    <div className="slider-container max-md:w-screen mt-16">
+    <div className="slider-container  max-md:w-screen mt-16 md:h-[450px] lg:h-[500px] ">
       <Slider {...settings}>
-        <div className="my-2 flex">
-          <img
-            src={cultivar}
-            className="max-sm:h-[290px] sm:h-[450px] w-full h-[250px]"
-            alt="cultivar"
-          />
-        </div>
+        
+       
+        
+        
         <div className="my-2 flex">
           <img
             src={sembrar}
-            className="max-sm:h-[290px] sm:h-[450px] w-full h-[250px]"
-            alt="cultivar"
-          />
-          
-        </div>
-        <div className="my-2 flex">
-          <img
-            src={vegetales}
-            className="max-sm:h-[290px] sm:h-[450px] w-full h-[250px]"
-            alt="cultivar"
+             className="max-sm:h-[290px] sm:h-[380px] w-full h-[250px] md:h-[450px] lg:h-[500px] "
+            alt="verduras"
           />
         </div>
         <div className="my-2 flex">
           <img
             src={girasoles}
-            className="max-sm:h-[290px] sm:h-[450px] w-full h-[250px]"
+             className="max-sm:h-[290px] sm:h-[380px] w-full h-[250px] md:h-[450px] lg:h-[500px] "
             alt="cultivar"
           />
         </div>
         <div className="my-2 flex">
           <img
             src={Verduras}
-            className="max-sm:h-[290px] sm:h-[450px] w-full h-[250px]"
+             className="max-sm:h-[290px] sm:h-[380px] w-full h-[250px] md:h-[450px] lg:h-[500px] "
             alt="verduras"
+          />
+        </div>
+        <div className="my-2 flex">
+          <img
+            src={vegetales}
+             className="max-sm:h-[290px] sm:h-[380px] w-full h-[250px] md:h-[450px] lg:h-[500px] "
+            alt="cultivar"
           />
         </div>
       </Slider>
