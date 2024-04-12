@@ -25,7 +25,7 @@ const ProductCard = ({ product, openModal }) => {
       <Button
         color="warning"
         variant="ghost"
-        className="flex content-center mx-auto hover:scale-105  duration-500 ease-in-out mb-3"
+        className="flex content-center mx-auto hover:scale-105  duration-500 ease-in-out mb-3 "
       >
         Agregar al carrito
       </Button>

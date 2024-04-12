@@ -6,11 +6,12 @@ import cesped from "../../../public/categoria/cesped.webp";
 import hortalizas from "../../../public/categoria/hortalizas.webp";
 import ornamentales from "../../../public/categoria/hornamentales.webp";
 import sustratos from "../../../public/categoria/sustrato.webp";
+import todo from "../../../public/procesoSiembra/semillas.webp";
 import ProductCard from "./ProductCard";
 import categorias from "../../scripts/products";
 import categoria from "../../../public/categorias.json";
 
-import { Button, ButtonGroup } from "@nextui-org/react";
+import { Button } from "@nextui-org/react";
 import ScrollToTopButton from "../ScrollToTop";
 
 const PagesCards = () => {
@@ -33,9 +34,9 @@ const PagesCards = () => {
   const handleCategoryClick = (categoria) => {
     if (categoria === "Mostrar Todo") {
       setShowAllProducts(true);
+      setSelectedCategory("Mostrar Todo");
     } else {
       setSelectedCategory(categoria);
-      console.log(categoria);
       setShowAllProducts(false);
     }
     setLoadedCards(6);
@@ -110,12 +111,12 @@ const PagesCards = () => {
   };
   const categoryImages = {
     aromaticas,
-
     bulbos,
     cesped,
     hortalizas,
     ornamentales,
     sustratos,
+    "Mostrar Todo": todo,
   };
   const imageSrc = categoryImages[selectedCategory];
   return (
@@ -162,8 +163,8 @@ const PagesCards = () => {
           </div>
         </div>
       </section>
-      <section className="container mx-auto p-4 w-[85%] flex max-md:w-full ">
-        <div className="container w-[20%] max-md:w-[40%] bg-white h-screen py-4 sticky top-[130px]">
+      <section className="container mx-auto p-4 w-[85%] flex max-md:w-full   ">
+        <div className="container w-[40%] max-md:w-[40%] lg:w-[30%] max-sm:w-[300px]  h-screen py-4 sticky top-[130px]">
           <h2 className="text-xl font-semibold mb-4 max-sm:text-sm max-sm:font-bold">
             Categorías
           </h2>
@@ -188,13 +189,18 @@ const PagesCards = () => {
               className="flex items-center hover:bg-gray-200 hover:scale-105 rounded-md py-2 transition duration-300 ease-in-out pl-1 "
               onClick={() => handleCategoryClick("Mostrar Todo")}
             >
-              <span>Mostrar Todo</span>
+              <img
+                src={todo}
+                alt="todo"
+                className="size-8 bg-slate-600 rounded-full mr-2"
+              />
+              <span className="max-sm:text-sm">Mostrar Todo</span>
             </li>
           </ul>
         </div>
         {!showAllProducts && (
-          <div className="w-full py-4 ml-[10%] max-sm:ml-[25%]">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-10 w-fit">
+          <div className="w-full py-4 ml-[10%] max-sm:ml-[25%] ">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10 w-fit">
               {sortedProducts
                 .filter(
                   (product, index) =>
@@ -249,7 +255,7 @@ const PagesCards = () => {
         )}
         {showAllProducts && (
           <div className="w-full py-4 ml-[10%]">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-10 w-fit">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10 w-fit">
               {Object.keys(categorias[0]).flatMap((category) =>
                 categorias[0][category]
                   .filter((product, index) => index < loadedCards)
