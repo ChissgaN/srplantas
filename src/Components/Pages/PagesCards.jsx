@@ -132,7 +132,7 @@ const PagesCards = () => {
           {selectedCategory.toUpperCase()}
         </div>
       </section>
-      <section className="container mx-auto p-4 w-[85%] max-md:mx-[14px] ">
+      <section className="container mx-auto p-4 w-[85%] max-md:mx-[14px]  ">
         <div className="flex justify-between items-center ">
           <h1 className="text-3xl font-semibold my-10 max-md:hidden">
             {selectedCategory.toUpperCase()}
