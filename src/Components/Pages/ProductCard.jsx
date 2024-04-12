@@ -16,7 +16,9 @@ const ProductCard = ({ product, openModal }) => {
         className="w-full h-fit object-cover rounded-xl max-w-[230px] max-h-[306px] "
       />
 
-      <h3 className="text-lg font-semibold mt-2">{product.producto}</h3>
+      <h3 className="text-lg font-semibold mt-2 max-h-[28px] overflow-auto">
+        {product.producto}
+      </h3>
 
       <p className="text-gray-600">${product.precio}</p>
 

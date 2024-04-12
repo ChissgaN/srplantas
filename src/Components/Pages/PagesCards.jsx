@@ -30,7 +30,7 @@ const PagesCards = () => {
       setShowAllProducts(true);
     } else {
       setSelectedCategory(categoria);
-      console.log(setSelectedCategory(categoria));
+      console.log(categoria);
       setShowAllProducts(false);
     }
     setLoadedCards(6);
@@ -103,23 +103,32 @@ const PagesCards = () => {
       closeModal();
     }
   };
-
+  const categoryImages = {
+    aromaticas: "../../../public/categoria/aromaticas.webp",
+    bulbos: "../../../public/categoria/bulbos.webp",
+    cesped: "../../../public/categoria/cesped.webp",
+    hortalizas: "../../../public/categoria/hortalizas.webp",
+    ornamentales: "../../../public/categoria/hornamentales.webp",
+    sustratos: "../../../public/categoria/sustrato.webp",
+  };
+  const imageSrc = categoryImages[selectedCategory];
   return (
     <>
       <NavBar />
       <section className="mt-28 w-[90%] mx-auto relative flex justify-center items-center">
         <img
           className="bg-slate-700 rounded-2xl md:h-[420px] md:w-full"
-          src={Verduras}
-          alt=""
+          src={imageSrc}
+          alt={""}
         />
+
         <div className="absolute text-white font-extrabold text-[60px] max-lg:text-[50px] max-md:text-[40px] max-sm:text-[30px] ">
           {selectedCategory.toUpperCase()}
         </div>
       </section>
-      <section className="container mx-auto p-4 w-[85%]">
-        <div className="flex justify-between items-center">
-          <h1 className="text-3xl font-semibold my-10">
+      <section className="container mx-auto p-4 w-[85%] max-md:mx-[14px] ">
+        <div className="flex justify-between items-center ">
+          <h1 className="text-3xl font-semibold my-10 max-md:hidden">
             {selectedCategory.toUpperCase()}
           </h1>
           <div className="flex gap-5">
@@ -128,7 +137,7 @@ const PagesCards = () => {
               placeholder={`Buscar ${selectedCategory}...`}
               value={searchTerm}
               onChange={handleSearchChange}
-              className="h-fit px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+              className="h-fit px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 max-md:w-[180px]"
             />
             <select
               className="h-[30%] px-2 py-2 border border-gray-300 rounded-md focus:outline-none"
@@ -147,14 +156,16 @@ const PagesCards = () => {
           </div>
         </div>
       </section>
-      <section className="container mx-auto p-4 w-[85%] flex">
-        <div className="container w-[20%] bg-white h-screen py-4 sticky top-[130px]">
-          <h2 className="text-xl font-semibold mb-4">Categorías</h2>
-          <ul className="space-y-2 cursor-pointer">
+      <section className="container mx-auto p-4 w-[85%] flex max-md:w-full ">
+        <div className="container w-[20%] max-md:w-[40%] bg-white h-screen py-4 sticky top-[130px]">
+          <h2 className="text-xl font-semibold mb-4 max-sm:text-sm max-sm:font-bold">
+            Categorías
+          </h2>
+          <ul className="space-y-2 cursor-pointer ">
             {Object.keys(categorias[0]).map((nombreCategoria, index) => (
               <li
                 key={index}
-                className="flex items-center hover:bg-gray-200 hover:scale-105 rounded-md py-2 transition duration-300 ease-in-out pl-1  focus:bg-gray-200"
+                className="flex items-center hover:bg-gray-200 hover:scale-105 rounded-md py-2 transition duration-300 ease-in-out pl-1  focus:bg-gray-200 "
                 onClick={() => handleCategoryClick(nombreCategoria)}
               >
                 <img
@@ -162,7 +173,9 @@ const PagesCards = () => {
                   alt={categoria[index].tituloCategoria}
                   className="w-8 h-8 rounded-full mr-2"
                 />
-                <span>{categoria[index].tituloCategoria}</span>
+                <span className="max-sm:text-[11px]">
+                  {categoria[index].tituloCategoria}
+                </span>
               </li>
             ))}
             <li
@@ -174,7 +187,7 @@ const PagesCards = () => {
           </ul>
         </div>
         {!showAllProducts && (
-          <div className="w-full py-4 ml-[10%]">
+          <div className="w-full py-4 ml-[10%] max-sm:ml-[25%]">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-10 w-fit">
               {sortedProducts
                 .filter(
@@ -281,7 +294,7 @@ const PagesCards = () => {
       </section>
       {selectedProduct && (
         <div
-          className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center modal-background"
+          className="fixed top-0 left-0 w-full h-full  bg-opacity-50 flex justify-center items-center modal-background"
           onClick={handleModalClick}
         >
           <div className="bg-white py-8 px-6 rounded-lg w-[50%] h-[70%] flex gap-6 max-sm:w-[95%] max-sm:px-3 sm:w-[80%] sm:h-[70%] ">
