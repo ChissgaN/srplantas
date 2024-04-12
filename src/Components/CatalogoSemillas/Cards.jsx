@@ -9,6 +9,7 @@ export const Cards = ({ imgProyect, tituloCategoria }) => {
         <img
           src={imgProyect}
           alt="imgCategorias"
+          loading="lazy"
           className="w-full h-full absolute transition duration-500 ease-in-out transform hover:scale-[1.2] "
         />
         <button className="absolute bg-green-300   px-4 py-2 rounded text-white boton">
