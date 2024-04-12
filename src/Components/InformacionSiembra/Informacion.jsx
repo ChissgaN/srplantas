@@ -59,12 +59,12 @@ export const Informacion = () => {
     Almacena tus cosechas en condiciones adecuadas para prolongar su frescura y calidad.
     Para algunos cultivos, como las verduras de hoja verde, es recomendable refrigerarlas inmediatamente después de la cosecha."
         /> */}
-        <Index
+       {/*  <Index
           procesoImg={rotacion}
           tituloProceso=" Rotación de cultivos:"
           descripcionProceso=" 
     Practica la rotación de cultivos para evitar la acumulación de plagas y enfermedades en el suelo y mejorar la salud general del suelo."
-        />
+        /> */}
       </div>
     </>
   );

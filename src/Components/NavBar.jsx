@@ -21,8 +21,6 @@ export default function NavBar() {
     setCarBuy(!carBuy);
   };
 
- 
-
   return (
     <div className="">
       <Navbar
@@ -45,9 +43,7 @@ export default function NavBar() {
           <NavbarItem>
             <Link to="/pages">Productos</Link>
           </NavbarItem>
-          <NavbarItem>
-            <Link to="/pages">Categorias</Link>
-          </NavbarItem>
+
           <NavbarItem isActive>
             <Link href="#" aria-current="page">
               Contacto
@@ -81,17 +77,37 @@ export default function NavBar() {
           </NavbarContent>
         }
         <NavbarMenu className="">
-          <NavbarMenuItem className="mt-5 flex flex-col">
-            <Link to="/pages" className="w-full" href="#" size="lg">
-              productos
+          <NavbarMenuItem className="pt-5 flex flex-col">
+            <Link
+              to="/pages"
+              className="w-full py-3 hover:scale-105  hover:bg-[#67d4768e] hover:rounded-[10px] transition duration-300 ease-in-out px-2 hover:font-semibold "
+              href="#"
+              size="lg"
+            >
+              Productos
             </Link>
-            <Link to="/pages" className="w-full" href="#" size="lg">
+            <Link
+              to="/pages"
+              className="w-full py-3 hover:scale-105 hover:bg-[#67d4768e]  transition duration-300 ease-in-out px-2 hover:rounded-[10px] hover:font-semibold"
+              href="#"
+              size="lg"
+            >
               Categorias
             </Link>
-            <Link to="/pages" className="w-full" href="#" size="lg">
-              Contac
+            <Link
+              to="/pages"
+              className="w-full py-3 hover:scale-105 hover:bg-[#67d4768e]  transition duration-300 ease-in-out px-2 hover:rounded-[10px] hover:font-semibold"
+              href="#"
+              size="lg"
+            >
+              Contactos
             </Link>
-            <Link to="/pages" className="w-full" href="#" size="lg">
+            <Link
+              to="/pages"
+              className="w-full py-3 hover:scale-105 hover:bg-[#67d4768e]  transition duration-300 ease-in-out px-2 hover:rounded-[10px] hover:font-semibold"
+              href="#"
+              size="lg"
+            >
               Acerca de nosotros
             </Link>
           </NavbarMenuItem>
