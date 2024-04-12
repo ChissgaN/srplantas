@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react";
 import NavBar from "../NavBar";
-import Verduras from "../../assets/agricultura/verduras1.jpg";
+import aromaticas from "../../../public/categoria/aromaticas.webp";
+import bulbos from "../../../public/categoria/bulbos.webp";
+import cesped from "../../../public/categoria/cesped.webp";
+import hortalizas from "../../../public/categoria/hortalizas.webp";
+import ornamentales from "../../../public/categoria/hornamentales.webp";
+import sustratos from "../../../public/categoria/sustrato.webp";
 import ProductCard from "./ProductCard";
 import categorias from "../../scripts/products";
 import categoria from "../../../public/categorias.json";
@@ -104,12 +109,13 @@ const PagesCards = () => {
     }
   };
   const categoryImages = {
-    aromaticas: "../../../public/categoria/aromaticas.webp",
-    bulbos: "../../../public/categoria/bulbos.webp",
-    cesped: "../../../public/categoria/cesped.webp",
-    hortalizas: "../../../public/categoria/hortalizas.webp",
-    ornamentales: "../../../public/categoria/hornamentales.webp",
-    sustratos: "../../../public/categoria/sustrato.webp",
+    aromaticas,
+
+    bulbos,
+    cesped,
+    hortalizas,
+    ornamentales,
+    sustratos,
   };
   const imageSrc = categoryImages[selectedCategory];
   return (
