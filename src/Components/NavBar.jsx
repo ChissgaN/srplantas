@@ -40,16 +40,16 @@ export default function NavBar() {
         </NavbarContent>
 
         <NavbarContent className="hidden sm:flex gap-10  " justify="center">
-          <NavbarItem>
+          <NavbarItem className="hover:scale-110 hover:bg-[#67d4768e]  transition duration-300 ease-in-out hover:rounded-lg px-2 py-1 hover:font-semibold">
             <Link to="/pages">Productos</Link>
           </NavbarItem>
 
-          <NavbarItem isActive>
+          <NavbarItem className="hover:scale-110 hover:bg-[#67d4768e]  transition duration-300 ease-in-out hover:rounded-lg px-2 py-1 hover:font-semibold">
             <Link href="#" aria-current="page">
               Contacto
             </Link>
           </NavbarItem>
-          <NavbarItem>
+          <NavbarItem className="hover:scale-110 hover:bg-[#67d4768e]  transition duration-300 ease-in-out hover:rounded-lg px-2 py-1 hover:font-semibold">
             <Link color="foreground" href="#">
               Acerca de nosotros
             </Link>
@@ -86,14 +86,7 @@ export default function NavBar() {
             >
               Productos
             </Link>
-            <Link
-              to="/pages"
-              className="w-full py-3 hover:scale-105 hover:bg-[#67d4768e]  transition duration-300 ease-in-out px-2 hover:rounded-[10px] hover:font-semibold"
-              href="#"
-              size="lg"
-            >
-              Categorias
-            </Link>
+
             <Link
               to="/pages"
               className="w-full py-3 hover:scale-105 hover:bg-[#67d4768e]  transition duration-300 ease-in-out px-2 hover:rounded-[10px] hover:font-semibold"
