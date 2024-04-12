@@ -41,9 +41,9 @@ export default function Main() {
         </div>
       </div>
 
-      <section className="h-[20vh]">
+     
         <Footer />
-      </section>
+      
     </NextUIProvider>
   );
 }
