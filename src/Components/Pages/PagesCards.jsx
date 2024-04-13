@@ -9,15 +9,23 @@ import sustratos from "../../../public/categoria/sustrato.webp";
 import todo from "../../../public/procesoSiembra/semillas.webp";
 import ProductCard from "./ProductCard";
 import categorias from "../../scripts/products";
+
 import categoria from "../../../public/categorias.json";
 
 import { Button } from "@nextui-org/react";
 import ScrollToTopButton from "../ScrollToTop";
 
+import { useParams } from "react-router-dom";
+
 const PagesCards = () => {
+
+  const params = useParams();
+  const categoriaURL  = params.id
+ 
+
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedProduct, setSelectedProduct] = useState(null);
-  const [selectedCategory, setSelectedCategory] = useState("aromaticas");
+  const [selectedCategory, setSelectedCategory] = useState(categoriaURL);
   const [selectedSortOption, setSelectedSortOption] = useState("default");
   const [showAllProducts, setShowAllProducts] = useState(false);
   const [loadedCards, setLoadedCards] = useState(6);
@@ -40,7 +48,7 @@ const PagesCards = () => {
       setShowAllProducts(false);
     }
     setLoadedCards(6);
-    console.log("Categoría seleccionada:", categoria);
+    
   };
 
   useEffect(() => {
@@ -119,6 +127,7 @@ const PagesCards = () => {
     "Mostrar Todo": todo,
   };
   const imageSrc = categoryImages[selectedCategory];
+ 
   return (
     <>
       <NavBar />
@@ -130,13 +139,13 @@ const PagesCards = () => {
         />
 
         <div className="absolute text-white font-extrabold text-[60px] max-lg:text-[50px] max-md:text-[40px] max-sm:text-[30px] ">
-          {selectedCategory.toUpperCase()}
+        {selectedCategory ? selectedCategory.toUpperCase() : ''}
         </div>
       </section>
       <section className="container mx-auto p-4 w-[85%] max-md:mx-[14px]  ">
         <div className="flex justify-between items-center ">
           <h1 className="text-3xl font-semibold my-10 max-md:hidden">
-            {selectedCategory.toUpperCase()}
+          {selectedCategory ? selectedCategory.toUpperCase() : ''}
           </h1>
           <div className="flex gap-5">
             <input
@@ -172,21 +181,24 @@ const PagesCards = () => {
             {Object.keys(categorias[0]).map((nombreCategoria, index) => (
               <li
                 key={index}
-                className="flex items-center hover:bg-gray-200 hover:scale-105 rounded-md py-2 transition duration-300 ease-in-out pl-1  focus:bg-gray-200 "
+                id={`categoria-${index}`} 
+                className="flex items-center hover:bg-gray-200 hover:scale-105 rounded-md py-2 transition duration-300 ease-in-out pl-1 focus:bg-gray-200"
                 onClick={() => handleCategoryClick(nombreCategoria)}
               >
                 <img
-                  src={categoria[index].imgProyect}
-                  alt={categoria[index].tituloCategoria}
+                     src={categoryImages[nombreCategoria]}
+                     alt={categoria[index].tituloCategoria}
                   className="w-8 h-8 rounded-full mr-2"
                 />
+                
                 <span className="max-sm:text-[11px]">
                   {categoria[index].tituloCategoria}
                 </span>
               </li>
             ))}
             <li
-              className="flex items-center hover:bg-gray-200 hover:scale-105 rounded-md py-2 transition duration-300 ease-in-out pl-1 "
+              id="mostrar-todo" 
+              className="flex items-center hover:bg-gray-200 hover:scale-105 rounded-md py-2 transition duration-300 ease-in-out pl-1"
               onClick={() => handleCategoryClick("Mostrar Todo")}
             >
               <img
@@ -201,7 +213,7 @@ const PagesCards = () => {
         {!showAllProducts && (
           <div className="w-full py-4 ml-[10%] max-sm:ml-[25%] ">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10 w-fit">
-              {sortedProducts
+              {sortedProducts && sortedProducts.length > 0 && sortedProducts
                 .filter(
                   (product, index) =>
                     index < loadedCards &&

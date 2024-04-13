@@ -2,7 +2,7 @@
     {
         "id": 1,
         "imgProyect": "./categoria/aromaticas.webp",
-        "tituloCategoria": "AROMÁTICAS"
+        "tituloCategoria": "AROMATICAS"
     },{
         "id": 2,
         "imgProyect": "./categoria/bulbos.webp",
@@ -15,7 +15,8 @@
     },{
         "id": 4,
         "imgProyect": "./categoria/hortalizas.webp",
-        "tituloCategoria": "HORTALIZAS"
+        "tituloCategoria": "HORTALIZAS",
+          "categoria": "/pages#hortalizas"
     },{
         "id": 5,
         "imgProyect": "./categoria/hornamentales.webp",
