@@ -5,7 +5,6 @@ import semillas from "/public/procesoSiembra/semillas.webp";
 import siembra from "/public/procesoSiembra/siembra.webp";
 import fertilizacion from "/public/procesoSiembra/fertilizacion.webp";
 import cosecha from "/public/procesoSiembra/cosecha.webp";
-import rotacion from "/public/procesoSiembra/rotacion.webp";
 import fumigar from "/public/procesoSiembra/fumigarr.webp";
 
 export const Informacion = () => {

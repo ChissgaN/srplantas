@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import sembrar from "../assets/agricultura/sembrar.webp";
 import vegetales from "../assets/agricultura/flores.webp";
 import girasoles from "../assets/agricultura/girasol.webp";
-import Verduras from "../assets/agricultura/verduras1.jpg";
+import Verduras from "../assets/agricultura/verduras1.webp";
 
 
 
