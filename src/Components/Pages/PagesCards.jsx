@@ -11,7 +11,7 @@ import ProductCard from "./ProductCard";
 import categorias from "../../scripts/products";
 
 import categoria from "../../../public/categorias.json";
-
+import {RedesSociales} from "../RedesSociales/RedesSociales"
 import { Button } from "@nextui-org/react";
 import ScrollToTopButton from "../ScrollToTop";
 
@@ -137,11 +137,12 @@ const PagesCards = () => {
           src={imageSrc}
           alt={""}
         />
-
+      
         <div className="absolute text-white font-extrabold text-[60px] max-lg:text-[50px] max-md:text-[40px] max-sm:text-[30px] ">
         {selectedCategory ? selectedCategory.toUpperCase() : ''}
         </div>
       </section>
+     <RedesSociales/>
       <section className="container mx-auto p-4 w-[85%] max-md:mx-[14px]  ">
         <div className="flex justify-between items-center ">
           <h1 className="text-3xl font-semibold my-10 max-md:hidden">
@@ -267,7 +268,7 @@ const PagesCards = () => {
         )}
         {showAllProducts && (
           <div className="w-full py-4 ml-[10%]">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10 w-fit">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10 w-fit  ">
               {Object.keys(categorias[0]).flatMap((category) =>
                 categorias[0][category]
                   .filter((product, index) => index < loadedCards)
@@ -318,10 +319,10 @@ const PagesCards = () => {
       </section>
       {selectedProduct && (
         <div
-          className="fixed top-0 left-0 w-full h-full  bg-opacity-50 flex justify-center items-center modal-background"
+          className="fixed top-0 left-0 w-full h-full  bg-opacity-50 flex justify-center items-center modal-background "
           onClick={handleModalClick}
         >
-          <div className="bg-white py-8 px-6 rounded-lg w-[50%] h-[70%] flex gap-6 max-sm:w-[95%] max-sm:px-3 sm:w-[80%] sm:h-[70%] ">
+          <div className="bg-white py-8 px-6 rounded-lg w-[50%] h-[70%] flex gap-6 max-sm:w-[95%] max-sm:px-3 sm:w-[80%] sm:h-[70%] shadow-xl   ">
             <div className="h-[100%] w-[50%] max-sm:w-[224px]  max-sm:h-[304px] sm:w-[60%]  sm:h-[80%] md:w-[276px] max-md:h-[390px] max-md:w-[276px] md:h-[390px] ">
               <img
                 src={selectedProduct.imagen}

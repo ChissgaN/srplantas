@@ -79,7 +79,7 @@ export default function NavBar() {
         <NavbarMenu className="">
           <NavbarMenuItem className="pt-5 flex flex-col">
             <Link
-              to="/pages"
+              to="/pages/aromaticas"
               className="w-full py-3 hover:scale-105  hover:bg-[#67d4768e] hover:rounded-[10px] transition duration-300 ease-in-out px-2 hover:font-semibold "
               href="#"
               size="lg"
