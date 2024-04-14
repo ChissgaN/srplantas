@@ -21,13 +21,10 @@ function SliderImg() {
   };
 
   return (
-    <div className="slider-container  max-md:w-screen mt-16 md:h-[450px] lg:h-[500px] ">
+    <div className="w-full mt-16 md:h-[450px] lg:h-[500px]  ">
       <Slider {...settings}>
-        
-       
-        
-        
-        <div className="my-2 flex">
+
+        <div className="my-2 flex w-screen">
           <img
             src={sembrar}
              className="max-sm:h-[290px] sm:h-[380px] w-full h-[250px] md:h-[450px] lg:h-[500px] "

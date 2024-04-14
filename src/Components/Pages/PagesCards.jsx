@@ -50,6 +50,10 @@ const PagesCards = () => {
     setLoadedCards(6);
     
   };
+  useEffect(() => {
+    // Desplazamiento al principio de la página al montar el componente
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     function handleScroll() {

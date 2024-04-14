@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import React from "react";
 import { Cards } from "./Cards";
-import PagesCards from "../Pages/PagesCards";
+
 
 export const Categorias = () => {
   const [users, setUsers] = useState([]);
