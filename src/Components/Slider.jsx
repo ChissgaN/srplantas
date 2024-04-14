@@ -21,7 +21,7 @@ function SliderImg() {
   };
 
   return (
-    <div className="w-full mt-16 md:h-[450px] lg:h-[500px]  bg-green-500">
+    <div className="w-full mt-16 md:h-[450px] lg:h-[500px]  ">
       <Slider {...settings}>
 
         <div className="my-2 flex w-screen">

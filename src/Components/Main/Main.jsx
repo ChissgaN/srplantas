@@ -14,7 +14,7 @@ export default function Main() {
         <NavBar />
       <div className=" w-full">
 
-        <div className="relative h-auto w-full bg-red-500">
+        <div className="relative h-auto w-full ">
           <SliderImg />
           <div className="absolute inset-0 flex w-full">
             <Beginning />

@@ -25,7 +25,7 @@ export default function NavBar() {
     <div className="">
       <Navbar
         onMenuOpenChange={setIsMenuOpen}
-        className="fixed h-[80px] bg-red-500  z-50 w-full"
+        className="fixed h-[80px]   z-50 w-full"
       >
         <NavbarContent className=" ">
           <NavbarMenuToggle
