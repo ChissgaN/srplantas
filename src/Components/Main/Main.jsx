@@ -11,18 +11,18 @@ import { Informacion } from "../InformacionSiembra/Informacion";
 export default function Main() {
   return (
     <NextUIProvider>
-      <div className="md:w-full">
         <NavBar />
+      <div className=" w-full">
 
-        <div className="relative h-auto">
+        <div className="relative h-auto w-full bg-red-500">
           <SliderImg />
-          <div className="absolute inset-0 flex w-[100%]">
+          <div className="absolute inset-0 flex w-full">
             <Beginning />
           </div>
         </div>
       </div>
       <div className="my-10">
-        <h1 className=" text-[30px] px-20">
+        <h1 className=" text-[30px] w-[90%] mx-auto">
           <strong>Categorías:</strong>
         </h1>
         <div className="flex justify-center   ">
@@ -32,17 +32,19 @@ export default function Main() {
         </div>
       </div>
 
-      <div>
-        <h1 className=" text-[30px] px-20">
+      <div className="w-[90%] mx-auto " >
+        <h1 className=" text-[30px] max-sm:text-md ">
           <strong>Proceso de Siembra y Recolección</strong>
         </h1>
-        <div className="flex justify-center pt-6 pb-20">
+        <div className="flex justify-center pt-6 pb-20 w-full ">
           <Informacion />
         </div>
       </div>
 
-     
+     <div className="w-full bg-green-400 ">
+
         <Footer />
+     </div>
       
     </NextUIProvider>
   );

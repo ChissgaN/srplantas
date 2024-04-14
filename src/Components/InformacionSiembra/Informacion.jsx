@@ -10,7 +10,7 @@ import fumigar from "/public/procesoSiembra/fumigarr.webp";
 export const Informacion = () => {
   return (
     <>
-      <div className="grid lg:grid-cols-3 lg:gap-10 md:grid-cols-2 md:gap-6 w-[80%]">
+      <div className="grid grid-1 lg:grid-cols-3  md:grid-cols-2 sm:grid-2 gap-x-10 gap-y-3 ">
         <Index
           procesoImg={preparaSuelo}
           tituloProceso="Preparación del suelo:"
@@ -51,19 +51,7 @@ export const Informacion = () => {
     Cosecha tus cultivos en el momento adecuado, cuando estén maduros pero aún tiernos.
     Utiliza herramientas limpias y afiladas para evitar dañar las plantas durante la cosecha."
         />
-        {/* <Index
-          procesoImg={cebolla}
-          tituloProceso="Almacenamiento:"
-          descripcionProceso=" 
-    Almacena tus cosechas en condiciones adecuadas para prolongar su frescura y calidad.
-    Para algunos cultivos, como las verduras de hoja verde, es recomendable refrigerarlas inmediatamente después de la cosecha."
-        /> */}
-       {/*  <Index
-          procesoImg={rotacion}
-          tituloProceso=" Rotación de cultivos:"
-          descripcionProceso=" 
-    Practica la rotación de cultivos para evitar la acumulación de plagas y enfermedades en el suelo y mejorar la salud general del suelo."
-        /> */}
+       
       </div>
     </>
   );
