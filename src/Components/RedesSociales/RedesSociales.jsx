@@ -17,7 +17,7 @@ export const RedesSociales = () => {
             <div className=" group relative transition-all bg-[#4460A0] hover:bg-[#4460A0] hover:w-[140px] w-12  h-10 flex items-center justify-center hover:rounded-r-lg">
               <img
                 src={facebook}
-                className=" relative transition-all  w-6 "
+                className=" relative transition-all  w-6 " alt="red social Facebook"
               />
               <span className="text-[0px] group-hover:text-[12px] group-hover:text-white pl-2">
                 FACEBOOK
@@ -35,7 +35,7 @@ export const RedesSociales = () => {
           className=" block"
         >
           <div className="group relative transition-all bg-[#67C15E]  hover:bg-[#67C15E] hover:w-[140px] w-12  h-10 flex items-center justify-center hover:rounded-r-lg">
-            <img src={whatssap} className=" relative transition-all w-6" />
+            <img src={whatssap} className=" relative transition-all w-6" alt="red social Whatssap"/>
             <span className="text-[0px] group-hover:text-[12px] group-hover:text-white pl-2">
               WHATSAPP
             </span>
