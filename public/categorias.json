@@ -15,8 +15,7 @@
     },{
         "id": 4,
         "imgProyect": "./categoria/hortalizas.webp",
-        "tituloCategoria": "HORTALIZAS",
-          "categoria": "/pages#hortalizas"
+        "tituloCategoria": "HORTALIZAS"
     },{
         "id": 5,
         "imgProyect": "./categoria/hornamentales.webp",
