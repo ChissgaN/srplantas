@@ -1,27 +1,26 @@
 import React, { useState, useEffect } from "react";
 import NavBar from "../NavBar";
-import aromaticas from "../../../public/categoria/aromaticas.webp";
-import bulbos from "../../../public/categoria/bulbos.webp";
-import cesped from "../../../public/categoria/cesped.webp";
-import hortalizas from "../../../public/categoria/hortalizas.webp";
-import ornamentales from "../../../public/categoria/hornamentales.webp";
-import sustratos from "../../../public/categoria/sustrato.webp";
-import todo from "../../../public/procesoSiembra/semillas.webp";
+
+import aromaticas from "/categoria/aromaticas.webp";
+import bulbos from "/categoria/bulbos.webp";
+import cesped from "/categoria/cesped.webp";
+import hortalizas from "/categoria/hortalizas.webp";
+import ornamentales from "/categoria/hornamentales.webp";
+import sustratos from "/categoria/sustrato.webp";
+import todo from "/procesoSiembra/semillas.webp";
 import ProductCard from "./ProductCard";
 import categorias from "../../scripts/products";
 
 import categoria from "../../../public/categorias.json";
-import {RedesSociales} from "../RedesSociales/RedesSociales"
+import { RedesSociales } from "../RedesSociales/RedesSociales";
 import { Button } from "@nextui-org/react";
 import ScrollToTopButton from "../ScrollToTop";
 
 import { useParams } from "react-router-dom";
 
 const PagesCards = () => {
-
   const params = useParams();
-  const categoriaURL  = params.id
- 
+  const categoriaURL = params.id;
 
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -48,10 +47,8 @@ const PagesCards = () => {
       setShowAllProducts(false);
     }
     setLoadedCards(6);
-    
   };
   useEffect(() => {
-    // Desplazamiento al principio de la página al montar el componente
     window.scrollTo(0, 0);
   }, []);
 
@@ -131,7 +128,7 @@ const PagesCards = () => {
     "Mostrar Todo": todo,
   };
   const imageSrc = categoryImages[selectedCategory];
- 
+
   return (
     <>
       <NavBar />
@@ -141,16 +138,16 @@ const PagesCards = () => {
           src={imageSrc}
           alt={""}
         />
-      
+
         <div className="absolute text-white font-extrabold text-[60px] max-lg:text-[50px] max-md:text-[40px] max-sm:text-[30px] ">
-        {selectedCategory ? selectedCategory.toUpperCase() : ''}
+          {selectedCategory ? selectedCategory.toUpperCase() : ""}
         </div>
       </section>
-     <RedesSociales/>
+      <RedesSociales />
       <section className="container mx-auto p-4 w-[85%] max-md:mx-[14px]  ">
         <div className="flex justify-between items-center ">
           <h1 className="text-3xl font-semibold my-10 max-md:hidden">
-          {selectedCategory ? selectedCategory.toUpperCase() : ''}
+            {selectedCategory ? selectedCategory.toUpperCase() : ""}
           </h1>
           <div className="flex gap-5">
             <input
@@ -177,8 +174,8 @@ const PagesCards = () => {
           </div>
         </div>
       </section>
-      <section className="container mx-auto p-4 w-[85%] flex max-md:w-full   ">
-        <div className="container w-[40%] max-md:w-[40%] lg:w-[30%] max-sm:w-[300px]  h-screen py-4 sticky top-[130px]">
+      <section className="container mx-auto pr-4 w-[85%] flex max-md:w-full  max-sm:gap-0 gap-20  ">
+        <div className="container w-[40%] max-md:w-[37%] md:w-[34%] lg:w-[20%] max-sm:w-[140px] h-screen py-4 sticky top-[130px]  ">
           <h2 className="text-xl font-semibold mb-4 max-sm:text-sm max-sm:font-bold">
             Categorías
           </h2>
@@ -186,23 +183,23 @@ const PagesCards = () => {
             {Object.keys(categorias[0]).map((nombreCategoria, index) => (
               <li
                 key={index}
-                id={`categoria-${index}`} 
+                id={`categoria-${index}`}
                 className="flex items-center hover:bg-gray-200 hover:scale-105 rounded-md py-2 transition duration-300 ease-in-out pl-1 focus:bg-gray-200"
                 onClick={() => handleCategoryClick(nombreCategoria)}
               >
                 <img
-                     src={categoryImages[nombreCategoria]}
-                     alt={categoria[index].tituloCategoria}
+                  src={categoryImages[nombreCategoria]}
+                  alt={categoria[index].tituloCategoria}
                   className="w-8 h-8 rounded-full mr-2"
                 />
-                
+
                 <span className="max-sm:text-[11px]">
                   {categoria[index].tituloCategoria}
                 </span>
               </li>
             ))}
             <li
-              id="mostrar-todo" 
+              id="mostrar-todo"
               className="flex items-center hover:bg-gray-200 hover:scale-105 rounded-md py-2 transition duration-300 ease-in-out pl-1"
               onClick={() => handleCategoryClick("Mostrar Todo")}
             >
@@ -216,24 +213,26 @@ const PagesCards = () => {
           </ul>
         </div>
         {!showAllProducts && (
-          <div className="w-full py-4 ml-[10%] max-sm:ml-[25%] ">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10 w-fit">
-              {sortedProducts && sortedProducts.length > 0 && sortedProducts
-                .filter(
-                  (product, index) =>
-                    index < loadedCards &&
-                    (searchTerm === "" ||
-                      product.producto
-                        .toLowerCase()
-                        .includes(searchTerm.toLowerCase()))
-                )
-                .map((product) => (
-                  <ProductCard
-                    key={product.id}
-                    product={product}
-                    openModal={openModal}
-                  />
-                ))}
+          <div className="w-fit py-4 mx-auto ">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 w-fit">
+              {sortedProducts &&
+                sortedProducts.length > 0 &&
+                sortedProducts
+                  .filter(
+                    (product, index) =>
+                      index < loadedCards &&
+                      (searchTerm === "" ||
+                        product.producto
+                          .toLowerCase()
+                          .includes(searchTerm.toLowerCase()))
+                  )
+                  .map((product) => (
+                    <ProductCard
+                      key={product.id}
+                      product={product}
+                      openModal={openModal}
+                    />
+                  ))}
             </div>
             {loading && (
               <div className="flex justify-center">
@@ -271,8 +270,8 @@ const PagesCards = () => {
           </div>
         )}
         {showAllProducts && (
-          <div className="w-full py-4 ml-[10%]">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10 w-fit  ">
+          <div className="w-fit py-4 mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 w-fit  ">
               {Object.keys(categorias[0]).flatMap((category) =>
                 categorias[0][category]
                   .filter((product, index) => index < loadedCards)

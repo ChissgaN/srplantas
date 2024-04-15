@@ -1,11 +1,11 @@
 import React from "react";
 import { Index } from "./Index.jsx";
-import preparaSuelo from "/public/procesoSiembra/preparar.webp";
-import semillas from "/public/procesoSiembra/semillas.webp";
-import siembra from "/public/procesoSiembra/siembra.webp";
-import fertilizacion from "/public/procesoSiembra/fertilizacion.webp";
-import cosecha from "/public/procesoSiembra/cosecha.webp";
-import fumigar from "/public/procesoSiembra/fumigarr.webp";
+import preparaSuelo from "/procesoSiembra/preparar.webp";
+import semillas from "/procesoSiembra/semillas.webp";
+import siembra from "/procesoSiembra/siembra.webp";
+import fertilizacion from "/procesoSiembra/fertilizacion.webp";
+import cosecha from "/procesoSiembra/cosecha.webp";
+import fumigar from "/procesoSiembra/fumigarr.webp";
 
 export const Informacion = () => {
   return (
@@ -51,7 +51,6 @@ export const Informacion = () => {
     Cosecha tus cultivos en el momento adecuado, cuando estén maduros pero aún tiernos.
     Utiliza herramientas limpias y afiladas para evitar dañar las plantas durante la cosecha."
         />
-       
       </div>
     </>
   );
