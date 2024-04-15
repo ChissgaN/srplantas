@@ -13,9 +13,8 @@ import { RedesSociales } from "../RedesSociales/RedesSociales";
 export default function Main() {
   return (
     <NextUIProvider>
-        <NavBar />
+      <NavBar />
       <div className=" w-full">
-
         <div className="relative h-auto w-full ">
           <SliderImg />
           <div className="absolute inset-0 flex w-full">
@@ -27,8 +26,8 @@ export default function Main() {
         <h1 className=" text-[30px] w-[90%] mx-auto">
           <strong>Categorías:</strong>
         </h1>
-       
-        <RedesSociales/>
+
+        <RedesSociales />
         <div className="flex justify-center   ">
           <div className=" grid  lg:gap-10 md:grid-cols-2 md:gap-6 w-[90%] ">
             <Categorias />
@@ -36,7 +35,7 @@ export default function Main() {
         </div>
       </div>
 
-      <div className="w-[90%] mx-auto " >
+      <div className="w-[90%] mx-auto ">
         <h1 className=" text-[30px] max-sm:text-md ">
           <strong>Proceso de Siembra y Recolección</strong>
         </h1>
@@ -46,7 +45,6 @@ export default function Main() {
       </div>
 
       <Footer />
-
     </NextUIProvider>
   );
 }
