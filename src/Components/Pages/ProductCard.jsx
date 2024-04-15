@@ -20,7 +20,7 @@ const ProductCard = ({ product, openModal }) => {
         {product.producto}
       </h3>
 
-      <p className="text-gray-600">${product.precio}</p>
+      <p className="text-gray-600">Q{product.precio}</p>
 
       <Button
         color="warning"
