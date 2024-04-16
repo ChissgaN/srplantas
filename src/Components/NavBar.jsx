@@ -123,10 +123,10 @@ export default function NavBar() {
                 <div className="grid grid-cols-[1fr_4fr_1fr] items-center gap-6 px-4 py-4">
                   {cartItems.map((item, index) => (
                     <div key={index}>
-                      <h6>{item.nombre}</h6>
+                      <h6>{item.producto}</h6>
                       <img
                         src={item.imagen}
-                        alt={item.product}
+                        alt={item.producto}
                         className="w-16 h-16"
                       />
                       <p>
