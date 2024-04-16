@@ -144,21 +144,24 @@ const PagesCards = () => {
         </div>
       </section>
       <RedesSociales />
-      <section className="container mx-auto p-4 w-[85%] max-md:mx-[14px]  ">
-        <div className="flex justify-between items-center ">
+      <section className="container mx-auto p-4 w-[90%] flex justify-between ">
+        <div className="flex max-sm:flex max-sm:flex-col items-center w-full  md:gap-[3%] gap-[10%] ">
           <h1 className="text-3xl font-semibold my-10 max-md:hidden">
             {selectedCategory ? selectedCategory.toUpperCase() : ""}
           </h1>
-          <div className="flex gap-5">
+
+          <div className=" max-sm:w-full w-full md:flex md:justify-end  ">
             <input
               type="text"
               placeholder={`Buscar ${selectedCategory}...`}
               value={searchTerm}
               onChange={handleSearchChange}
-              className="h-fit px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 max-md:w-[180px]"
+              className="h-fit px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400  w-full"
             />
+          </div>
+          <div className="md:flex md:items-end w-full   md:justify-end ">
             <select
-              className="h-[30%] px-2 py-2 border border-gray-300 rounded-md focus:outline-none"
+              className="h-auto px-2 py-2 border border-gray-300 rounded-md focus:outline-none  w-full"
               value={selectedSortOption}
               onChange={handleSortChange}
             >
@@ -174,8 +177,9 @@ const PagesCards = () => {
           </div>
         </div>
       </section>
+
       <section className="container mx-auto pr-4 w-[85%] flex max-md:w-full  max-sm:gap-0 gap-20  ">
-        <div className="container w-[40%] max-md:w-[37%] md:w-[34%] lg:w-[20%] max-sm:w-[140px] h-screen py-4 sticky top-[130px]  ">
+        <div className="container w-[40%] max-md:w-[37%] md:w-[34%] lg:w-[20%] max-sm:w-[140px] h-screen py-4 sticky top-[130px] max-sm:mr-[10%] max-sm:ml-3">
           <h2 className="text-xl font-semibold mb-4 max-sm:text-sm max-sm:font-bold">
             Categorías
           </h2>
