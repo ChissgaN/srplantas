@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button } from "@nextui-org/react";
 import searchIcon from "/search.svg";
 import categorias from "../scripts/products";
+import "../App.css"
 
 export default function Beginning() {
   const [inputValue, setInputValue] = useState("");
@@ -58,19 +59,19 @@ export default function Beginning() {
         </div>
 
         {inputValue && (
-          <div className="resultados-container md:max-h-[200px] max-md:h-[200px] lg:max-h-[200px] max-sm:w-[100%] md:w-[95%] lg:w-[72%] xl:w-[59%] max-sm:max-h-[180px] mt-3 overflow-y-auto flex flex-wrap justify-around bg-white p-3 px-8 gap-10 border border-green-600 rounded-lg max-w-[640px]">
+          <div className="resultados-container md:max-h-[200px] max-md:h-[210px] lg:max-h-[225px] max-sm:w-[100%] md:w-[95%] lg:w-[72%] xl:w-[59%] max-sm:max-h-[205px] mt-3 overflow-y-auto overflow-x-auto flex flex-wrap justify-around bg-white p-3 px-8 gap-8 rounded-lg max-w-[640px] shadow-lg transition duration-300 hover:shadow-xl ">
             {searchResults.map((producto) => (
               <div
-                key={producto.id}
-                onClick={() => handleResultClick(producto)}
-                className="resultado-item flex-shrink-0 "
-              >
+              key={producto.id}
+              onClick={() => handleResultClick(producto)}
+              className="resultado-item flex-shrink-0 cursor-pointer rounded-lg hover:border hover:border-[#67d4768e] hover:shadow-xl hover:shadow-[#67d4768e] hover:shadow-right hover:shadow-bottom shadow-none"
+            >
                 <img
-                  className="w-28 h-28 border border-green-600"
+                  className="w-28 h-28 border rounded-lg"
                   src={producto.imagen}
                   alt={producto.producto}
                 />
-                <p className="m-0 w-28">{producto.producto}</p>
+                <p className="m-0 w-28 text-pretty text-center">{producto.producto}</p>
               </div>
             ))}
           </div>
