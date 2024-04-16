@@ -5,7 +5,7 @@ import whatssap from "/footer/whatssap2.svg";
 export const RedesSociales = () => {
   return (
     <>
-      <div className="fixed md:left-0 top-[35%] z-50 max-sm:right-0 sm:right-0">
+      <div className="fixed md:left-0 top-[270px] z-50 max-sm:right-0 sm:right-0">
         <div className="flex items-center ">
           <a
             href="https://www.facebook.com/agriculturaespecializadagt"
@@ -21,7 +21,7 @@ hover:sm-rounded-l-md
 "
             >
               <span className="text-[0px] group-hover:text-[12px] group-hover:text-white pl-2 max-sm:pr-2 md:hidden ms:hidden max-sm:block  sm:pl-2 max-md:block sm:pr-2">
-              FACEBOOK
+                FACEBOOK
               </span>
               <img
                 src={facebook}
@@ -36,7 +36,7 @@ hover:sm-rounded-l-md
         </div>
       </div>
 
-      <div className="fixed md:left-0 top-[41%] z-50 max-sm:right-0 sm:right-0">
+      <div className="fixed md:left-0 top-[309px] z-50 max-sm:right-0 sm:right-0">
         <div className="flex items-center ">
           <a
             href="https://wa.me/+50233332343"
