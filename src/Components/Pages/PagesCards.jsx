@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import NavBar from "../NavBar";
 
 import aromaticas from "/categoria/aromaticas.webp";
@@ -17,6 +17,7 @@ import { Button } from "@nextui-org/react";
 import ScrollToTopButton from "../ScrollToTop";
 
 import { useParams } from "react-router-dom";
+import { ShoppingCartContext } from "../ShoppingCartContext";
 
 const PagesCards = () => {
   const params = useParams();
@@ -29,6 +30,11 @@ const PagesCards = () => {
   const [showAllProducts, setShowAllProducts] = useState(false);
   const [loadedCards, setLoadedCards] = useState(6);
   const [loading, setLoading] = useState(false);
+  const { addToCart } = useContext(ShoppingCartContext);
+
+  const handleAddToCart = (selectedProduct) => {
+    addToCart(selectedProduct);
+  };
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
@@ -326,7 +332,7 @@ const PagesCards = () => {
       </section>
       {selectedProduct && (
         <div
-          className="fixed top-0 left-0 w-full h-full  bg-opacity-50 flex justify-center items-center modal-background "
+          className={`fixed top-0 left-0 w-full h-full flex justify-center items-center bg-opacity-80 bg-black modal-background`}
           onClick={handleModalClick}
         >
           <div className="bg-white py-8 px-6 rounded-lg w-[50%] h-[70%] flex gap-6 max-sm:w-[95%] max-sm:px-3 sm:w-[80%] sm:h-[70%] shadow-xl   ">
@@ -337,7 +343,10 @@ const PagesCards = () => {
                 className="w-full h-full  object-cover rounded-md mb-4  max-sm:w-[224px]  max-sm:h-[304px] max-md:h-[390px] max-md:w-[276px]"
               />
               <div className="flex">
-                <button className="w-[80%] bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 mx-auto sm:hidden">
+                <button
+                  className="w-[80%] bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 mx-auto sm:hidden"
+                  onClick={() => handleAddToCart(selectedProduct)}
+                >
                   Agregar al carrito
                 </button>
               </div>
@@ -355,7 +364,10 @@ const PagesCards = () => {
                 </p>
 
                 <div className="flex">
-                  <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 mx-auto max-sm:hidden">
+                  <button
+                    className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 mx-auto max-sm:hidden"
+                    onClick={() => handleAddToCart(selectedProduct)}
+                  >
                     Agregar al carrito
                   </button>
                 </div>
