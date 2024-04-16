@@ -156,7 +156,7 @@ const PagesCards = () => {
               placeholder={`Buscar ${selectedCategory}...`}
               value={searchTerm}
               onChange={handleSearchChange}
-              className="h-fit px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500  w-full"
+              className="h-fit px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400  w-full"
             />
           </div>
           <div className="md:flex md:items-end w-full   md:justify-end ">
