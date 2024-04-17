@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button } from "@nextui-org/react";
 import searchIcon from "/search.svg";
 import categorias from "../scripts/products";
+import { Link } from "react-router-dom";
 import "../App.css";
 
 export default function Beginning() {
@@ -54,7 +55,8 @@ export default function Beginning() {
             color="success"
             className="bg-green-100 h-full hover:bg-green-200 transition-[5s] hover:scale-110 duration-300 ease-in-out rounded-[10px] py-[13px] px-6 text-gray-500"
           >
-            Buscar
+            <Link to="/pages" onClick={() => handleResultClick(searchResults[0])}>Buscar</Link>
+            
           </Button>
         </div>
 
