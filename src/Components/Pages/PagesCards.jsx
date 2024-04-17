@@ -22,7 +22,6 @@ import { ShoppingCartContext } from "../ShoppingCartContext";
 const PagesCards = () => {
   const params = useParams();
   const categoriaURL = params.id;
-
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState(categoriaURL);
@@ -30,21 +29,21 @@ const PagesCards = () => {
   const [showAllProducts, setShowAllProducts] = useState(false);
   const [loadedCards, setLoadedCards] = useState(6);
   const [loading, setLoading] = useState(false);
-  const { addToCart, cartItems, setCartItems } =
-    useContext(ShoppingCartContext);
+  const {
+    addToCart,
+    cartItems,
+    setCartItems,
+    selectedProductCart,
+    setSelectedProductCart,
+  } = useContext(ShoppingCartContext);
 
-  const handleAddToCart = (product) => {
-    const existingProductIndex = cartItems.findIndex(
-      (item) => item.id === product.id
-    );
-
-    if (existingProductIndex !== -1) {
-      const updatedCartItems = [...cartItems];
-      updatedCartItems[existingProductIndex].quantity += 1;
-      setCartItems(updatedCartItems);
-    } else {
-      addToCart(product);
-    }
+  const handleAddToCart = () => {
+    /*  console.log(
+      "aqui estoy:",
+      selectedProductCart
+    ); */
+    addToCart(selectedProductCart);
+    closeModal();
   };
 
   const handleSearchChange = (event) => {
@@ -65,6 +64,7 @@ const PagesCards = () => {
     }
     setLoadedCards(6);
   };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -124,6 +124,7 @@ const PagesCards = () => {
 
   const openModal = (product) => {
     setSelectedProduct(product);
+    setSelectedProductCart({ ...product, quantity: 1 }); // Asegúrate de que quantity se establezca en 1 inicialmente
   };
 
   const closeModal = () => {
@@ -133,16 +134,30 @@ const PagesCards = () => {
   const handleModalClick = (event) => {
     if (event.target.classList.contains("modal-background")) {
       closeModal();
+      // Actualizamos la cantidad del producto seleccionado en el carrito
+      const existingProductIndex = cartItems.findIndex(
+        (item) => item.id === selectedProductCart.id
+      );
+      if (existingProductIndex !== -1) {
+        const updatedCartItems = cartItems.map((item, index) => {
+          if (index === existingProductIndex) {
+            return { ...item, quantity: selectedProductCart.quantity }; // Actualizamos la cantidad del producto seleccionado
+          }
+          return item; // Mantenemos los otros elementos sin cambios
+        });
+        setCartItems(updatedCartItems);
+      }
     }
   };
+
   const categoryImages = {
-    aromaticas,
-    bulbos,
-    cesped,
-    hortalizas,
-    ornamentales,
-    sustratos,
-    "Mostrar Todo": todo,
+    aromaticas: "/categoria/aromaticas.webp",
+    bulbos: "/categoria/bulbos.webp",
+    cesped: "/categoria/cesped.webp",
+    hortalizas: "/categoria/hortalizas.webp",
+    ornamentales: "/categoria/hornamentales.webp",
+    sustratos: "/categoria/sustrato.webp",
+    "Mostrar Todo": "/procesoSiembra/semillas.webp",
   };
   const imageSrc = categoryImages[selectedCategory];
 
@@ -248,6 +263,7 @@ const PagesCards = () => {
                       key={product.id}
                       product={product}
                       openModal={openModal}
+                      setSelectedProductCart={setSelectedProductCart}
                     />
                   ))}
             </div>
@@ -297,6 +313,7 @@ const PagesCards = () => {
                       key={product.id}
                       product={product}
                       openModal={openModal}
+                      setSelectedProductCart={setSelectedProductCart}
                     />
                   ))
               )}
@@ -369,6 +386,18 @@ const PagesCards = () => {
                 <p className="text-gray-600  w-full h-full overflow-hidden text-pretty mb-4">
                   Descripción: {selectedProduct.descripcion}
                 </p>
+                <input
+                  type="number"
+                  min="1"
+                  value={selectedProductCart.quantity}
+                  onChange={(event) =>
+                    setSelectedProductCart({
+                      ...selectedProductCart,
+                      quantity: parseInt(event.target.value),
+                    })
+                  }
+                  className="w-1/2 h-10 px-3 mx-auto mb-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400"
+                />
 
                 <div className="flex">
                   <button
