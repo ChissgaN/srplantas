@@ -357,7 +357,7 @@ const PagesCards = () => {
                   {selectedProduct.producto}
                 </h2>
                 <p className="text-gray-600 ">
-                  Precio: ${selectedProduct.precio}
+                  Precio: Q{selectedProduct.precio}
                 </p>
                 <p className="text-gray-600  w-full h-full overflow-hidden text-pretty mb-4">
                   Descripción: {selectedProduct.descripcion}
