@@ -143,7 +143,8 @@ const categorias = [
         codigo: 4,
         precio: 22.0,
         imagen: albahaca,
-        descripcion: "La albahaca es una hierba aromática popular en la cocina mediterránea. Sus hojas tienen un aroma distintivo y se utilizan frescas en ensaladas, pastas y platos de tomate."
+        descripcion:
+          "La albahaca es una hierba aromática popular en la cocina mediterránea. Sus hojas tienen un aroma distintivo y se utilizan frescas en ensaladas, pastas y platos de tomate.",
       },
       {
         id: 2,
@@ -152,7 +153,8 @@ const categorias = [
         codigo: 5,
         precio: 22.0,
         imagen: albahacav,
-        descripcion: "La albahaca violeta es una variante colorida de la albahaca común. Tiene un aroma similar pero agrega un toque visual único a tus platos."
+        descripcion:
+          "La albahaca violeta es una variante colorida de la albahaca común. Tiene un aroma similar pero agrega un toque visual único a tus platos.",
       },
       {
         id: 3,
@@ -161,7 +163,8 @@ const categorias = [
         codigo: 10,
         precio: 22.0,
         imagen: apio,
-        descripcion: "El apio es una planta aromática con un sabor fresco y crujiente. Sus tallos se utilizan en ensaladas, sopas y como ingrediente para agregar sabor a muchos platos."
+        descripcion:
+          "El apio es una planta aromática con un sabor fresco y crujiente. Sus tallos se utilizan en ensaladas, sopas y como ingrediente para agregar sabor a muchos platos.",
       },
       {
         id: 4,
@@ -170,7 +173,8 @@ const categorias = [
         codigo: 65,
         precio: 22.0,
         imagen: cilantro,
-        descripcion: "El cilantro es una hierba popular en la cocina mexicana y asiática. Sus hojas tienen un sabor distintivo que complementa platos como guacamole, curry y ceviche."
+        descripcion:
+          "El cilantro es una hierba popular en la cocina mexicana y asiática. Sus hojas tienen un sabor distintivo que complementa platos como guacamole, curry y ceviche.",
       },
       {
         id: 5,
@@ -179,7 +183,8 @@ const categorias = [
         codigo: 95,
         precio: 22.0,
         imagen: eneldo,
-        descripcion: "El eneldo es una hierba con un aroma fresco y anisado. Se utiliza comúnmente en la cocina europea para aromatizar pescados, salsas y encurtidos."
+        descripcion:
+          "El eneldo es una hierba con un aroma fresco y anisado. Se utiliza comúnmente en la cocina europea para aromatizar pescados, salsas y encurtidos.",
       },
       {
         id: 6,
@@ -188,7 +193,8 @@ const categorias = [
         codigo: 162,
         precio: 30.0,
         imagen: hinojo,
-        descripcion: "El hinojo es una planta con un sabor anisado y ligeramente dulce. Tanto sus bulbos como sus hojas se pueden utilizar en ensaladas, sopas y platos de pescado."
+        descripcion:
+          "El hinojo es una planta con un sabor anisado y ligeramente dulce. Tanto sus bulbos como sus hojas se pueden utilizar en ensaladas, sopas y platos de pescado.",
       },
       {
         id: 7,
@@ -197,7 +203,8 @@ const categorias = [
         codigo: 32,
         precio: 22.0,
         imagen: manzanilla,
-        descripcion: "La manzanilla es una hierba conocida por sus propiedades calmantes. Se utiliza comúnmente para hacer infusiones que ayudan a relajar el cuerpo y la mente."
+        descripcion:
+          "La manzanilla es una hierba conocida por sus propiedades calmantes. Se utiliza comúnmente para hacer infusiones que ayudan a relajar el cuerpo y la mente.",
       },
       {
         id: 8,
@@ -206,7 +213,8 @@ const categorias = [
         codigo: 183,
         precio: 22.0,
         imagen: melissa,
-        descripcion: "La melisa, también conocida como toronjil o hierba limón, tiene un aroma cítrico y fresco. Se utiliza en infusiones y en la cocina para aromatizar platos de pescado y postres."
+        descripcion:
+          "La melisa, también conocida como toronjil o hierba limón, tiene un aroma cítrico y fresco. Se utiliza en infusiones y en la cocina para aromatizar platos de pescado y postres.",
       },
       {
         id: 9,
@@ -215,7 +223,8 @@ const categorias = [
         codigo: 186,
         precio: 22.0,
         imagen: menta,
-        descripcion: "La menta es una hierba refrescante con un sabor vigorizante. Se utiliza en infusiones, cócteles, postres y como ingrediente en platos salados como ensaladas y salsas."
+        descripcion:
+          "La menta es una hierba refrescante con un sabor vigorizante. Se utiliza en infusiones, cócteles, postres y como ingrediente en platos salados como ensaladas y salsas.",
       },
       {
         id: 10,
@@ -224,7 +233,8 @@ const categorias = [
         codigo: 410,
         precio: 37.0,
         imagen: mixAromaticas,
-        descripcion: "El mix de plantas aromáticas es una combinación de varias hierbas frescas que añaden aroma y sabor a tus platos. Perfecto para tener en tu cocina y utilizar en una variedad de recetas."
+        descripcion:
+          "El mix de plantas aromáticas es una combinación de varias hierbas frescas que añaden aroma y sabor a tus platos. Perfecto para tener en tu cocina y utilizar en una variedad de recetas.",
       },
       {
         id: 11,
@@ -233,7 +243,8 @@ const categorias = [
         codigo: 408,
         precio: 37.0,
         imagen: mixInfusiones,
-        descripcion: "El mix de plantas para infusiones es una mezcla de hierbas especialmente seleccionadas para hacer infusiones relajantes y reconfortantes. Disfruta de una taza caliente de esta mezcla después de un largo día."
+        descripcion:
+          "El mix de plantas para infusiones es una mezcla de hierbas especialmente seleccionadas para hacer infusiones relajantes y reconfortantes. Disfruta de una taza caliente de esta mezcla después de un largo día.",
       },
       {
         id: 12,
@@ -242,7 +253,8 @@ const categorias = [
         codigo: 194,
         precio: 22.0,
         imagen: oregano,
-        descripcion: "El orégano es una hierba aromática con un sabor intenso y ligeramente amargo. Se utiliza en la cocina mediterránea para sazonar pizzas, pastas, carnes y ensaladas."
+        descripcion:
+          "El orégano es una hierba aromática con un sabor intenso y ligeramente amargo. Se utiliza en la cocina mediterránea para sazonar pizzas, pastas, carnes y ensaladas.",
       },
       {
         id: 13,
@@ -251,7 +263,8 @@ const categorias = [
         codigo: 207,
         precio: 22.0,
         imagen: perejil,
-        descripcion: "El perejil es una hierba versátil con un sabor fresco y ligeramente picante. Se utiliza como guarnición en una amplia variedad de platos y también como ingrediente en salsas y aderezos."
+        descripcion:
+          "El perejil es una hierba versátil con un sabor fresco y ligeramente picante. Se utiliza como guarnición en una amplia variedad de platos y también como ingrediente en salsas y aderezos.",
       },
       {
         id: 14,
@@ -260,7 +273,8 @@ const categorias = [
         codigo: 263,
         precio: 22.0,
         imagen: romero,
-        descripcion: "El romero es una hierba aromática con un aroma distintivo y un sabor fuerte. Se utiliza comúnmente en la cocina mediterránea para sazonar carnes, aves, patatas y panes."
+        descripcion:
+          "El romero es una hierba aromática con un aroma distintivo y un sabor fuerte. Se utiliza comúnmente en la cocina mediterránea para sazonar carnes, aves, patatas y panes.",
       },
       {
         id: 15,
@@ -269,10 +283,11 @@ const categorias = [
         codigo: 275,
         precio: 22.0,
         imagen: tomillo,
-        descripcion: "El tomillo es una hierba con un aroma cálido y terroso. Se utiliza en la cocina para sazonar carnes, aves, guisos y platos de verduras."
+        descripcion:
+          "El tomillo es una hierba con un aroma cálido y terroso. Se utiliza en la cocina para sazonar carnes, aves, guisos y platos de verduras.",
       },
     ],
-    
+
     bulbos: [
       {
         id: 1,
@@ -281,10 +296,11 @@ const categorias = [
         codigo: 416,
         precio: 75.0,
         imagen: bulbos,
-        descripcion: "Apreciada por sus elegantes flores en forma de trompeta. Los bulbos se plantan en primavera para disfrutar de sus hermosas flores durante el verano. Ideales para jardines, arreglos florales y decoración de interiores."
+        descripcion:
+          "Apreciada por sus elegantes flores en forma de trompeta. Los bulbos se plantan en primavera para disfrutar de sus hermosas flores durante el verano. Ideales para jardines, arreglos florales y decoración de interiores.",
       },
     ],
-    
+
     cesped: [
       {
         id: 1,
@@ -293,7 +309,8 @@ const categorias = [
         codigo: 292,
         precio: 130.0,
         imagen: bermudaGrass,
-        descripcion: "Es una variedad popular conocida por su resistencia y capacidad de crecimiento rápido. Es ideal para climas cálidos y soleados, y se utiliza comúnmente en campos deportivos, parques y áreas residenciales."
+        descripcion:
+          "Es una variedad popular conocida por su resistencia y capacidad de crecimiento rápido. Es ideal para climas cálidos y soleados, y se utiliza comúnmente en campos deportivos, parques y áreas residenciales.",
       },
       {
         id: 2,
@@ -302,7 +319,8 @@ const categorias = [
         codigo: 297,
         precio: 30.0,
         imagen: grama25g,
-        descripcion: "Es una forma práctica y rápida de establecer un césped nuevo o reparar áreas dañadas en tu jardín. Esta presentación de 25g es perfecta para pequeñas áreas o proyectos de jardinería."
+        descripcion:
+          "Es una forma práctica y rápida de establecer un césped nuevo o reparar áreas dañadas en tu jardín. Esta presentación de 25g es perfecta para pequeñas áreas o proyectos de jardinería.",
       },
       {
         id: 3,
@@ -311,7 +329,8 @@ const categorias = [
         codigo: 302,
         precio: 225.0,
         imagen: gramaCompetenciaDeportiva1k,
-        descripcion: "Ofrece una superficie resistente y de alto rendimiento que cumple con los estándares de calidad exigidos para la práctica de diversos deportes."
+        descripcion:
+          "Ofrece una superficie resistente y de alto rendimiento que cumple con los estándares de calidad exigidos para la práctica de diversos deportes.",
       },
       {
         id: 4,
@@ -320,9 +339,10 @@ const categorias = [
         codigo: 431,
         precio: 82.0,
         imagen: gramaParaSombra,
-        descripcion: "Es una opción ideal para áreas de tu jardín que reciben poca luz solar directa. Esta variedad está adaptada para crecer bien en condiciones de sombra parcial, manteniendo un aspecto verde y saludable."
+        descripcion:
+          "Es una opción ideal para áreas de tu jardín que reciben poca luz solar directa. Esta variedad está adaptada para crecer bien en condiciones de sombra parcial, manteniendo un aspecto verde y saludable.",
       },
-    ],    
+    ],
 
     hortalizas: [
       {
@@ -332,7 +352,8 @@ const categorias = [
         codigo: 1,
         precio: 22.0,
         imagen: acelgaImg,
-        descripcion: "Es una verdura de hojas verdes y tallos blancos o rojos. Es rica en nutrientes como vitaminas A y K, y se puede consumir cruda en ensaladas o cocida en sopas, guisos y salteados."
+        descripcion:
+          "Es una verdura de hojas verdes y tallos blancos o rojos. Es rica en nutrientes como vitaminas A y K, y se puede consumir cruda en ensaladas o cocida en sopas, guisos y salteados.",
       },
       {
         id: 2,
@@ -341,7 +362,8 @@ const categorias = [
         codigo: 6,
         precio: 22.0,
         imagen: alcachofaImg,
-        descripcion: "Es una verdura con un sabor único y delicado. Se pueden cocinar al vapor, hervidas o asadas, y se disfrutan comúnmente con salsas como alioli o vinagreta."
+        descripcion:
+          "Es una verdura con un sabor único y delicado. Se pueden cocinar al vapor, hervidas o asadas, y se disfrutan comúnmente con salsas como alioli o vinagreta.",
       },
       {
         id: 3,
@@ -350,7 +372,8 @@ const categorias = [
         codigo: 386,
         precio: 30.0,
         imagen: amarantoImg,
-        descripcion: "Es un pseudocereal que se cultiva por sus semillas y hojas comestibles. Es rico en proteínas, fibra y minerales, y se puede cocinar como el arroz o agregar a ensaladas y panes."
+        descripcion:
+          "Es un pseudocereal que se cultiva por sus semillas y hojas comestibles. Es rico en proteínas, fibra y minerales, y se puede cocinar como el arroz o agregar a ensaladas y panes.",
       },
       {
         id: 4,
@@ -359,7 +382,8 @@ const categorias = [
         codigo: 368,
         precio: 22.0,
         imagen: arugulaImg,
-        descripcion: "Es una hoja verde con un sabor ligeramente picante y amargo. Se utiliza en ensaladas, pizzas, pasta y como guarnición para dar un toque de frescura y sabor."
+        descripcion:
+          "Es una hoja verde con un sabor ligeramente picante y amargo. Se utiliza en ensaladas, pizzas, pasta y como guarnición para dar un toque de frescura y sabor.",
       },
       {
         id: 5,
@@ -368,7 +392,8 @@ const categorias = [
         codigo: 16,
         precio: 22.0,
         imagen: berenjenaImg,
-        descripcion: "Es una hortaliza versátil con una textura suave y sabor suave. Se puede asar, hornear, freír o cocinar a la parrilla, y se utiliza en platos como moussaka, parmesana de berenjenas y ratatouille."
+        descripcion:
+          "Es una hortaliza versátil con una textura suave y sabor suave. Se puede asar, hornear, freír o cocinar a la parrilla, y se utiliza en platos como moussaka, parmesana de berenjenas y ratatouille.",
       },
       {
         id: 6,
@@ -377,7 +402,8 @@ const categorias = [
         codigo: 17,
         precio: 22.0,
         imagen: berroAguaImg,
-        descripcion: "Es una planta acuática con hojas pequeñas y un sabor picante y refrescante. Se utiliza en ensaladas, sándwiches y como guarnición para platos de pescado y mariscos."
+        descripcion:
+          "Es una planta acuática con hojas pequeñas y un sabor picante y refrescante. Se utiliza en ensaladas, sándwiches y como guarnición para platos de pescado y mariscos.",
       },
       {
         id: 7,
@@ -386,7 +412,8 @@ const categorias = [
         codigo: 372,
         precio: 30.0,
         imagen: brocoliImg,
-        descripcion: "Es una verdura crucífera rica en nutrientes como vitamina C, fibra y antioxidantes. Se puede cocinar al vapor, hervido, asado o salteado, y se disfruta como acompañamiento o ingrediente en ensaladas, sopas y platos principales."
+        descripcion:
+          "Es una verdura crucífera rica en nutrientes como vitamina C, fibra y antioxidantes. Se puede cocinar al vapor, hervido, asado o salteado, y se disfruta como acompañamiento o ingrediente en ensaladas, sopas y platos principales.",
       },
       {
         id: 8,
@@ -395,7 +422,8 @@ const categorias = [
         codigo: 20,
         precio: 22.0,
         imagen: calabacinImg,
-        descripcion: "Es una hortaliza de piel suave y sabor delicado. Se puede cocinar a la parrilla, salteado, horneado o relleno, y se utiliza en platos como lasañas, tortillas, ensaladas y guisos."
+        descripcion:
+          "Es una hortaliza de piel suave y sabor delicado. Se puede cocinar a la parrilla, salteado, horneado o relleno, y se utiliza en platos como lasañas, tortillas, ensaladas y guisos.",
       },
       {
         id: 9,
@@ -404,7 +432,8 @@ const categorias = [
         codigo: 34,
         precio: 30.0,
         imagen: cebollaBlancaImg,
-        descripcion: "Es una variedad suave y dulce de cebolla. Se utiliza en una amplia variedad de platos como ensaladas, salsas, guisos y como ingrediente aromático en muchas recetas."
+        descripcion:
+          "Es una variedad suave y dulce de cebolla. Se utiliza en una amplia variedad de platos como ensaladas, salsas, guisos y como ingrediente aromático en muchas recetas.",
       },
       {
         id: 10,
@@ -413,7 +442,8 @@ const categorias = [
         codigo: 42,
         precio: 30.0,
         imagen: cebollaRojaImg,
-        descripcion: "Es una variedad de cebolla con un sabor más fuerte y picante que la blanca. Se utiliza cruda en ensaladas, sándwiches, salsas y como ingrediente en platos cocidos como guisos y asados."
+        descripcion:
+          "Es una variedad de cebolla con un sabor más fuerte y picante que la blanca. Se utiliza cruda en ensaladas, sándwiches, salsas y como ingrediente en platos cocidos como guisos y asados.",
       },
       {
         id: 11,
@@ -422,7 +452,8 @@ const categorias = [
         codigo: 46,
         precio: 22.0,
         imagen: cebollinImg,
-        descripcion: "También conocido como cebollino o cebolla de verdeo, es una hierba aromática con un sabor similar al de la cebolla. Se utiliza como guarnición en ensaladas, sopas, huevos revueltos y platos de pescado."
+        descripcion:
+          "También conocido como cebollino o cebolla de verdeo, es una hierba aromática con un sabor similar al de la cebolla. Se utiliza como guarnición en ensaladas, sopas, huevos revueltos y platos de pescado.",
       },
       {
         id: 12,
@@ -431,7 +462,8 @@ const categorias = [
         codigo: 55,
         precio: 22.0,
         imagen: chileJalapenoImg,
-        descripcion: "Es un tipo de pimiento picante originario de México. Se utiliza en salsas, guacamole, nachos, tacos y una variedad de platos mexicanos para agregar un toque de calor y sabor."
+        descripcion:
+          "Es un tipo de pimiento picante originario de México. Se utiliza en salsas, guacamole, nachos, tacos y una variedad de platos mexicanos para agregar un toque de calor y sabor.",
       },
       {
         id: 13,
@@ -440,7 +472,8 @@ const categorias = [
         codigo: 60,
         precio: 22.0,
         imagen: chileCayenneImg,
-        descripcion: "Es una variedad picante y aromática de pimiento rojo. Se utiliza en polvo como condimento en salsas, adobos, currys y platos picantes para añadir calor y sabor."
+        descripcion:
+          "Es una variedad picante y aromática de pimiento rojo. Se utiliza en polvo como condimento en salsas, adobos, currys y platos picantes para añadir calor y sabor.",
       },
       {
         id: 14,
@@ -449,7 +482,8 @@ const categorias = [
         codigo: 216,
         precio: 22.0,
         imagen: chilePimientoCortoImg,
-        descripcion: "Es una variedad dulce de pimiento con forma cuadrada o redonda. Se utiliza crudo en ensaladas, salsas, rellenos y asados, y es conocido por su sabor suave y jugoso."
+        descripcion:
+          "Es una variedad dulce de pimiento con forma cuadrada o redonda. Se utiliza crudo en ensaladas, salsas, rellenos y asados, y es conocido por su sabor suave y jugoso.",
       },
       {
         id: 15,
@@ -458,7 +492,8 @@ const categorias = [
         codigo: 222,
         precio: 22.0,
         imagen: chilePimientoLargoImg,
-        descripcion: "Es una variedad dulce y jugosa de pimiento con forma alargada. Se utiliza crudo en ensaladas, asados, rellenos y salteados, y es ideal para asar a la parrilla o rellenar con queso y hierbas."
+        descripcion:
+          "Es una variedad dulce y jugosa de pimiento con forma alargada. Se utiliza crudo en ensaladas, asados, rellenos y salteados, y es ideal para asar a la parrilla o rellenar con queso y hierbas.",
       },
       {
         id: 16,
@@ -467,7 +502,8 @@ const categorias = [
         codigo: 62,
         precio: 22.0,
         imagen: chileSigarretaImg,
-        descripcion: "Es una variedad de pimiento picante originaria de México. Se caracteriza por su forma alargada y su intenso sabor picante. Se utiliza en salsas, guisos, marinadas y platos mexicanos para agregar un toque de calor y sabor distintivo."
+        descripcion:
+          "Es una variedad de pimiento picante originaria de México. Se caracteriza por su forma alargada y su intenso sabor picante. Se utiliza en salsas, guisos, marinadas y platos mexicanos para agregar un toque de calor y sabor distintivo.",
       },
       {
         id: 17,
@@ -476,7 +512,8 @@ const categorias = [
         codigo: 385,
         precio: 30.0,
         imagen: chipilinImg,
-        descripcion: "Es una hierba comestible muy apreciada en la cocina de América Central, especialmente en Guatemala y El Salvador. Tiene un sabor similar a las espinacas y se utiliza en sopas, tamales, tortillas y otros platos tradicionales."
+        descripcion:
+          "Es una hierba comestible muy apreciada en la cocina de América Central, especialmente en Guatemala y El Salvador. Tiene un sabor similar a las espinacas y se utiliza en sopas, tamales, tortillas y otros platos tradicionales.",
       },
       {
         id: 18,
@@ -485,7 +522,8 @@ const categorias = [
         codigo: 81,
         precio: 22.0,
         imagen: colBruselasImg,
-        descripcion: "Es una variedad de repollo pequeño y redondo. Se cocina al vapor, asada, salteada o gratinada, y se disfruta como acompañamiento o ingrediente en ensaladas, guisos, pasteles y platos principales."
+        descripcion:
+          "Es una variedad de repollo pequeño y redondo. Se cocina al vapor, asada, salteada o gratinada, y se disfruta como acompañamiento o ingrediente en ensaladas, guisos, pasteles y platos principales.",
       },
       {
         id: 19,
@@ -494,7 +532,8 @@ const categorias = [
         codigo: 80,
         precio: 22.0,
         imagen: colMilanImg,
-        descripcion: "Es una variedad de col rizada con hojas rizadas y un sabor dulce y suave. Se utiliza en ensaladas, sopas, salteados y como guarnición para platos de carne y pescado."
+        descripcion:
+          "Es una variedad de col rizada con hojas rizadas y un sabor dulce y suave. Se utiliza en ensaladas, sopas, salteados y como guarnición para platos de carne y pescado.",
       },
       {
         id: 20,
@@ -503,7 +542,8 @@ const categorias = [
         codigo: 84,
         precio: 22.0,
         imagen: coliflorImg,
-        descripcion: "Es una hortaliza de la familia de las crucíferas con una cabeza compacta de floretes blancos. Se puede cocinar al vapor, hervida, asada, frita o en puré, y se utiliza en una variedad de recetas como guarnición o plato principal."
+        descripcion:
+          "Es una hortaliza de la familia de las crucíferas con una cabeza compacta de floretes blancos. Se puede cocinar al vapor, hervida, asada, frita o en puré, y se utiliza en una variedad de recetas como guarnición o plato principal.",
       },
       {
         id: 21,
@@ -512,7 +552,8 @@ const categorias = [
         codigo: 98,
         precio: 22.0,
         imagen: esparragoImg,
-        descripcion: "Es una verdura delicada y sabrosa con tallos tiernos y puntas comestibles. Se puede cocinar al vapor, hervido, asado o salteado, y se disfruta como acompañamiento, en ensaladas, tortillas y platos principales."
+        descripcion:
+          "Es una verdura delicada y sabrosa con tallos tiernos y puntas comestibles. Se puede cocinar al vapor, hervido, asado o salteado, y se disfruta como acompañamiento, en ensaladas, tortillas y platos principales.",
       },
       {
         id: 22,
@@ -521,7 +562,8 @@ const categorias = [
         codigo: 100,
         precio: 22.0,
         imagen: espinacaImg,
-        descripcion: "Es una hoja verde rica en nutrientes como hierro, calcio y vitaminas A y C. Se puede consumir cruda en ensaladas o cocida en sopas, guisos, salteados y como relleno en platos como lasañas y empanadas."
+        descripcion:
+          "Es una hoja verde rica en nutrientes como hierro, calcio y vitaminas A y C. Se puede consumir cruda en ensaladas o cocida en sopas, guisos, salteados y como relleno en platos como lasañas y empanadas.",
       },
       {
         id: 23,
@@ -530,7 +572,8 @@ const categorias = [
         codigo: 129,
         precio: 22.0,
         imagen: fresaImg,
-        descripcion: "Es una fruta dulce y jugosa con un aroma distintivo. Se puede disfrutar cruda como postre, en ensaladas de frutas, batidos, mermeladas y como ingrediente en pasteles, tartas y helados."
+        descripcion:
+          "Es una fruta dulce y jugosa con un aroma distintivo. Se puede disfrutar cruda como postre, en ensaladas de frutas, batidos, mermeladas y como ingrediente en pasteles, tartas y helados.",
       },
       {
         id: 24,
@@ -539,7 +582,8 @@ const categorias = [
         codigo: 276,
         precio: 30.0,
         imagen: frijolEjoteroImg,
-        descripcion: "Es una variedad de frijol con vainas tiernas y comestibles. Se puede cocinar al vapor, hervido, salteado o en guisos, y se disfruta como acompañamiento o como ingrediente en platillos mexicanos como sopas y tacos."
+        descripcion:
+          "Es una variedad de frijol con vainas tiernas y comestibles. Se puede cocinar al vapor, hervido, salteado o en guisos, y se disfruta como acompañamiento o como ingrediente en platillos mexicanos como sopas y tacos.",
       },
       {
         id: 25,
@@ -548,7 +592,8 @@ const categorias = [
         codigo: 145,
         precio: 22.0,
         imagen: guisanteImg,
-        descripcion: "También conocido como arveja o chícharo, es una legumbre pequeña y redonda. Se puede cocinar al vapor, hervido, salteado o en guisos, y se disfruta como acompañamiento o como ingrediente en ensaladas, arroces y sopas."
+        descripcion:
+          "También conocido como arveja o chícharo, es una legumbre pequeña y redonda. Se puede cocinar al vapor, hervido, salteado o en guisos, y se disfruta como acompañamiento o como ingrediente en ensaladas, arroces y sopas.",
       },
       {
         id: 26,
@@ -557,7 +602,8 @@ const categorias = [
         codigo: 152,
         precio: 22.0,
         imagen: habaImg,
-        descripcion: "Es una legumbre grande y verde con una textura firme y un sabor ligeramente dulce. Se puede cocinar al vapor, hervida, salteada o en guisos, y se disfruta como acompañamiento o como ingrediente en ensaladas, arroces y platos principales."
+        descripcion:
+          "Es una legumbre grande y verde con una textura firme y un sabor ligeramente dulce. Se puede cocinar al vapor, hervida, salteada o en guisos, y se disfruta como acompañamiento o como ingrediente en ensaladas, arroces y platos principales.",
       },
       {
         id: 27,
@@ -566,8 +612,9 @@ const categorias = [
         codigo: 170,
         precio: 22.0,
         imagen: hierbamoraImg,
-        descripcion: "Se utilizan tanto frescas como secas en infusiones y tés. Además de su uso culinario, la hierbamora se aprecia por sus propiedades medicinales, que incluyen ser antioxidante, antiinflamatoria y diurética."
-      },      
+        descripcion:
+          "Se utilizan tanto frescas como secas en infusiones y tés. Además de su uso culinario, la hierbamora se aprecia por sus propiedades medicinales, que incluyen ser antioxidante, antiinflamatoria y diurética.",
+      },
       {
         id: 28,
         producto: "Jamaica",
@@ -575,7 +622,8 @@ const categorias = [
         codigo: 200,
         precio: 22.0,
         imagen: jamaicaImg,
-        descripcion: "También conocida como flor de Jamaica o hibisco, es una flor comestible con un sabor ácido y refrescante. Se utiliza para preparar bebidas refrescantes como aguas frescas, té, cócteles y postres."
+        descripcion:
+          "También conocida como flor de Jamaica o hibisco, es una flor comestible con un sabor ácido y refrescante. Se utiliza para preparar bebidas refrescantes como aguas frescas, té, cócteles y postres.",
       },
       {
         id: 29,
@@ -584,7 +632,8 @@ const categorias = [
         codigo: 243,
         precio: 22.0,
         imagen: lechugaImg,
-        descripcion: "Es una hortaliza de hojas verdes y crujientes. Se utiliza como base para ensaladas, sándwiches, tacos y hamburguesas, y se puede disfrutar sola o con aderezos y otros ingredientes."
+        descripcion:
+          "Es una hortaliza de hojas verdes y crujientes. Se utiliza como base para ensaladas, sándwiches, tacos y hamburguesas, y se puede disfrutar sola o con aderezos y otros ingredientes.",
       },
       {
         id: 30,
@@ -593,7 +642,8 @@ const categorias = [
         codigo: 244,
         precio: 22.0,
         imagen: lechugaRojaImg,
-        descripcion: "Es una variedad de lechuga con hojas de color rojo intenso y sabor suave. Se utiliza como base para ensaladas gourmet, platos de entrada y guarniciones, y aporta un toque de color y frescura a los platos."
+        descripcion:
+          "Es una variedad de lechuga con hojas de color rojo intenso y sabor suave. Se utiliza como base para ensaladas gourmet, platos de entrada y guarniciones, y aporta un toque de color y frescura a los platos.",
       },
       {
         id: 31,
@@ -602,7 +652,8 @@ const categorias = [
         codigo: 245,
         precio: 22.0,
         imagen: lechugaRomanaImg,
-        descripcion: "Es una variedad de lechuga con hojas alargadas y crujientes que forman una cabeza alargada. Se utiliza en ensaladas César, wraps, sándwiches y como base para platos de ensaladas gourmet."
+        descripcion:
+          "Es una variedad de lechuga con hojas alargadas y crujientes que forman una cabeza alargada. Se utiliza en ensaladas César, wraps, sándwiches y como base para platos de ensaladas gourmet.",
       },
       {
         id: 32,
@@ -611,7 +662,8 @@ const categorias = [
         codigo: 282,
         precio: 22.0,
         imagen: maizDulceImg,
-        descripcion: "También conocido como elote o mazorca, es un cereal con granos dulces y jugosos. Se puede disfrutar cocido, asado a la parrilla, en ensaladas, sopas, salsas y como ingrediente en platos principales y guarniciones."
+        descripcion:
+          "También conocido como elote o mazorca, es un cereal con granos dulces y jugosos. Se puede disfrutar cocido, asado a la parrilla, en ensaladas, sopas, salsas y como ingrediente en platos principales y guarniciones.",
       },
       {
         id: 33,
@@ -620,7 +672,8 @@ const categorias = [
         codigo: 288,
         precio: 22.0,
         imagen: melonImg,
-        descripcion: "Es una fruta jugosa y refrescante con una pulpa dulce y aromática. Se puede disfrutar sola, en ensaladas de frutas, batidos, cócteles y como ingrediente en postres, mermeladas y sorbetes."
+        descripcion:
+          "Es una fruta jugosa y refrescante con una pulpa dulce y aromática. Se puede disfrutar sola, en ensaladas de frutas, batidos, cócteles y como ingrediente en postres, mermeladas y sorbetes.",
       },
       {
         id: 34,
@@ -629,7 +682,8 @@ const categorias = [
         codigo: 319,
         precio: 22.0,
         imagen: mezclaEnsaladasImg,
-        descripcion: "Es una combinación de diferentes tipos de lechugas y vegetales frescos y crujientes. Es ideal para preparar ensaladas rápidas y nutritivas como acompañamiento o plato principal."
+        descripcion:
+          "Es una combinación de diferentes tipos de lechugas y vegetales frescos y crujientes. Es ideal para preparar ensaladas rápidas y nutritivas como acompañamiento o plato principal.",
       },
       {
         id: 35,
@@ -638,7 +692,8 @@ const categorias = [
         codigo: 320,
         precio: 22.0,
         imagen: mezclaHierbasCocinarImg,
-        descripcion: "Es una combinación de hierbas frescas como perejil, cilantro, tomillo, orégano y romero. Aporta sabor y aroma a una variedad de platos como sopas, guisos, adobos y marinadas."
+        descripcion:
+          "Es una combinación de hierbas frescas como perejil, cilantro, tomillo, orégano y romero. Aporta sabor y aroma a una variedad de platos como sopas, guisos, adobos y marinadas.",
       },
       {
         id: 36,
@@ -647,7 +702,8 @@ const categorias = [
         codigo: 378,
         precio: 22.0,
         imagen: miltomateImg,
-        descripcion: "También conocido como tomate de milpa, es una variedad de tomate pequeño y redondo. Tiene un sabor dulce y ligeramente ácido, y se utiliza en ensaladas, salsas, guisos y como guarnición."
+        descripcion:
+          "También conocido como tomate de milpa, es una variedad de tomate pequeño y redondo. Tiene un sabor dulce y ligeramente ácido, y se utiliza en ensaladas, salsas, guisos y como guarnición.",
       },
       {
         id: 37,
@@ -656,7 +712,8 @@ const categorias = [
         codigo: 353,
         precio: 22.0,
         imagen: mixHortalizasSemillerosImg,
-        descripcion: "Es una combinación de semillas de diferentes hortalizas como tomate, pimiento, berenjena, calabacín y pepino. Es ideal para cultivar en semilleros y trasplantar al huerto o jardín."
+        descripcion:
+          "Es una combinación de semillas de diferentes hortalizas como tomate, pimiento, berenjena, calabacín y pepino. Es ideal para cultivar en semilleros y trasplantar al huerto o jardín.",
       },
       {
         id: 38,
@@ -665,7 +722,8 @@ const categorias = [
         codigo: 352,
         precio: 22.0,
         imagen: mixHortalizasSiembraDirectaImg,
-        descripcion: "Es una combinación de semillas de hortalizas que se siembran directamente en el suelo o en macetas. Incluye variedades como zanahoria, rábano, lechuga, espinaca y rabanito."
+        descripcion:
+          "Es una combinación de semillas de hortalizas que se siembran directamente en el suelo o en macetas. Incluye variedades como zanahoria, rábano, lechuga, espinaca y rabanito.",
       },
       {
         id: 39,
@@ -674,7 +732,8 @@ const categorias = [
         codigo: 355,
         precio: 22.0,
         imagen: mixPlantasSalsaRojaImg,
-        descripcion: "Es una combinación de hierbas y vegetales como tomate, chile, cebolla y ajo. Es ideal para preparar salsas rojas caseras para acompañar tacos, quesadillas, enchiladas y otros platillos mexicanos."
+        descripcion:
+          "Es una combinación de hierbas y vegetales como tomate, chile, cebolla y ajo. Es ideal para preparar salsas rojas caseras para acompañar tacos, quesadillas, enchiladas y otros platillos mexicanos.",
       },
       {
         id: 40,
@@ -683,7 +742,8 @@ const categorias = [
         codigo: 356,
         precio: 22.0,
         imagen: mixPlantasSalsaVerdeImg,
-        descripcion: "Es una combinación de hierbas y vegetales como tomate verde, chile, cilantro y cebolla. Es ideal para preparar salsas verdes caseras para acompañar tacos, enchiladas, quesadillas y otros platillos mexicanos."
+        descripcion:
+          "Es una combinación de hierbas y vegetales como tomate verde, chile, cilantro y cebolla. Es ideal para preparar salsas verdes caseras para acompañar tacos, enchiladas, quesadillas y otros platillos mexicanos.",
       },
       {
         id: 41,
@@ -692,7 +752,8 @@ const categorias = [
         codigo: 354,
         precio: 22.0,
         imagen: mixPlantasSalsaPicanteImg,
-        descripcion: "Es una combinación de chiles picantes como jalapeño, serrano, habanero y cayena. Es ideal para preparar salsas picantes caseras para acompañar tacos, burritos, huevos y otros platillos mexicanos."
+        descripcion:
+          "Es una combinación de chiles picantes como jalapeño, serrano, habanero y cayena. Es ideal para preparar salsas picantes caseras para acompañar tacos, burritos, huevos y otros platillos mexicanos.",
       },
       {
         id: 42,
@@ -701,7 +762,8 @@ const categorias = [
         codigo: 405,
         precio: 30.0,
         imagen: mostazaImg,
-        descripcion: "Es una planta cuyas semillas se utilizan para preparar el popular condimento de mostaza. Tiene un sabor picante y se utiliza en salsas, aderezos, marinadas y como condimento para acompañar carnes, embutidos y sándwiches."
+        descripcion:
+          "Es una planta cuyas semillas se utilizan para preparar el popular condimento de mostaza. Tiene un sabor picante y se utiliza en salsas, aderezos, marinadas y como condimento para acompañar carnes, embutidos y sándwiches.",
       },
       {
         id: 43,
@@ -710,7 +772,8 @@ const categorias = [
         codigo: 408,
         precio: 22.0,
         imagen: naboBlancoImg,
-        descripcion: "Es una raíz comestible de forma redonda u ovalada con una piel exterior morada o blanca y una carne blanca y crujiente. Se puede cocinar al vapor, hervido, asado o en guisos, y se disfruta como acompañamiento o como ingrediente en sopas, estofados y ensaladas."
+        descripcion:
+          "Es una raíz comestible de forma redonda u ovalada con una piel exterior morada o blanca y una carne blanca y crujiente. Se puede cocinar al vapor, hervido, asado o en guisos, y se disfruta como acompañamiento o como ingrediente en sopas, estofados y ensaladas.",
       },
       {
         id: 44,
@@ -719,7 +782,8 @@ const categorias = [
         codigo: 429,
         precio: 22.0,
         imagen: okraImg,
-        descripcion: "También conocida como quingombó o bamia, es una hortaliza de forma alargada y textura gelatinosa. Se utiliza en guisos, sopas, salteados y como ingrediente en platos típicos de la cocina criolla y del sur de Estados Unidos."
+        descripcion:
+          "También conocida como quingombó o bamia, es una hortaliza de forma alargada y textura gelatinosa. Se utiliza en guisos, sopas, salteados y como ingrediente en platos típicos de la cocina criolla y del sur de Estados Unidos.",
       },
       {
         id: 45,
@@ -728,7 +792,8 @@ const categorias = [
         codigo: 445,
         precio: 22.0,
         imagen: pepinoImg,
-        descripcion: "Es una hortaliza de forma alargada y piel verde con pulpa crujiente y refrescante. Se consume crudo en ensaladas, sándwiches, gazpachos y como ingrediente en bebidas refrescantes como aguas frescas y cócteles."
+        descripcion:
+          "Es una hortaliza de forma alargada y piel verde con pulpa crujiente y refrescante. Se consume crudo en ensaladas, sándwiches, gazpachos y como ingrediente en bebidas refrescantes como aguas frescas y cócteles.",
       },
       {
         id: 46,
@@ -737,7 +802,8 @@ const categorias = [
         codigo: 463,
         precio: 22.0,
         imagen: puerroImg,
-        descripcion: "Es una hortaliza de bulbo alargado y tallo cilíndrico que forma capas superpuestas. Tiene un sabor suave y aromático, y se utiliza en sopas, guisos, salteados y como ingrediente en rellenos y acompañamientos."
+        descripcion:
+          "Es una hortaliza de bulbo alargado y tallo cilíndrico que forma capas superpuestas. Tiene un sabor suave y aromático, y se utiliza en sopas, guisos, salteados y como ingrediente en rellenos y acompañamientos.",
       },
       {
         id: 47,
@@ -746,7 +812,8 @@ const categorias = [
         codigo: 466,
         precio: 22.0,
         imagen: rabanoImg,
-        descripcion: "Es una raíz comestible de forma redonda u ovalada con piel de color rojo, blanco o negro y una carne blanca y crujiente. Se consume crudo en ensaladas, rebanado como guarnición y como ingrediente en adobos y encurtidos."
+        descripcion:
+          "Es una raíz comestible de forma redonda u ovalada con piel de color rojo, blanco o negro y una carne blanca y crujiente. Se consume crudo en ensaladas, rebanado como guarnición y como ingrediente en adobos y encurtidos.",
       },
       {
         id: 48,
@@ -755,7 +822,8 @@ const categorias = [
         codigo: 470,
         precio: 22.0,
         imagen: remolachaImg,
-        descripcion: "Es una raíz comestible de forma redonda u ovalada con piel de color rojo oscuro y una carne dulce y jugosa. Se puede consumir cruda en ensaladas, cocida al vapor, asada o encurtida, y se utiliza como ingrediente en sopas, guisos y purés."
+        descripcion:
+          "Es una raíz comestible de forma redonda u ovalada con piel de color rojo oscuro y una carne dulce y jugosa. Se puede consumir cruda en ensaladas, cocida al vapor, asada o encurtida, y se utiliza como ingrediente en sopas, guisos y purés.",
       },
       {
         id: 49,
@@ -764,7 +832,8 @@ const categorias = [
         codigo: 471,
         precio: 22.0,
         imagen: repolloImg,
-        descripcion: "Es una hortaliza de hojas redondeadas y compactas que forman una cabeza. Se consume crudo en ensaladas, cocido al vapor, hervido, salteado o fermentado para hacer chucrut, y se utiliza como ingrediente en sopas, guisos y rellenos."
+        descripcion:
+          "Es una hortaliza de hojas redondeadas y compactas que forman una cabeza. Se consume crudo en ensaladas, cocido al vapor, hervido, salteado o fermentado para hacer chucrut, y se utiliza como ingrediente en sopas, guisos y rellenos.",
       },
       {
         id: 50,
@@ -773,7 +842,8 @@ const categorias = [
         codigo: 472,
         precio: 22.0,
         imagen: repolloRojoImg,
-        descripcion: "Es una variedad de repollo con hojas de color morado intenso. Tiene un sabor ligeramente dulce y crujiente. Se consume crudo en ensaladas, cocido al vapor, hervido, salteado o fermentado para hacer chucrut."
+        descripcion:
+          "Es una variedad de repollo con hojas de color morado intenso. Tiene un sabor ligeramente dulce y crujiente. Se consume crudo en ensaladas, cocido al vapor, hervido, salteado o fermentado para hacer chucrut.",
       },
       {
         id: 51,
@@ -782,7 +852,8 @@ const categorias = [
         codigo: 516,
         precio: 22.0,
         imagen: sandiaLargaImg,
-        descripcion: "Es una variedad de sandía con forma alargada y cáscara verde con rayas claras. Tiene una pulpa roja, dulce y jugosa. Se consume fresca, sola, en ensaladas de frutas, batidos y cócteles refrescantes."
+        descripcion:
+          "Es una variedad de sandía con forma alargada y cáscara verde con rayas claras. Tiene una pulpa roja, dulce y jugosa. Se consume fresca, sola, en ensaladas de frutas, batidos y cócteles refrescantes.",
       },
       {
         id: 52,
@@ -791,7 +862,8 @@ const categorias = [
         codigo: 517,
         precio: 22.0,
         imagen: sandiaRedondaImg,
-        descripcion: "Es una variedad de sandía con forma redondeada y cáscara verde con manchas claras. Tiene una pulpa roja, dulce y jugosa. Se consume fresca, sola, en ensaladas de frutas, batidos y cócteles refrescantes."
+        descripcion:
+          "Es una variedad de sandía con forma redondeada y cáscara verde con manchas claras. Tiene una pulpa roja, dulce y jugosa. Se consume fresca, sola, en ensaladas de frutas, batidos y cócteles refrescantes.",
       },
       {
         id: 53,
@@ -800,7 +872,8 @@ const categorias = [
         codigo: 582,
         precio: 22.0,
         imagen: tomateLargoImg,
-        descripcion: "Es una variedad de tomate con forma alargada y piel roja brillante. Tiene una pulpa carnosa y jugosa con un sabor ligeramente ácido. Se utiliza en ensaladas, sándwiches, salsas y como guarnición."
+        descripcion:
+          "Es una variedad de tomate con forma alargada y piel roja brillante. Tiene una pulpa carnosa y jugosa con un sabor ligeramente ácido. Se utiliza en ensaladas, sándwiches, salsas y como guarnición.",
       },
       {
         id: 54,
@@ -809,7 +882,8 @@ const categorias = [
         codigo: 583,
         precio: 22.0,
         imagen: tomateRedondoImg,
-        descripcion: "Es una variedad de tomate con forma redondeada y piel roja brillante. Tiene una pulpa jugosa y suave con un sabor dulce y ácido. Se utiliza en ensaladas, sándwiches, salsas y como guarnición."
+        descripcion:
+          "Es una variedad de tomate con forma redondeada y piel roja brillante. Tiene una pulpa jugosa y suave con un sabor dulce y ácido. Se utiliza en ensaladas, sándwiches, salsas y como guarnición.",
       },
       {
         id: 55,
@@ -818,8 +892,9 @@ const categorias = [
         codigo: 648,
         precio: 22.0,
         imagen: zanahoriaBerlicumImg,
-        descripcion: "Es una variedad de zanahoria de forma cilíndrica y piel de color naranja brillante. Tiene una pulpa crujiente y dulce. Se consume cruda en ensaladas, cocida al vapor, hervida, asada o en puré, y se utiliza como ingrediente en sopas, guisos y platos horneados."
-      }      
+        descripcion:
+          "Es una variedad de zanahoria de forma cilíndrica y piel de color naranja brillante. Tiene una pulpa crujiente y dulce. Se consume cruda en ensaladas, cocida al vapor, hervida, asada o en puré, y se utiliza como ingrediente en sopas, guisos y platos horneados.",
+      },
     ],
 
     ornamentales: [
@@ -830,7 +905,8 @@ const categorias = [
         codigo: 8,
         precio: 22.0,
         imagen: aleli,
-        descripcion: "Conocida por su fragancia dulce y su amplia gama de colores vibrantes. Se utiliza comúnmente en jardinería y arreglos florales debido a su belleza y durabilidad."
+        descripcion:
+          "Conocida por su fragancia dulce y su amplia gama de colores vibrantes. Se utiliza comúnmente en jardinería y arreglos florales debido a su belleza y durabilidad.",
       },
       {
         id: 2,
@@ -839,7 +915,8 @@ const categorias = [
         codigo: 9,
         precio: 22.0,
         imagen: antirrino,
-        descripcion: "Conocido como boca de dragón, es una flor de jardín apreciada por sus espigas de flores tubulares en forma de boca abierta. Viene en una variedad de colores brillantes y es popular en macizos de flores y borduras."
+        descripcion:
+          "Conocido como boca de dragón, es una flor de jardín apreciada por sus espigas de flores tubulares en forma de boca abierta. Viene en una variedad de colores brillantes y es popular en macizos de flores y borduras.",
       },
       {
         id: 3,
@@ -848,7 +925,8 @@ const categorias = [
         codigo: 19,
         precio: 22.0,
         imagen: cactus,
-        descripcion: "Son plantas suculentas adaptadas a entornos áridos y secos. Tienen formas y tamaños diversos, con espinas y flores llamativas. Son populares como plantas de interior y de jardín, y requieren poco mantenimiento."
+        descripcion:
+          "Son plantas suculentas adaptadas a entornos áridos y secos. Tienen formas y tamaños diversos, con espinas y flores llamativas. Son populares como plantas de interior y de jardín, y requieren poco mantenimiento.",
       },
       {
         id: 4,
@@ -857,7 +935,8 @@ const categorias = [
         codigo: 30,
         precio: 22.0,
         imagen: calendula,
-        descripcion: "Es una flor anual con brillantes cabezas de flores amarillas y naranjas. Se cultiva por su belleza ornamental, así como por sus usos medicinales y culinarios. Es fácil de cultivar y atrae a polinizadores como abejas y mariposas."
+        descripcion:
+          "Es una flor anual con brillantes cabezas de flores amarillas y naranjas. Se cultiva por su belleza ornamental, así como por sus usos medicinales y culinarios. Es fácil de cultivar y atrae a polinizadores como abejas y mariposas.",
       },
       {
         id: 5,
@@ -866,7 +945,8 @@ const categorias = [
         codigo: 31,
         precio: 22.0,
         imagen: campanula,
-        descripcion: "Es una planta perenne que produce delicadas flores en forma de campana en tonos de azul, violeta, blanco o rosa. Es ideal para borduras, macizos de flores y contenedores, y florece abundantemente durante la primavera y el verano."
+        descripcion:
+          "Es una planta perenne que produce delicadas flores en forma de campana en tonos de azul, violeta, blanco o rosa. Es ideal para borduras, macizos de flores y contenedores, y florece abundantemente durante la primavera y el verano.",
       },
       {
         id: 6,
@@ -875,7 +955,8 @@ const categorias = [
         codigo: 33,
         precio: 22.0,
         imagen: capuchina,
-        descripcion: "Es una planta anual comúnmente cultivada por sus flores brillantes y su follaje atrayente. Además de su valor ornamental, las flores y las hojas jóvenes son comestibles y se pueden agregar a ensaladas y platos para dar un toque picante."
+        descripcion:
+          "Es una planta anual comúnmente cultivada por sus flores brillantes y su follaje atrayente. Además de su valor ornamental, las flores y las hojas jóvenes son comestibles y se pueden agregar a ensaladas y platos para dar un toque picante.",
       },
       {
         id: 7,
@@ -884,7 +965,8 @@ const categorias = [
         codigo: 52,
         precio: 22.0,
         imagen: celosiaPlumosa,
-        descripcion: "Es una planta anual valorada por sus vistosas espigas de flores plumosas en tonos de rojo, naranja, amarillo y rosa. Es ideal para borduras, macizos de flores y arreglos secos, y agrega un toque exótico y llamativo al jardín."
+        descripcion:
+          "Es una planta anual valorada por sus vistosas espigas de flores plumosas en tonos de rojo, naranja, amarillo y rosa. Es ideal para borduras, macizos de flores y arreglos secos, y agrega un toque exótico y llamativo al jardín.",
       },
       {
         id: 8,
@@ -893,7 +975,8 @@ const categorias = [
         codigo: 53,
         precio: 22.0,
         imagen: centaurea,
-        descripcion: "También conocida como botón de soltero, es una planta anual apreciada por sus cabezas de flores redondas y espinosas en tonos de azul, morado, rosa y blanco. Es resistente y fácil de cultivar, y atrae a polinizadores como abejas y mariposas."
+        descripcion:
+          "También conocida como botón de soltero, es una planta anual apreciada por sus cabezas de flores redondas y espinosas en tonos de azul, morado, rosa y blanco. Es resistente y fácil de cultivar, y atrae a polinizadores como abejas y mariposas.",
       },
       {
         id: 9,
@@ -902,7 +985,8 @@ const categorias = [
         codigo: 429,
         precio: 37.0,
         imagen: cipressPiramidal,
-        descripcion: "Es un árbol ornamental de hoja perenne con una forma estrecha y cónica. Es ideal para alineaciones, bordes de jardín y como punto focal en el paisaje. Requiere poco mantenimiento y proporciona estructura y verticalidad al diseño del jardín."
+        descripcion:
+          "Es un árbol ornamental de hoja perenne con una forma estrecha y cónica. Es ideal para alineaciones, bordes de jardín y como punto focal en el paisaje. Requiere poco mantenimiento y proporciona estructura y verticalidad al diseño del jardín.",
       },
       {
         id: 10,
@@ -911,7 +995,8 @@ const categorias = [
         codigo: 72,
         precio: 22.0,
         imagen: clavelAmarillo,
-        descripcion: "Es una variedad de clavel conocida por sus flores perfumadas y de color amarillo brillante. Es una planta perenne popular en jardinería de borduras, macizos de flores y arreglos florales debido a su belleza y fragancia duradera."
+        descripcion:
+          "Es una variedad de clavel conocida por sus flores perfumadas y de color amarillo brillante. Es una planta perenne popular en jardinería de borduras, macizos de flores y arreglos florales debido a su belleza y fragancia duradera.",
       },
       {
         id: 11,
@@ -920,7 +1005,8 @@ const categorias = [
         codigo: 73,
         precio: 22.0,
         imagen: clavelBlanco,
-        descripcion: "Es una variedad de clavel apreciada por sus flores elegantes y fragantes de color blanco puro. Es una planta perenne versátil que se puede cultivar en borduras, macizos de flores, contenedores y como flor cortada en arreglos florales."
+        descripcion:
+          "Es una variedad de clavel apreciada por sus flores elegantes y fragantes de color blanco puro. Es una planta perenne versátil que se puede cultivar en borduras, macizos de flores, contenedores y como flor cortada en arreglos florales.",
       },
       {
         id: 12,
@@ -929,7 +1015,8 @@ const categorias = [
         codigo: 76,
         precio: 22.0,
         imagen: clavelMixClaro,
-        descripcion: "Es una mezcla de variedades de claveles con flores en tonos suaves y claros, como blanco, rosa pálido y amarillo crema. Es una opción encantadora para borduras, macizos de flores y arreglos florales que desean una paleta de colores delicada y elegante."
+        descripcion:
+          "Es una mezcla de variedades de claveles con flores en tonos suaves y claros, como blanco, rosa pálido y amarillo crema. Es una opción encantadora para borduras, macizos de flores y arreglos florales que desean una paleta de colores delicada y elegante.",
       },
       {
         id: 13,
@@ -938,7 +1025,8 @@ const categorias = [
         codigo: 77,
         precio: 22.0,
         imagen: clavelMixOscuro,
-        descripcion: "Es una mezcla de variedades de claveles con flores en tonos ricos y oscuros, como rojo profundo, morado y borgoña. Agrega un toque dramático y sofisticado a borduras, macizos de flores y arreglos florales."
+        descripcion:
+          "Es una mezcla de variedades de claveles con flores en tonos ricos y oscuros, como rojo profundo, morado y borgoña. Agrega un toque dramático y sofisticado a borduras, macizos de flores y arreglos florales.",
       },
       {
         id: 14,
@@ -947,7 +1035,8 @@ const categorias = [
         codigo: 78,
         precio: 22.0,
         imagen: clavelRojo,
-        descripcion: "Es una variedad de clavel conocida por sus flores de color rojo intenso y su fragancia embriagadora. Es una planta perenne popular en jardinería de borduras, macizos de flores y arreglos florales debido a su belleza y durabilidad."
+        descripcion:
+          "Es una variedad de clavel conocida por sus flores de color rojo intenso y su fragancia embriagadora. Es una planta perenne popular en jardinería de borduras, macizos de flores y arreglos florales debido a su belleza y durabilidad.",
       },
       {
         id: 15,
@@ -956,7 +1045,8 @@ const categorias = [
         codigo: 83,
         precio: 22.0,
         imagen: coleusVariados,
-        descripcion: "Es una planta tropical conocida por sus llamativas hojas en una variedad de colores y patrones. Es popular como planta de interior y de jardín, y es apreciada por su fácil cuidado y su capacidad para agregar color y textura a los espacios."
+        descripcion:
+          "Es una planta tropical conocida por sus llamativas hojas en una variedad de colores y patrones. Es popular como planta de interior y de jardín, y es apreciada por su fácil cuidado y su capacidad para agregar color y textura a los espacios.",
       },
       {
         id: 16,
@@ -965,7 +1055,8 @@ const categorias = [
         codigo: 91,
         precio: 22.0,
         imagen: cosmosVariados,
-        descripcion: "Flores anuales conocidas por sus delicadas flores en forma de margarita en una variedad de colores, como blanco, rosa, rojo y morado. Son fáciles de cultivar, atraen a polinizadores como abejas y mariposas, y son excelentes para borduras, macizos de flores y arreglos de jardín."
+        descripcion:
+          "Flores anuales conocidas por sus delicadas flores en forma de margarita en una variedad de colores, como blanco, rosa, rojo y morado. Son fáciles de cultivar, atraen a polinizadores como abejas y mariposas, y son excelentes para borduras, macizos de flores y arreglos de jardín.",
       },
       {
         id: 17,
@@ -974,7 +1065,8 @@ const categorias = [
         codigo: 92,
         precio: 22.0,
         imagen: crisantemo,
-        descripcion: "Flores perennes valoradas por sus llamativas cabezas de flores en forma de pompón en una variedad de colores y tamaños. Son populares en arreglos florales y como plantas de jardín, y florecen abundantemente en otoño."
+        descripcion:
+          "Flores perennes valoradas por sus llamativas cabezas de flores en forma de pompón en una variedad de colores y tamaños. Son populares en arreglos florales y como plantas de jardín, y florecen abundantemente en otoño.",
       },
       {
         id: 18,
@@ -983,7 +1075,8 @@ const categorias = [
         codigo: 93,
         precio: 22.0,
         imagen: delphinium,
-        descripcion: "Flor perenne conocida por sus altas espigas de flores en forma de racimo en tonos de azul, púrpura, rosa y blanco. Es una planta impresionante en el jardín de borduras y macizos de flores, y agrega una verticalidad elegante al paisaje."
+        descripcion:
+          "Flor perenne conocida por sus altas espigas de flores en forma de racimo en tonos de azul, púrpura, rosa y blanco. Es una planta impresionante en el jardín de borduras y macizos de flores, y agrega una verticalidad elegante al paisaje.",
       },
       {
         id: 19,
@@ -992,7 +1085,8 @@ const categorias = [
         codigo: 94,
         precio: 22.0,
         imagen: digital,
-        descripcion: "Plantas perennes apreciadas por sus altas espigas de flores tubulares en tonos de rosa, blanco, morado y amarillo. Son populares en jardines de estilo cottage y como plantas de fondo en borduras y macizos de flores."
+        descripcion:
+          "Plantas perennes apreciadas por sus altas espigas de flores tubulares en tonos de rosa, blanco, morado y amarillo. Son populares en jardines de estilo cottage y como plantas de fondo en borduras y macizos de flores.",
       },
       {
         id: 20,
@@ -1001,7 +1095,8 @@ const categorias = [
         codigo: 105,
         precio: 22.0,
         imagen: estaticeAmarillo,
-        descripcion: "Es una variedad de flor seca conocida por sus cabezas de flores en tonos vibrantes de amarillo. Se usa comúnmente en ramos secos y arreglos florales para dar color y textura duraderos."
+        descripcion:
+          "Es una variedad de flor seca conocida por sus cabezas de flores en tonos vibrantes de amarillo. Se usa comúnmente en ramos secos y arreglos florales para dar color y textura duraderos.",
       },
       {
         id: 21,
@@ -1010,7 +1105,8 @@ const categorias = [
         codigo: 108,
         precio: 22.0,
         imagen: estaticeAzul,
-        descripcion: "Es una variedad de flor seca apreciada por sus cabezas de flores en tonos de azul profundo. Es popular en ramos secos y arreglos florales para agregar un toque de color único y duradero."
+        descripcion:
+          "Es una variedad de flor seca apreciada por sus cabezas de flores en tonos de azul profundo. Es popular en ramos secos y arreglos florales para agregar un toque de color único y duradero.",
       },
       {
         id: 22,
@@ -1019,7 +1115,8 @@ const categorias = [
         codigo: 111,
         precio: 22.0,
         imagen: estaticeBlanco,
-        descripcion: "Es una variedad de flor seca conocida por sus cabezas de flores en tonos de blanco puro. Es una opción elegante y atemporal en ramos secos y arreglos florales que desean una estética clásica."
+        descripcion:
+          "Es una variedad de flor seca conocida por sus cabezas de flores en tonos de blanco puro. Es una opción elegante y atemporal en ramos secos y arreglos florales que desean una estética clásica.",
       },
       {
         id: 23,
@@ -1028,7 +1125,8 @@ const categorias = [
         codigo: 114,
         precio: 22.0,
         imagen: estaticeMix,
-        descripcion: "Es una mezcla de variedades de flores secas en una variedad de colores, como amarillo, azul, blanco y rosa. Es perfecto para ramos secos y arreglos florales que desean una paleta de colores diversa y vibrante."
+        descripcion:
+          "Es una mezcla de variedades de flores secas en una variedad de colores, como amarillo, azul, blanco y rosa. Es perfecto para ramos secos y arreglos florales que desean una paleta de colores diversa y vibrante.",
       },
       {
         id: 24,
@@ -1037,7 +1135,8 @@ const categorias = [
         codigo: 120,
         precio: 22.0,
         imagen: estaticeRojo,
-        descripcion: "Es una variedad de flor seca conocida por sus cabezas de flores en tonos de rojo intenso. Aporta un toque de pasión y calidez a ramos secos y arreglos florales, y es perfecto para ocasiones especiales."
+        descripcion:
+          "Es una variedad de flor seca conocida por sus cabezas de flores en tonos de rojo intenso. Aporta un toque de pasión y calidez a ramos secos y arreglos florales, y es perfecto para ocasiones especiales.",
       },
       {
         id: 25,
@@ -1046,7 +1145,8 @@ const categorias = [
         codigo: 126,
         precio: 37.0,
         imagen: estrelicia,
-        descripcion: "También conocida como flor del pájaro del paraíso, es una planta perenne tropical famosa por sus impresionantes flores en forma de pájaro en tonos de naranja y azul. Es una planta llamativa en jardines tropicales y se utiliza a menudo en arreglos florales exóticos."
+        descripcion:
+          "También conocida como flor del pájaro del paraíso, es una planta perenne tropical famosa por sus impresionantes flores en forma de pájaro en tonos de naranja y azul. Es una planta llamativa en jardines tropicales y se utiliza a menudo en arreglos florales exóticos.",
       },
       {
         id: 26,
@@ -1055,7 +1155,8 @@ const categorias = [
         codigo: 127,
         precio: 22.0,
         imagen: floresAnuales,
-        descripcion: "Son plantas que completan su ciclo de vida en un año. Vienen en una amplia variedad de colores y formas y son perfectas para llenar espacios vacíos en el jardín, borduras y macizos de flores, agregando un estallido de color durante toda la temporada de crecimiento."
+        descripcion:
+          "Son plantas que completan su ciclo de vida en un año. Vienen en una amplia variedad de colores y formas y son perfectas para llenar espacios vacíos en el jardín, borduras y macizos de flores, agregando un estallido de color durante toda la temporada de crecimiento.",
       },
       {
         id: 27,
@@ -1064,7 +1165,8 @@ const categorias = [
         codigo: 128,
         precio: 22.0,
         imagen: flox,
-        descripcion: "Es una planta perenne conocida por sus racimos de flores en forma de estrella en una variedad de colores, como rosa, blanco y púrpura. Es popular en jardines de cottage y de estilo tradicional, y atrae a mariposas y abejas con su fragancia dulce."
+        descripcion:
+          "Es una planta perenne conocida por sus racimos de flores en forma de estrella en una variedad de colores, como rosa, blanco y púrpura. Es popular en jardines de cottage y de estilo tradicional, y atrae a mariposas y abejas con su fragancia dulce.",
       },
       {
         id: 28,
@@ -1073,7 +1175,8 @@ const categorias = [
         codigo: 131,
         precio: 37.0,
         imagen: gerbera,
-        descripcion: "Es una planta perenne conocida por sus brillantes y alegres flores en una amplia variedad de colores, como rojo, naranja, amarillo, rosa y blanco. Es una planta popular en jardinería de contenedores y en arreglos florales debido a su larga floración y colores vibrantes."
+        descripcion:
+          "Es una planta perenne conocida por sus brillantes y alegres flores en una amplia variedad de colores, como rojo, naranja, amarillo, rosa y blanco. Es una planta popular en jardinería de contenedores y en arreglos florales debido a su larga floración y colores vibrantes.",
       },
       {
         id: 29,
@@ -1082,7 +1185,8 @@ const categorias = [
         codigo: 132,
         precio: 22.0,
         imagen: gipsophilia,
-        descripcion: "Conocida como aliento de bebé, es una planta perenne conocida por sus delicadas flores blancas y rosadas y su follaje fino y esponjoso. Es popular en arreglos florales como relleno para agregar volumen y suavidad."
+        descripcion:
+          "Conocida como aliento de bebé, es una planta perenne conocida por sus delicadas flores blancas y rosadas y su follaje fino y esponjoso. Es popular en arreglos florales como relleno para agregar volumen y suavidad.",
       },
       {
         id: 30,
@@ -1091,7 +1195,8 @@ const categorias = [
         codigo: 142,
         precio: 22.0,
         imagen: girasol,
-        descripcion: "Es una planta anual conocida por sus impresionantes flores en forma de disco con pétalos amarillos brillantes y un centro oscuro. Es popular en jardines de verano y como flor cortada en arreglos florales, y sigue el movimiento del sol durante el día."
+        descripcion:
+          "Es una planta anual conocida por sus impresionantes flores en forma de disco con pétalos amarillos brillantes y un centro oscuro. Es popular en jardines de verano y como flor cortada en arreglos florales, y sigue el movimiento del sol durante el día.",
       },
       {
         id: 31,
@@ -1100,7 +1205,8 @@ const categorias = [
         codigo: 143,
         precio: 22.0,
         imagen: girasolDeCentro,
-        descripcion: "Conocido por su robusto tallo y su gran cabeza floral, este girasol es una adición impresionante a cualquier jardín. Sus pétalos amarillos brillantes rodean un centro oscuro, atrayendo la atención de humanos y polinizadores por igual."
+        descripcion:
+          "Conocido por su robusto tallo y su gran cabeza floral, este girasol es una adición impresionante a cualquier jardín. Sus pétalos amarillos brillantes rodean un centro oscuro, atrayendo la atención de humanos y polinizadores por igual.",
       },
       {
         id: 32,
@@ -1109,7 +1215,8 @@ const categorias = [
         codigo: 151,
         precio: 22.0,
         imagen: guisantesDeOlor,
-        descripcion: "Estas flores encantadoras no solo son hermosas a la vista, sino que también emiten un aroma dulce y delicado. Los guisantes de olor son ideales para agregar color y fragancia a cualquier jardín o arreglo floral."
+        descripcion:
+          "Estas flores encantadoras no solo son hermosas a la vista, sino que también emiten un aroma dulce y delicado. Los guisantes de olor son ideales para agregar color y fragancia a cualquier jardín o arreglo floral.",
       },
       {
         id: 33,
@@ -1118,7 +1225,8 @@ const categorias = [
         codigo: 164,
         precio: 22.0,
         imagen: ipomeaV,
-        descripcion: "Conocida por sus vistosas flores en forma de trompeta, la Ipomea V es una planta trepadora vigorosa. Sus flores vienen en una variedad de colores y son excelentes para cubrir pérgolas, enrejados y cercas."
+        descripcion:
+          "Conocida por sus vistosas flores en forma de trompeta, la Ipomea V es una planta trepadora vigorosa. Sus flores vienen en una variedad de colores y son excelentes para cubrir pérgolas, enrejados y cercas.",
       },
       {
         id: 34,
@@ -1127,7 +1235,8 @@ const categorias = [
         codigo: 180,
         precio: 22.0,
         imagen: margaritaBotoncitos,
-        descripcion: "Estas pequeñas margaritas, con sus delicados pétalos blancos y amarillos, añaden un encanto pintoresco a cualquier jardín o arreglo floral. Son perfectas para borduras, macetas y cestas colgantes."
+        descripcion:
+          "Estas pequeñas margaritas, con sus delicados pétalos blancos y amarillos, añaden un encanto pintoresco a cualquier jardín o arreglo floral. Son perfectas para borduras, macetas y cestas colgantes.",
       },
       {
         id: 35,
@@ -1136,7 +1245,8 @@ const categorias = [
         codigo: 181,
         precio: 22.0,
         imagen: margaritaGigante,
-        descripcion: "Con sus flores de gran tamaño y sus tallos altos y robustos, esta variedad de margaritas es una declaración audaz en el jardín. Las margaritas gigantes son ideales para crear impactantes arreglos florales y borduras llamativas."
+        descripcion:
+          "Con sus flores de gran tamaño y sus tallos altos y robustos, esta variedad de margaritas es una declaración audaz en el jardín. Las margaritas gigantes son ideales para crear impactantes arreglos florales y borduras llamativas.",
       },
       {
         id: 36,
@@ -1145,7 +1255,8 @@ const categorias = [
         codigo: 190,
         precio: 22.0,
         imagen: miosotisDeLosAlpes,
-        descripcion: "Las flores azules brillantes de los Miosotis de los Alpes añaden un toque de frescura y serenidad a cualquier espacio. Estas plantas compactas son perfectas para borduras, macizos de flores y contenedores."
+        descripcion:
+          "Las flores azules brillantes de los Miosotis de los Alpes añaden un toque de frescura y serenidad a cualquier espacio. Estas plantas compactas son perfectas para borduras, macizos de flores y contenedores.",
       },
       {
         id: 37,
@@ -1154,7 +1265,8 @@ const categorias = [
         codigo: 191,
         precio: 22.0,
         imagen: miramelindo,
-        descripcion: "Conocido por su follaje suave y sus flores en forma de embudo, el miramelindo es una adición encantadora a cualquier jardín. Sus flores vienen en una variedad de colores y son populares entre polinizadores como mariposas y abejas."
+        descripcion:
+          "Conocido por su follaje suave y sus flores en forma de embudo, el miramelindo es una adición encantadora a cualquier jardín. Sus flores vienen en una variedad de colores y son populares entre polinizadores como mariposas y abejas.",
       },
       {
         id: 38,
@@ -1163,7 +1275,8 @@ const categorias = [
         codigo: 406,
         precio: 37.0,
         imagen: mezclaDeFloresParaAbejas,
-        descripcion: "Está diseñado para atraer y beneficiar a insectos polinizadores como abejas, mariposas y avispas. Con una variedad de colores y formas, estas flores no solo embellecen el jardín, sino que también promueven la biodiversidad y la salud del ecosistema."
+        descripcion:
+          "Está diseñado para atraer y beneficiar a insectos polinizadores como abejas, mariposas y avispas. Con una variedad de colores y formas, estas flores no solo embellecen el jardín, sino que también promueven la biodiversidad y la salud del ecosistema.",
       },
       {
         id: 39,
@@ -1172,7 +1285,8 @@ const categorias = [
         codigo: 196,
         precio: 22.0,
         imagen: pensamientoAmarillo,
-        descripcion: "Son símbolos de alegría y optimismo. Con sus vibrantes flores amarillas y su resistencia al frío, son una opción popular para jardines de invierno, macetas y borduras."
+        descripcion:
+          "Son símbolos de alegría y optimismo. Con sus vibrantes flores amarillas y su resistencia al frío, son una opción popular para jardines de invierno, macetas y borduras.",
       },
       {
         id: 40,
@@ -1181,7 +1295,8 @@ const categorias = [
         codigo: 197,
         precio: 22.0,
         imagen: pensamientoAzul,
-        descripcion: "Son una elección encantadora para agregar un toque de frescura y serenidad al jardín. Con sus flores de color azul claro y su capacidad para florecer incluso en climas frescos, son una opción popular entre los jardineros."
+        descripcion:
+          "Son una elección encantadora para agregar un toque de frescura y serenidad al jardín. Con sus flores de color azul claro y su capacidad para florecer incluso en climas frescos, son una opción popular entre los jardineros.",
       },
       {
         id: 41,
@@ -1190,7 +1305,8 @@ const categorias = [
         codigo: 200,
         precio: 22.0,
         imagen: pensamientoMix,
-        descripcion: "Este mix de pensamientos ofrece una variedad de colores para añadir un estallido de color al jardín. Con tonos que van desde el blanco puro hasta el morado profundo, estos pensamientos son versátiles y fáciles de cultivar."
+        descripcion:
+          "Este mix de pensamientos ofrece una variedad de colores para añadir un estallido de color al jardín. Con tonos que van desde el blanco puro hasta el morado profundo, estos pensamientos son versátiles y fáciles de cultivar.",
       },
       {
         id: 42,
@@ -1199,7 +1315,8 @@ const categorias = [
         codigo: 212,
         precio: 22.0,
         imagen: petuniaColgante,
-        descripcion: "Son ideales para crear cestas colgantes y macetas desbordantes de flores. Con su hábito de crecimiento cascada, añaden un toque de elegancia y color a cualquier espacio al aire libre."
+        descripcion:
+          "Son ideales para crear cestas colgantes y macetas desbordantes de flores. Con su hábito de crecimiento cascada, añaden un toque de elegancia y color a cualquier espacio al aire libre.",
       },
       {
         id: 43,
@@ -1208,7 +1325,8 @@ const categorias = [
         codigo: 213,
         precio: 37.0,
         imagen: petuniaGrande,
-        descripcion: "Son una opción impresionante para macizos de flores y borduras. Con sus flores de gran tamaño y su amplia gama de colores, estas plantas perennes añaden un impacto visual inmediato al jardín."
+        descripcion:
+          "Son una opción impresionante para macizos de flores y borduras. Con sus flores de gran tamaño y su amplia gama de colores, estas plantas perennes añaden un impacto visual inmediato al jardín.",
       },
       {
         id: 44,
@@ -1217,7 +1335,8 @@ const categorias = [
         codigo: 214,
         precio: 22.0,
         imagen: petuniaGrandiflora,
-        descripcion: "Son conocidas por sus flores grandes y vistosas en una amplia variedad de colores. Son perfectas para macizos de flores, borduras y contenedores, añadiendo un estallido de color durante toda la temporada."
+        descripcion:
+          "Son conocidas por sus flores grandes y vistosas en una amplia variedad de colores. Son perfectas para macizos de flores, borduras y contenedores, añadiendo un estallido de color durante toda la temporada.",
       },
       {
         id: 45,
@@ -1226,8 +1345,9 @@ const categorias = [
         codigo: 221,
         precio: 22.0,
         imagen: pimientoOrnamental,
-        descripcion: "No solo son hermosos a la vista, sino que también añaden un toque de sabor picante al jardín. Sus frutos de colores brillantes son ideales para añadir interés visual a parterres y macetas."
-      },      
+        descripcion:
+          "No solo son hermosos a la vista, sino que también añaden un toque de sabor picante al jardín. Sus frutos de colores brillantes son ideales para añadir interés visual a parterres y macetas.",
+      },
       {
         id: 46,
         producto: "Reina Marg. Belleza",
@@ -1235,7 +1355,8 @@ const categorias = [
         codigo: 243,
         precio: 22.0,
         imagen: reinaMargaritaBelleza,
-        descripcion: "Es una variedad de margarita conocida por sus grandes y vistosas flores. Con pétalos de colores brillantes y un centro llamativo, es una elección impresionante para agregar color y alegría al jardín."
+        descripcion:
+          "Es una variedad de margarita conocida por sus grandes y vistosas flores. Con pétalos de colores brillantes y un centro llamativo, es una elección impresionante para agregar color y alegría al jardín.",
       },
       {
         id: 47,
@@ -1244,7 +1365,8 @@ const categorias = [
         codigo: 241,
         precio: 22.0,
         imagen: reinaMargaritaMix,
-        descripcion: "Ofrece una variedad de colores y formas en estas hermosas flores. Desde tonos suaves hasta colores vibrantes, este mix es perfecto para crear arreglos florales llamativos y borduras encantadoras."
+        descripcion:
+          "Ofrece una variedad de colores y formas en estas hermosas flores. Desde tonos suaves hasta colores vibrantes, este mix es perfecto para crear arreglos florales llamativos y borduras encantadoras.",
       },
       {
         id: 48,
@@ -1253,7 +1375,8 @@ const categorias = [
         codigo: 270,
         precio: 22.0,
         imagen: siempreviva,
-        descripcion: "Es una planta resistente y duradera que agrega textura y color al jardín. Sus flores de aspecto único son ideales para arreglos secos y decoraciones de temporada."
+        descripcion:
+          "Es una planta resistente y duradera que agrega textura y color al jardín. Sus flores de aspecto único son ideales para arreglos secos y decoraciones de temporada.",
       },
       {
         id: 49,
@@ -1262,7 +1385,8 @@ const categorias = [
         codigo: 278,
         precio: 37.0,
         imagen: thuja,
-        descripcion: "También conocida como ciprés, es un árbol ornamental popular por su follaje denso y su forma cónica. Es ideal para setos, bordes y como punto focal en el paisajismo."
+        descripcion:
+          "También conocida como ciprés, es un árbol ornamental popular por su follaje denso y su forma cónica. Es ideal para setos, bordes y como punto focal en el paisajismo.",
       },
       {
         id: 50,
@@ -1271,7 +1395,8 @@ const categorias = [
         codigo: 297,
         precio: 22.0,
         imagen: verdolaga,
-        descripcion: "Es una planta suculenta de bajo mantenimiento con flores brillantes y follaje jugoso. Es perfecta para macetas colgantes, borduras y jardines de rocas."
+        descripcion:
+          "Es una planta suculenta de bajo mantenimiento con flores brillantes y follaje jugoso. Es perfecta para macetas colgantes, borduras y jardines de rocas.",
       },
       {
         id: 51,
@@ -1280,7 +1405,8 @@ const categorias = [
         codigo: 304,
         precio: 22.0,
         imagen: violeta,
-        descripcion: "Son plantas compactas y perennes conocidas por sus flores delicadas y fragantes. Son ideales para borduras, macetas y como plantas de interior."
+        descripcion:
+          "Son plantas compactas y perennes conocidas por sus flores delicadas y fragantes. Son ideales para borduras, macetas y como plantas de interior.",
       },
       {
         id: 52,
@@ -1289,9 +1415,9 @@ const categorias = [
         codigo: 310,
         precio: 22.0,
         imagen: zinnia,
-        descripcion: "Son flores anuales vibrantes y fáciles de cultivar. Con una amplia gama de colores y formas, son una adición alegre y colorida a cualquier jardín o arreglo floral."
-      }
-      
+        descripcion:
+          "Son flores anuales vibrantes y fáciles de cultivar. Con una amplia gama de colores y formas, son una adición alegre y colorida a cualquier jardín o arreglo floral.",
+      },
     ],
 
     sustratos: [
@@ -1302,7 +1428,8 @@ const categorias = [
         codigo: 339,
         precio: 35.0,
         imagen: sustratoGerminarSemillas,
-        descripcion: "Proporciona las condiciones ideales para la germinación de semillas. Una textura fina y ligera, promueve un buen drenaje y una aireación adecuada para facilitar el crecimiento de las plántulas."
+        descripcion:
+          "Proporciona las condiciones ideales para la germinación de semillas. Una textura fina y ligera, promueve un buen drenaje y una aireación adecuada para facilitar el crecimiento de las plántulas.",
       },
       {
         id: 2,
@@ -1311,7 +1438,8 @@ const categorias = [
         codigo: 375,
         precio: 30.0,
         imagen: sustratoCactus,
-        descripcion: "Este sustrato proporciona un ambiente bien drenado y ligeramente ácido que imita las condiciones naturales de crecimiento de estas plantas. Ayuda a prevenir el encharcamiento y la pudrición de las raíces."
+        descripcion:
+          "Este sustrato proporciona un ambiente bien drenado y ligeramente ácido que imita las condiciones naturales de crecimiento de estas plantas. Ayuda a prevenir el encharcamiento y la pudrición de las raíces.",
       },
       {
         id: 3,
@@ -1320,7 +1448,8 @@ const categorias = [
         codigo: 436,
         precio: 6.0,
         imagen: sustratoCactusBolsaPequena,
-        descripcion: "Perfecta para trasplantar o para el cuidado de cactus pequeños en macetas. Proporciona los mismos beneficios de drenaje y aireación que la versión estándar."
+        descripcion:
+          "Perfecta para trasplantar o para el cuidado de cactus pequeños en macetas. Proporciona los mismos beneficios de drenaje y aireación que la versión estándar.",
       },
       {
         id: 4,
@@ -1329,7 +1458,8 @@ const categorias = [
         codigo: 376,
         precio: 35.0,
         imagen: sustratoOrquideas,
-        descripcion: "Proporciona una estructura suelta que permite un drenaje rápido, así como una buena retención de humedad. Ayuda a mantener las raíces sanas y permite un crecimiento óptimo de las orquídeas."
+        descripcion:
+          "Proporciona una estructura suelta que permite un drenaje rápido, así como una buena retención de humedad. Ayuda a mantener las raíces sanas y permite un crecimiento óptimo de las orquídeas.",
       },
       {
         id: 5,
@@ -1338,7 +1468,8 @@ const categorias = [
         codigo: 405,
         precio: 6.0,
         imagen: sustratoOrquideasBolsaPequena,
-        descripcion: "Ideal para trasplantar o para el cuidado de orquídeas en macetas más pequeñas. Ofrece los mismos beneficios de drenaje y retención de humedad que la versión estándar."
+        descripcion:
+          "Ideal para trasplantar o para el cuidado de orquídeas en macetas más pequeñas. Ofrece los mismos beneficios de drenaje y retención de humedad que la versión estándar.",
       },
       {
         id: 6,
@@ -1347,7 +1478,8 @@ const categorias = [
         codigo: 391,
         precio: 50.0,
         imagen: sustratoBocashi,
-        descripcion: "Es un abono orgánico fermentado. Promueve la salud del suelo y aumenta la fertilidad, lo que resulta en un crecimiento vigoroso y cosechas abundantes."
+        descripcion:
+          "Es un abono orgánico fermentado. Promueve la salud del suelo y aumenta la fertilidad, lo que resulta en un crecimiento vigoroso y cosechas abundantes.",
       },
       {
         id: 7,
@@ -1356,8 +1488,9 @@ const categorias = [
         codigo: 415,
         precio: 25.0,
         imagen: gravaOrnamentalFina,
-        descripcion: "Perfecto para decorar macetas y jardines de interior. Agrega un toque decorativo y ayuda a mantener la humedad del suelo. También es ideal para proyectos de paisajismo y diseño de jardines."
-      }      
+        descripcion:
+          "Perfecto para decorar macetas y jardines de interior. Agrega un toque decorativo y ayuda a mantener la humedad del suelo. También es ideal para proyectos de paisajismo y diseño de jardines.",
+      },
     ],
   },
 ];
