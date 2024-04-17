@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import { Button } from "@nextui-org/react";
+import { ShoppingCartContext } from "../ShoppingCartContext";
 
 const ProductCard = ({ product, openModal }) => {
   const handleClick = () => {
     openModal(product);
   };
+
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const { addToCart } = useContext(ShoppingCartContext);
+
+  const handleAddToCart = (selectedProduct) => {
+    addToCart(selectedProduct);
+  };
+
   return (
     <div
       className="bg-white rounded-xl px-2  hover:scale-105  duration-500 ease-in-out mb-3 max-w-[240px] max-h-[434px]"
@@ -26,6 +35,7 @@ const ProductCard = ({ product, openModal }) => {
         color="warning"
         variant="ghost"
         className="flex content-center mx-auto hover:scale-105  duration-500 ease-in-out mb-3 "
+        onClick={() => handleAddToCart(product)}
       >
         Agregar al carrito
       </Button>

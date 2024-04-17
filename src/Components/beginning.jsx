@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Button } from "@nextui-org/react";
 import searchIcon from "/search.svg";
 import categorias from "../scripts/products";
-import "../App.css"
+import { Link } from "react-router-dom";
+import "../App.css";
 
 export default function Beginning() {
   const [inputValue, setInputValue] = useState("");
@@ -12,7 +13,7 @@ export default function Beginning() {
     const value = e.target.value;
     setInputValue(value);
 
-    if (value === "") {
+    if (value.length < 2) {
       setSearchResults([]);
       return;
     }
@@ -22,7 +23,7 @@ export default function Beginning() {
         productos.filter(
           (producto) =>
             producto.producto &&
-            producto.producto.toLowerCase().includes(value.toLowerCase())
+            producto.producto.toLowerCase().startsWith(value.toLowerCase())
         )
       )
     );
@@ -54,7 +55,8 @@ export default function Beginning() {
             color="success"
             className="bg-green-100 h-full hover:bg-green-200 transition-[5s] hover:scale-110 duration-300 ease-in-out rounded-[10px] py-[13px] px-6 text-gray-500"
           >
-            Buscar
+            <Link to="/pages" onClick={() => handleResultClick(searchResults[0])}>Buscar</Link>
+            
           </Button>
         </div>
 
@@ -62,16 +64,18 @@ export default function Beginning() {
           <div className="resultados-container md:max-h-[200px] max-md:h-[210px] lg:max-h-[225px] max-sm:w-[100%] md:w-[95%] lg:w-[72%] xl:w-[59%] max-sm:max-h-[205px] mt-3 overflow-y-auto overflow-x-auto flex flex-wrap justify-around bg-white p-3 px-8 gap-8 rounded-lg max-w-[640px] shadow-lg transition duration-300 hover:shadow-xl ">
             {searchResults.map((producto) => (
               <div
-              key={producto.id}
-              onClick={() => handleResultClick(producto)}
-              className="resultado-item flex-shrink-0 cursor-pointer rounded-lg hover:border hover:border-[#67d4768e] hover:shadow-xl hover:shadow-[#67d4768e] hover:shadow-right hover:shadow-bottom shadow-none"
-            >
+                key={producto.id}
+                onClick={() => handleResultClick(producto)}
+                className="resultado-item flex-shrink-0 cursor-pointer rounded-lg hover:border hover:border-[#67d4768e] hover:shadow-xl hover:shadow-[#67d4768e] hover:shadow-right hover:shadow-bottom shadow-none"
+              >
                 <img
                   className="w-28 h-28 border rounded-lg"
                   src={producto.imagen}
                   alt={producto.producto}
                 />
-                <p className="m-0 w-28 text-pretty text-center">{producto.producto}</p>
+                <p className="m-0 w-28 text-pretty text-center">
+                  {producto.producto}
+                </p>
               </div>
             ))}
           </div>
