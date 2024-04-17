@@ -12,14 +12,7 @@ export const RedesSociales = () => {
             target="_blank"
             className="block"
           >
-            <div
-              className="group relative transition-all bg-[#4460A0] hover:bg-[#4460A0] hover:w-[140px] w-12 h-10 flex items-center justify-center
-
-hover:max-md:rounded-l-md
-hover:md:rounded-r-md
-hover:sm-rounded-l-md
-"
-            >
+            <div className="group relative transition-all bg-[#4460A0] hover:bg-[#4460A0] hover:w-[140px] w-12 h-10 flex items-center justify-center hover:max-md:rounded-l-md hover:md:rounded-r-md hover:sm-rounded-l-md">
               <span className="text-[0px] group-hover:text-[12px] group-hover:text-white pl-2 max-sm:pr-2 md:hidden ms:hidden max-sm:block  sm:pl-2 max-md:block sm:pr-2">
                 FACEBOOK
               </span>
