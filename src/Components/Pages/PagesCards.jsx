@@ -38,10 +38,7 @@ const PagesCards = () => {
   } = useContext(ShoppingCartContext);
 
   const handleAddToCart = () => {
-    /*  console.log(
-      "aqui estoy:",
-      selectedProductCart
-    ); */
+    console.log("aqui estoy:", selectedProductCart);
     addToCart(selectedProductCart);
     closeModal();
   };
