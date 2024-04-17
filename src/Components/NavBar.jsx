@@ -18,13 +18,20 @@ export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { cartItems, addToCart } = useContext(ShoppingCartContext);
   const [carBuy, setCarBuy] = useState(false);
-  const [quantity, setQuantity] = useState(1);
-
+  const [productQuantities, setProductQuantities] = useState({});
   const cartRef = useRef(null);
 
   const toggleCar = () => {
     setCarBuy(!carBuy);
   };
+
+  useEffect(() => {
+    const quantities = {};
+    cartItems.forEach((item) => {
+      quantities[item.id] = item.quantity;
+    });
+    setProductQuantities(quantities);
+  }, [cartItems]);
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -39,25 +46,13 @@ export default function NavBar() {
     };
   }, []);
 
-  const increaseQuantity = () => {
-    setQuantity((prevQuantity) => prevQuantity + 1);
-  };
-
-  const decreaseQuantity = () => {
-    if (quantity > 1) {
-      setQuantity((prevQuantity) => prevQuantity - 1);
-    }
-  };
-
-  const handleQuantityChange = (event) => {
-    const value = parseInt(event.target.value);
-    if (!isNaN(value) && value >= 1) {
-      setQuantity(value);
-    }
-  };
-
-  const handleButtonClick = (event) => {
-    event.stopPropagation();
+  const decreaseQuantity = (productId) => {
+    const currentQuantity = productQuantities[productId] || 1;
+    const newQuantity = Math.max(currentQuantity - 1, 1);
+    setProductQuantities((prevQuantities) => ({
+      ...prevQuantities,
+      [productId]: newQuantity,
+    }));
   };
 
   return (
@@ -141,24 +136,29 @@ export default function NavBar() {
 
                       <div className="flex flex-row items-center justify-center">
                         <button
-                          onClick={() => {
-                            decreaseQuantity();
-                            handleButtonClick();
-                          }}
+                          onClick={() => decreaseQuantity(item.id)}
                           className="px-2 py-1 rounded-md bg-gray-200"
                         >
                           -
                         </button>
                         <input
                           type="number"
-                          value={quantity}
-                          onChange={handleQuantityChange}
+                          value={productQuantities[item.id] || 1}
+                          onChange={(e) => {
+                            const value = parseInt(e.target.value);
+                            setProductQuantities((prevQuantities) => ({
+                              ...prevQuantities,
+                              [item.id]: value,
+                            }));
+                          }}
                           className="w-10 text-center"
                         />
                         <button
                           onClick={() => {
-                            increaseQuantity();
-                            handleButtonClick();
+                            setProductQuantities((prevQuantities) => ({
+                              ...prevQuantities,
+                              [item.id]: (prevQuantities[item.id] || 1) + 1,
+                            }));
                           }}
                           className="px-2 py-1 rounded-md bg-gray-200"
                         >
@@ -168,7 +168,7 @@ export default function NavBar() {
                       <span>
                         Precio:
                         <span className="font-bold">
-                          {item.precio * quantity}
+                          {item.precio * (productQuantities[item.id] || 1)}
                         </span>
                       </span>
                     </div>
