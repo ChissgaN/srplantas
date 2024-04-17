@@ -39,7 +39,24 @@ const PagesCards = () => {
 
   const handleAddToCart = () => {
     console.log("aqui estoy:", selectedProductCart);
-    addToCart(selectedProductCart);
+    const existingProductIndex = cartItems.findIndex(
+      (item) => item.id === selectedProductCart.id
+    );
+
+    if (existingProductIndex !== -1) {
+      const updatedCartItems = cartItems.map((item, index) => {
+        if (index === existingProductIndex) {
+          return {
+            ...item,
+            quantity: item.quantity + selectedProductCart.quantity,
+          };
+        }
+        return item;
+      });
+      setCartItems(updatedCartItems);
+    } else {
+      addToCart(selectedProductCart);
+    }
     closeModal();
   };
 
@@ -121,7 +138,7 @@ const PagesCards = () => {
 
   const openModal = (product) => {
     setSelectedProduct(product);
-    setSelectedProductCart({ ...product, quantity: 1 }); // Asegúrate de que quantity se establezca en 1 inicialmente
+    setSelectedProductCart({ ...product, quantity: 1 });
   };
 
   const closeModal = () => {
@@ -131,16 +148,16 @@ const PagesCards = () => {
   const handleModalClick = (event) => {
     if (event.target.classList.contains("modal-background")) {
       closeModal();
-      // Actualizamos la cantidad del producto seleccionado en el carrito
+
       const existingProductIndex = cartItems.findIndex(
         (item) => item.id === selectedProductCart.id
       );
       if (existingProductIndex !== -1) {
         const updatedCartItems = cartItems.map((item, index) => {
           if (index === existingProductIndex) {
-            return { ...item, quantity: selectedProductCart.quantity }; // Actualizamos la cantidad del producto seleccionado
+            return { ...item, quantity: selectedProductCart.quantity };
           }
-          return item; // Mantenemos los otros elementos sin cambios
+          return item;
         });
         setCartItems(updatedCartItems);
       }
@@ -383,18 +400,43 @@ const PagesCards = () => {
                 <p className="text-gray-600  w-full h-full overflow-hidden text-pretty mb-4">
                   Descripción: {selectedProduct.descripcion}
                 </p>
-                <input
-                  type="number"
-                  min="1"
-                  value={selectedProductCart.quantity}
-                  onChange={(event) =>
-                    setSelectedProductCart({
-                      ...selectedProductCart,
-                      quantity: parseInt(event.target.value),
-                    })
-                  }
-                  className="w-1/2 h-10 px-3 mx-auto mb-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400"
-                />
+
+                <div className="flex justify-center items-center content-center mb-6">
+                  <button
+                    className="px-3 py-1 rounded-md bg-gray-200 "
+                    onClick={() =>
+                      setSelectedProductCart({
+                        ...selectedProductCart,
+                        quantity: Math.max(selectedProductCart.quantity - 1, 1),
+                      })
+                    }
+                  >
+                    -
+                  </button>
+                  <input
+                    type="number"
+                    min="1"
+                    value={selectedProductCart.quantity}
+                    onChange={(event) =>
+                      setSelectedProductCart({
+                        ...selectedProductCart,
+                        quantity: parseInt(event.target.value),
+                      })
+                    }
+                    className="w-1/4 text-center h-full border border-gray-300 rounded-md focus:outline-none focus:border-blue-400"
+                  />
+                  <button
+                    className="px-3 py-1 rounded-md bg-gray-200"
+                    onClick={() =>
+                      setSelectedProductCart({
+                        ...selectedProductCart,
+                        quantity: selectedProductCart.quantity + 1,
+                      })
+                    }
+                  >
+                    +
+                  </button>
+                </div>
 
                 <div className="flex">
                   <button

@@ -3,15 +3,29 @@ import { Button } from "@nextui-org/react";
 import { ShoppingCartContext } from "../ShoppingCartContext";
 
 const ProductCard = ({ product, openModal }) => {
-  const { addToCart } = useContext(ShoppingCartContext);
+  const { addToCart, cartItems, setCartItems } =
+    useContext(ShoppingCartContext);
 
   const handleClick = () => {
     openModal(product);
   };
 
-  const handleAddToCart = () => {
-    addToCart(product);
-    closeModal();
+  const handleAddToCart = (product) => {
+    const existingProductIndex = cartItems.findIndex(
+      (item) => item.id === product.id
+    );
+
+    if (existingProductIndex !== -1) {
+      const updatedCartItems = cartItems.map((item, index) => {
+        if (index === existingProductIndex) {
+          return { ...item, quantity: item.quantity + 1 };
+        }
+        return item;
+      });
+      setCartItems(updatedCartItems);
+    } else {
+      addToCart({ ...product, quantity: 1 });
+    }
   };
 
   return (
