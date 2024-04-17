@@ -29,12 +29,12 @@ const ProductCard = ({ product, openModal }) => {
         {product.producto}
       </h3>
 
-      <p className="text-gray-600">Q{product.precio}</p>
+      <p className="text-gray-600">Q {product.precio}</p>
 
       <Button
         color="warning"
         variant="ghost"
-        className="flex content-center mx-auto hover:scale-105  duration-500 ease-in-out mb-3 "
+        className="flex content-center mx-auto transition-colors hover:scale-105  duration-500 ease-in-out mb-3 hover:text-white "
         onClick={() => handleAddToCart(product)}
       >
         Agregar al carrito
