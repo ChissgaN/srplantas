@@ -16,9 +16,9 @@ import { ShoppingCartContext } from "./ShoppingCartContext";
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { cartItems, addToCart, removeFromCart } =
-    useContext(ShoppingCartContext);
+  const { cartItems, addToCart } = useContext(ShoppingCartContext);
   const [carBuy, setCarBuy] = useState(false);
+  const [quantity, setQuantity] = useState(1);
 
   const cartRef = useRef(null);
 
@@ -39,24 +39,34 @@ export default function NavBar() {
     };
   }, []);
 
-  const increaseQuantity = (index) => {
-    const updatedCartItems = [...cartItems];
-    updatedCartItems[index].cantidad++;
-    addToCart(updatedCartItems[index]);
+  const increaseQuantity = () => {
+    setQuantity((prevQuantity) => prevQuantity + 1);
   };
 
-  const decreaseQuantity = (index) => {
-    const updatedCartItems = [...cartItems];
-    if (updatedCartItems[index].cantidad > 1) {
-      updatedCartItems[index].cantidad--;
-      addToCart(updatedCartItems[index]);
+  const decreaseQuantity = () => {
+    if (quantity > 1) {
+      setQuantity((prevQuantity) => prevQuantity - 1);
     }
   };
 
+  const handleQuantityChange = (event) => {
+    const value = parseInt(event.target.value);
+    if (!isNaN(value) && value >= 1) {
+      setQuantity(value);
+    }
+  };
+
+  const handleButtonClick = (event) => {
+    event.stopPropagation();
+  };
+
   return (
-    <div className="relative">
+    <div>
       {carBuy && (
-        <div className="fixed top-0 left-0 w-full h-full bg-black opacity-50 z-40"></div>
+        <div
+          className="fixed top-0 left-0 w-full h-full bg-black opacity-50 z-40"
+          onClick={toggleCar}
+        ></div>
       )}
       <Navbar
         onMenuOpenChange={setIsMenuOpen}
@@ -90,18 +100,15 @@ export default function NavBar() {
             </Link>
           </NavbarItem>
         </NavbarContent>
-        <NavbarContent justify="end" className="max-sm:mt-3">
+        <NavbarContent justify="end" className="max-sm:mt-3 ">
           <NavbarItem>
             <Button
-              as={Link}
-              color="primary"
-              href="#"
               variant="flat"
               onClick={toggleCar}
-              className="relative flex items-center"
+              className="relative flex items-center bg-[#67d4768e]"
             >
               <div className="flex items-center ">
-                <img src={car} alt="LogoC" className="w-[25px] h-[23px]" />
+                <img src={car} alt="LogoC" className="w-[25px] h-[23px] " />
                 <span className="rounded-xl text-xs px-2 py-1 text-black ml-1">
                   {cartItems.length}
                 </span>
@@ -117,39 +124,58 @@ export default function NavBar() {
                 Carrito de Compras
               </h4>
               <hr />
-              {cartItems.length === 0 ? (
-                <p className="text-center py-8">Tu carrito está vacío</p>
-              ) : (
-                <div className="grid grid-cols-[1fr_4fr_1fr] items-center gap-6 px-4 py-4">
-                  {cartItems.map((item, index) => (
-                    <div key={index}>
-                      <h6>{item.producto}</h6>
-                      <img
-                        src={item.imagen}
-                        alt={item.producto}
-                        className="w-16 h-16"
-                      />
-                      <p>
-                        <span>Cantidad: </span>{" "}
+              <div className="grid grid-cols-3 items-center gap-6 px-4 py-4">
+                {cartItems.map((item, index) => (
+                  <div key={index} className="bg-green-200 rounded-2xl w-full">
+                    <h6 className="text-yellow-500 font-semibold w-full text-center">
+                      {" "}
+                      {item.producto}
+                    </h6>
+                    <img
+                      src={item.imagen}
+                      alt={item.producto}
+                      className="size-28 mx-auto rounded-xl"
+                    />
+                    <div className="text-center">
+                      <span className="font-bold text-center">Cantidad</span>
+
+                      <div className="flex flex-row items-center justify-center">
                         <button
-                          onClick={() => decreaseQuantity(index)}
+                          onClick={() => {
+                            decreaseQuantity();
+                            handleButtonClick();
+                          }}
                           className="px-2 py-1 rounded-md bg-gray-200"
                         >
                           -
-                        </button>{" "}
-                        {item.cantidad}{" "}
+                        </button>
+                        <input
+                          type="number"
+                          value={quantity}
+                          onChange={handleQuantityChange}
+                          className="w-10 text-center"
+                        />
                         <button
-                          onClick={() => increaseQuantity(index)}
+                          onClick={() => {
+                            increaseQuantity();
+                            handleButtonClick();
+                          }}
                           className="px-2 py-1 rounded-md bg-gray-200"
                         >
                           +
-                        </button>{" "}
-                        <span className="font-bold">Precio: {item.precio}</span>
-                      </p>
+                        </button>
+                      </div>
+                      <span>
+                        Precio:
+                        <span className="font-bold">
+                          {item.precio * quantity}
+                        </span>
+                      </span>
                     </div>
-                  ))}
-                </div>
-              )}
+                  </div>
+                ))}
+                <div></div>
+              </div>
             </div>
           )}
         </NavbarContent>

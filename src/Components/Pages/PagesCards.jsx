@@ -30,10 +30,21 @@ const PagesCards = () => {
   const [showAllProducts, setShowAllProducts] = useState(false);
   const [loadedCards, setLoadedCards] = useState(6);
   const [loading, setLoading] = useState(false);
-  const { addToCart } = useContext(ShoppingCartContext);
+  const { addToCart, cartItems, setCartItems } =
+    useContext(ShoppingCartContext);
 
-  const handleAddToCart = (selectedProduct) => {
-    addToCart(selectedProduct);
+  const handleAddToCart = (product) => {
+    const existingProductIndex = cartItems.findIndex(
+      (item) => item.id === product.id
+    );
+
+    if (existingProductIndex !== -1) {
+      const updatedCartItems = [...cartItems];
+      updatedCartItems[existingProductIndex].quantity += 1;
+      setCartItems(updatedCartItems);
+    } else {
+      addToCart(product);
+    }
   };
 
   const handleSearchChange = (event) => {
@@ -144,18 +155,15 @@ const PagesCards = () => {
           src={imageSrc}
           alt={""}
         />
-
         <div className="absolute text-white font-extrabold text-[60px] max-lg:text-[50px] max-md:text-[40px] max-sm:text-[30px] ">
           {selectedCategory ? selectedCategory.toUpperCase() : ""}
         </div>
       </section>
-      <RedesSociales />
       <section className="container mx-auto p-4 w-[90%] flex justify-between ">
         <div className="flex max-sm:flex max-sm:flex-col items-center w-full  md:gap-[3%] gap-[10%] ">
           <h1 className="text-3xl font-semibold my-10 max-md:hidden">
             {selectedCategory ? selectedCategory.toUpperCase() : ""}
           </h1>
-
           <div className=" max-sm:w-full w-full md:flex md:justify-end  ">
             <input
               type="text"
@@ -202,7 +210,6 @@ const PagesCards = () => {
                   alt={categoria[index].tituloCategoria}
                   className="w-8 h-8 rounded-full mr-2"
                 />
-
                 <span className="max-sm:text-[11px]">
                   {categoria[index].tituloCategoria}
                 </span>
@@ -344,7 +351,7 @@ const PagesCards = () => {
               />
               <div className="flex">
                 <button
-                  className="w-[80%] bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 mx-auto sm:hidden"
+                  className="w-[80%] hover:bg-green-500 transition-colors duration-1000 text-white px-4 py-2 rounded-md  bg-green-600 mx-auto sm:hidden"
                   onClick={() => handleAddToCart(selectedProduct)}
                 >
                   Agregar al carrito
@@ -357,7 +364,7 @@ const PagesCards = () => {
                   {selectedProduct.producto}
                 </h2>
                 <p className="text-gray-600 ">
-                  Precio: ${selectedProduct.precio}
+                  Precio: Q {selectedProduct.precio}
                 </p>
                 <p className="text-gray-600  w-full h-full overflow-hidden text-pretty mb-4">
                   Descripción: {selectedProduct.descripcion}
@@ -365,7 +372,7 @@ const PagesCards = () => {
 
                 <div className="flex">
                   <button
-                    className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 mx-auto max-sm:hidden"
+                    className="hover:bg-green-500 transition-colors duration-1000 text-white px-4 py-2 rounded-md bg-green-600 mx-auto max-sm:hidden"
                     onClick={() => handleAddToCart(selectedProduct)}
                   >
                     Agregar al carrito
