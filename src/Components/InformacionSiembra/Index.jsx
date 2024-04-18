@@ -4,7 +4,7 @@ export const Index = ({ procesoImg, tituloProceso, descripcionProceso }) => {
   return (
     <>
     {/*  transform hover:scale-[1.05] transition duration-300 ease-in-out */}
-      <div className="container h-full py-3  mx-aut ">
+      <div className="container h-full py-3  mx-aut transition duration-100 ease-in-out  hover:scale-[1.05]">
         <img
           src={procesoImg}
           alt="proceso"
