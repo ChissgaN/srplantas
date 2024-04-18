@@ -6,7 +6,6 @@ import car from "/icon-cart.svg";
 import { jsPDF } from "jspdf";
 import "jspdf-autotable";
 
-
 import {
   Navbar,
   NavbarBrand,
