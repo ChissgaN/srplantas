@@ -8,6 +8,7 @@ import "../App.css";
 export default function Beginning() {
   const [inputValue, setInputValue] = useState("");
   const [searchResults, setSearchResults] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState("");
 
   const handleInputChange = (e) => {
     const value = e.target.value;
@@ -33,7 +34,27 @@ export default function Beginning() {
 
   const handleResultClick = (producto) => {
     setInputValue(producto.producto);
+    const category = getCategoryOfProduct(producto);
+    setSelectedCategory(category);
+    console.log("Selected Product Category:", category);
     setSearchResults([producto]);
+    console.log("Selected Product Product:", producto);
+  };
+
+  const getCategoryOfProduct = (product) => {
+    const productName = product.producto.toLowerCase();
+
+    for (const categoria of categorias) {
+      for (const key in categoria) {
+        const foundProduct = categoria[key].find(
+          (item) => item.producto.toLowerCase() === productName
+        );
+        if (foundProduct) {
+          return key;
+        }
+      }
+    }
+    return "";
   };
 
   return (
@@ -55,8 +76,13 @@ export default function Beginning() {
             color="success"
             className="bg-green-100 h-full hover:bg-green-200 transition-[5s] hover:scale-110 duration-300 ease-in-out rounded-[10px] py-[13px] px-6 text-gray-500"
           >
-            <Link to="/pages" onClick={() => handleResultClick(searchResults[0])}>Buscar</Link>
-            
+            <Link
+              to={`/pages/${selectedCategory}?search=${encodeURIComponent(
+                JSON.stringify(searchResults[0])
+              )}`}
+            >
+              Buscar
+            </Link>
           </Button>
         </div>
 

@@ -1,28 +1,42 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { Button } from "@nextui-org/react";
 import { ShoppingCartContext } from "../ShoppingCartContext";
 
 const ProductCard = ({ product, openModal }) => {
+  const { addToCart, cartItems, setCartItems } =
+    useContext(ShoppingCartContext);
+
   const handleClick = () => {
     openModal(product);
   };
 
-  const [selectedProduct, setSelectedProduct] = useState(null);
-  const { addToCart } = useContext(ShoppingCartContext);
+  const handleAddToCart = (product) => {
+    const existingProductIndex = cartItems.findIndex(
+      (item) => item.id === product.id
+    );
 
-  const handleAddToCart = (selectedProduct) => {
-    addToCart(selectedProduct);
+    if (existingProductIndex !== -1) {
+      const updatedCartItems = cartItems.map((item, index) => {
+        if (index === existingProductIndex) {
+          return { ...item, quantity: item.quantity + 1 };
+        }
+        return item;
+      });
+      setCartItems(updatedCartItems);
+    } else {
+      addToCart({ ...product, quantity: 1 });
+    }
   };
 
   return (
     <div
-      className="bg-white rounded-xl px-2  hover:scale-105  duration-500 ease-in-out mb-3 max-w-[240px] max-h-[434px]"
+      className="bg-white rounded-xl px-2 hover:scale-105 duration-500 ease-in-out mb-3 max-w-[240px] max-h-[434px]"
       onClick={handleClick}
     >
       <img
         src={product.imagen}
         alt={product.producto}
-        className="w-full h-fit object-cover rounded-xl max-w-[230px] max-h-[306px] "
+        className="w-full h-fit object-cover rounded-xl max-w-[230px] max-h-[306px]"
       />
 
       <h3 className="text-lg font-semibold mt-2 max-h-[28px] overflow-auto">
@@ -34,7 +48,7 @@ const ProductCard = ({ product, openModal }) => {
       <Button
         color="warning"
         variant="ghost"
-        className="flex content-center mx-auto transition-colors hover:scale-105  duration-500 ease-in-out mb-3 hover:text-white "
+        className="flex content-center mx-auto transition-colors hover:scale-105 duration-500 ease-in-out mb-3 hover:text-white"
         onClick={() => handleAddToCart(product)}
       >
         Agregar al carrito

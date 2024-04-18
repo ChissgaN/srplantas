@@ -1,28 +1,29 @@
 import React, { useState, useEffect, useContext } from "react";
 import NavBar from "../NavBar";
-
-import aromaticas from "/categoria/aromaticas.webp";
-import bulbos from "/categoria/bulbos.webp";
-import cesped from "/categoria/cesped.webp";
-import hortalizas from "/categoria/hortalizas.webp";
-import ornamentales from "/categoria/hornamentales.webp";
-import sustratos from "/categoria/sustrato.webp";
 import todo from "/procesoSiembra/semillas.webp";
 import ProductCard from "./ProductCard";
 import categorias from "../../scripts/products";
 
 import categoria from "../../../public/categorias.json";
-import { RedesSociales } from "../RedesSociales/RedesSociales";
 import { Button } from "@nextui-org/react";
 import ScrollToTopButton from "../ScrollToTop";
-
-import { useParams } from "react-router-dom";
 import { ShoppingCartContext } from "../ShoppingCartContext";
+import { useParams, useLocation } from "react-router-dom";
 
 const PagesCards = () => {
+
+  const location = useLocation();
+
+  useEffect(() => {
+    const searchParams = new URLSearchParams(location.search);
+    const searchProduct = searchParams.get("search");
+    if (searchProduct) {
+      setSelectedProduct(JSON.parse(decodeURIComponent(searchProduct)));
+    }
+  }, [location]);
+
   const params = useParams();
   const categoriaURL = params.id;
-
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState(categoriaURL);
@@ -30,21 +31,35 @@ const PagesCards = () => {
   const [showAllProducts, setShowAllProducts] = useState(false);
   const [loadedCards, setLoadedCards] = useState(6);
   const [loading, setLoading] = useState(false);
-  const { addToCart, cartItems, setCartItems } =
-    useContext(ShoppingCartContext);
+  const {
+    addToCart,
+    cartItems,
+    setCartItems,
+    selectedProductCart,
+    setSelectedProductCart,
+  } = useContext(ShoppingCartContext);
 
-  const handleAddToCart = (product) => {
+  const handleAddToCart = () => {
+    console.log("aqui estoy:", selectedProductCart);
     const existingProductIndex = cartItems.findIndex(
-      (item) => item.id === product.id
+      (item) => item.id === selectedProductCart.id
     );
 
     if (existingProductIndex !== -1) {
-      const updatedCartItems = [...cartItems];
-      updatedCartItems[existingProductIndex].quantity += 1;
+      const updatedCartItems = cartItems.map((item, index) => {
+        if (index === existingProductIndex) {
+          return {
+            ...item,
+            quantity: item.quantity + selectedProductCart.quantity,
+          };
+        }
+        return item;
+      });
       setCartItems(updatedCartItems);
     } else {
-      addToCart(product);
+      addToCart(selectedProductCart);
     }
+    closeModal();
   };
 
   const handleSearchChange = (event) => {
@@ -65,6 +80,7 @@ const PagesCards = () => {
     }
     setLoadedCards(6);
   };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -124,6 +140,7 @@ const PagesCards = () => {
 
   const openModal = (product) => {
     setSelectedProduct(product);
+    setSelectedProductCart({ ...product, quantity: 1 });
   };
 
   const closeModal = () => {
@@ -133,16 +150,30 @@ const PagesCards = () => {
   const handleModalClick = (event) => {
     if (event.target.classList.contains("modal-background")) {
       closeModal();
+
+      const existingProductIndex = cartItems.findIndex(
+        (item) => item.id === selectedProductCart.id
+      );
+      if (existingProductIndex !== -1) {
+        const updatedCartItems = cartItems.map((item, index) => {
+          if (index === existingProductIndex) {
+            return { ...item, quantity: selectedProductCart.quantity };
+          }
+          return item;
+        });
+        setCartItems(updatedCartItems);
+      }
     }
   };
+
   const categoryImages = {
-    aromaticas,
-    bulbos,
-    cesped,
-    hortalizas,
-    ornamentales,
-    sustratos,
-    "Mostrar Todo": todo,
+    aromaticas: "/categoria/aromaticas.webp",
+    bulbos: "/categoria/bulbos.webp",
+    cesped: "/categoria/cesped.webp",
+    hortalizas: "/categoria/hortalizas.webp",
+    ornamentales: "/categoria/hornamentales.webp",
+    sustratos: "/categoria/sustrato.webp",
+    "Mostrar Todo": "/procesoSiembra/semillas.webp",
   };
   const imageSrc = categoryImages[selectedCategory];
 
@@ -248,6 +279,7 @@ const PagesCards = () => {
                       key={product.id}
                       product={product}
                       openModal={openModal}
+                      setSelectedProductCart={setSelectedProductCart}
                     />
                   ))}
             </div>
@@ -297,6 +329,7 @@ const PagesCards = () => {
                       key={product.id}
                       product={product}
                       openModal={openModal}
+                      setSelectedProductCart={setSelectedProductCart}
                     />
                   ))
               )}
@@ -369,6 +402,43 @@ const PagesCards = () => {
                 <p className="text-gray-600  w-full h-full overflow-hidden text-pretty mb-4">
                   Descripción: {selectedProduct.descripcion}
                 </p>
+
+                <div className="flex justify-center items-center content-center mb-6">
+                  <button
+                    className="px-3 py-1 rounded-md bg-gray-200 "
+                    onClick={() =>
+                      setSelectedProductCart({
+                        ...selectedProductCart,
+                        quantity: Math.max(selectedProductCart.quantity - 1, 1),
+                      })
+                    }
+                  >
+                    -
+                  </button>
+                  <input
+                    type="number"
+                    min="1"
+                    value={selectedProductCart.quantity}
+                    onChange={(event) =>
+                      setSelectedProductCart({
+                        ...selectedProductCart,
+                        quantity: parseInt(event.target.value),
+                      })
+                    }
+                    className="w-1/4 text-center h-full border border-gray-300 rounded-md focus:outline-none focus:border-blue-400"
+                  />
+                  <button
+                    className="px-3 py-1 rounded-md bg-gray-200"
+                    onClick={() =>
+                      setSelectedProductCart({
+                        ...selectedProductCart,
+                        quantity: selectedProductCart.quantity + 1,
+                      })
+                    }
+                  >
+                    +
+                  </button>
+                </div>
 
                 <div className="flex">
                   <button
