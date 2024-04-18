@@ -1,25 +1,27 @@
 import React, { useState, useEffect, useContext } from "react";
 import NavBar from "../NavBar";
-
-import aromaticas from "/categoria/aromaticas.webp";
-import bulbos from "/categoria/bulbos.webp";
-import cesped from "/categoria/cesped.webp";
-import hortalizas from "/categoria/hortalizas.webp";
-import ornamentales from "/categoria/hornamentales.webp";
-import sustratos from "/categoria/sustrato.webp";
 import todo from "/procesoSiembra/semillas.webp";
 import ProductCard from "./ProductCard";
 import categorias from "../../scripts/products";
 
 import categoria from "../../../public/categorias.json";
-import { RedesSociales } from "../RedesSociales/RedesSociales";
 import { Button } from "@nextui-org/react";
 import ScrollToTopButton from "../ScrollToTop";
-
-import { useParams } from "react-router-dom";
 import { ShoppingCartContext } from "../ShoppingCartContext";
+import { useParams, useLocation } from "react-router-dom";
 
 const PagesCards = () => {
+
+  const location = useLocation();
+
+  useEffect(() => {
+    const searchParams = new URLSearchParams(location.search);
+    const searchProduct = searchParams.get("search");
+    if (searchProduct) {
+      setSelectedProduct(JSON.parse(decodeURIComponent(searchProduct)));
+    }
+  }, [location]);
+
   const params = useParams();
   const categoriaURL = params.id;
   const [searchTerm, setSearchTerm] = useState("");
