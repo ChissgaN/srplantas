@@ -4,7 +4,7 @@ import logo from "/logo.webp";
 import car from "/icon-cart.svg";
 
 import jsPDF from "jspdf/dist/jspdf.es.min.js";
-import autoTable from 'jspdf-autotable';
+import 'jspdf-autotable';
 
 
 import {
