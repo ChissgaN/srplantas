@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import logo from "/logo.webp";
 import car from "/icon-cart.svg";
 
+import jsPDF from "jspdf";
+import autoTable from "jspdf-autotable";
+
 import {
   Navbar,
   NavbarBrand,
@@ -61,6 +64,14 @@ export default function NavBar() {
     return total + item.precio * (productQuantities[item.id] || 1);
   }, 0);
 
+  const dataPDF = {
+    ID: "as",
+    Nombre_Producto: "asdas",
+    Precio_Unidad: 22,
+    Cantidad: 3,
+    Precio_Total: 2343,
+  };
+
   const generarPDF = () => {
     const doc = new jsPDF();
 
@@ -86,7 +97,7 @@ export default function NavBar() {
       ];
     });
 
-    doc.autoTable({
+    autoTable(doc, {
       head: [columns],
       body: data,
       startY: 30,
@@ -164,7 +175,7 @@ export default function NavBar() {
             >
               <div className="flex items-center justify-between">
                 <h4 className="px-6 py-2 text-lg font-bold">
-                  Carrito de Compras
+                  Carrito de Compras.
                 </h4>
                 <p className="pr-14">
                   Total: Q <strong>{totalCarrito}</strong>
