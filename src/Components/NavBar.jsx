@@ -175,7 +175,7 @@ export default function NavBar() {
             >
               <div className="flex items-center justify-between">
                 <h4 className="px-6 py-2 text-lg font-bold">
-                  Carrito de Compras
+                  Carrito de Compras.
                 </h4>
                 <p className="pr-14">
                   Total: Q <strong>{totalCarrito}</strong>
