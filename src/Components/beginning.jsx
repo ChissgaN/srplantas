@@ -38,7 +38,7 @@ export default function Beginning() {
     setSelectedCategory(category);
     console.log("Selected Product Category:", category);
     setSearchResults([producto]);
-    console.log("Selected Product:", producto);
+    console.log("Selected Product Product:", producto);
   };
 
   const getCategoryOfProduct = (product) => {
