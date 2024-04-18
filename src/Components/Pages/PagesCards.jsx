@@ -9,9 +9,9 @@ import { Button } from "@nextui-org/react";
 import ScrollToTopButton from "../ScrollToTop";
 import { ShoppingCartContext } from "../ShoppingCartContext";
 import { useParams, useLocation } from "react-router-dom";
+import { RedesSociales } from "../RedesSociales/RedesSociales";
 
 const PagesCards = () => {
-
   const location = useLocation();
 
   useEffect(() => {
@@ -179,6 +179,7 @@ const PagesCards = () => {
 
   return (
     <>
+      <RedesSociales />
       <NavBar />
       <section className="mt-28 w-[90%] mx-auto relative flex justify-center items-center">
         <img

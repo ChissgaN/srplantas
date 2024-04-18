@@ -1,10 +1,18 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Button } from "@nextui-org/react";
 import { ShoppingCartContext } from "../ShoppingCartContext";
 
 const ProductCard = ({ product, openModal }) => {
-  const { addToCart, cartItems, setCartItems } =
+  const { addToCart, cartItems, setCartItems, setSelectedProductCart } =
     useContext(ShoppingCartContext);
+
+  useEffect(() => {
+    const searchParams = new URLSearchParams(location.search);
+    const searchProduct = searchParams.get("search");
+    if (searchProduct) {
+      setSelectedProductCart(JSON.parse(decodeURIComponent(searchProduct)));
+    }
+  }, [location]);
 
   const handleClick = () => {
     openModal(product);
@@ -30,7 +38,7 @@ const ProductCard = ({ product, openModal }) => {
 
   return (
     <div
-      className="bg-white rounded-xl px-2 hover:scale-105 duration-500 ease-in-out mb-3 max-w-[240px] max-h-[434px]"
+      className="bg-white rounded-xl px-2 hover:scale-105 duration-500 ease-in-out mb-3 max-w-[240px] max-h-[434px] cursor-pointer"
       onClick={handleClick}
     >
       <img
