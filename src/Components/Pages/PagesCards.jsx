@@ -177,9 +177,6 @@ const PagesCards = () => {
   };
   const imageSrc = categoryImages[selectedCategory];
 
-
-
-  
   return (
     <>
       <RedesSociales />
