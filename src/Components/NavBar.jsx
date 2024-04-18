@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 import logo from "/logo.webp";
 import car from "/icon-cart.svg";
 
-import jsPDF from "jspdf";
-import autoTable from "jspdf-autotable";
+import jsPDF from "./node_modules/jspdf";
+import autoTable from "./node_modules/jspdf-autotable";
+
 
 import {
   Navbar,
