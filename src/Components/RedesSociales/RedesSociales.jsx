@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 
 import facebook from "/footer/facebook.svg";
 import whatssap from "/footer/whatssap2.svg";
+import arrow from "/footer/arrowequal.svg";
 export const RedesSociales = () => {
+  const [visible, setVisible] = useState(true);
+
+  const toggleVisibility = () => {
+    setVisible(!visible);
+  };
+
   return (
+   
     <>
+    {visible && (
       <div className="fixed md:left-0 top-[270px] z-50 max-sm:right-0 sm:right-0">
         <div className="flex items-center ">
           <a
@@ -28,7 +37,9 @@ export const RedesSociales = () => {
           </a>
         </div>
       </div>
+      )}
 
+      {visible && (
       <div className="fixed md:left-0 top-[309px] z-50 max-sm:right-0 sm:right-0">
         <div className="flex items-center ">
           <a
@@ -60,6 +71,15 @@ export const RedesSociales = () => {
           </a>
         </div>
       </div>
+      )}
+      
+      <button
+        className="fixed md:left-0 top-[349px] z-50 max-sm:right-0 sm:right-0 bg-slate-300 hover:bg-slate-400 w-4 hover:w-8 transition-all"
+        onClick={toggleVisibility}
+      >
+        <img src={arrow} alt="flecha Desplegable Redes Sociales" className="w-6" />
+      </button>
+
     </>
   );
 };

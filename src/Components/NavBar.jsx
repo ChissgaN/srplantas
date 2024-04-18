@@ -2,6 +2,11 @@ import React, { useContext, useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import logo from "/logo.webp";
 import car from "/icon-cart.svg";
+
+import { jsPDF } from "jspdf";
+import "jspdf-autotable";
+
+
 import {
   Navbar,
   NavbarBrand,
@@ -13,6 +18,7 @@ import {
   Button,
 } from "@nextui-org/react";
 import { ShoppingCartContext } from "./ShoppingCartContext";
+import { compact } from "lodash";
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -55,6 +61,50 @@ export default function NavBar() {
     }));
   };
 
+  const totalCarrito = cartItems.reduce((total, item) => {
+    return total + item.precio * (productQuantities[item.id] || 1);
+  }, 0);
+
+  const dataPDF = {
+    ID: "as",
+    Nombre_Producto: "asdas",
+    Precio_Unidad: 22,
+    Cantidad: 3,
+    Precio_Total: 2343,
+  };
+
+  const generarPDF = () => {
+    const doc = new jsPDF();
+    
+    doc.text('Datos de la Compra', 75, 20);
+    
+    const columns = ['ID', 'Producto', 'Precio unitario', 'Cantidad', 'Precio total'];
+    const data = cartItems.map((item, index) => {
+      const cantidad = productQuantities[item.id] || 1;
+      const precioTotal = item.precio * cantidad;
+      
+      return [
+        index + 1,
+        item.producto,
+        `Q${item.precio}`,
+        cantidad,
+        `Q${precioTotal}`
+      ];
+    });
+    
+    doc.autoTable({
+      head: [columns],
+      body: data,
+      startY: 30,
+      theme: 'grid',
+      
+    });
+    
+    doc.text(`Total a Pagar: Q${totalCarrito}`, 10, doc.lastAutoTable.finalY + 10);
+    
+    doc.save("Agricultura Especializada.pdf");
+  };
+
   return (
     <div>
       {carBuy && (
@@ -65,7 +115,7 @@ export default function NavBar() {
       )}
       <Navbar
         onMenuOpenChange={setIsMenuOpen}
-        className="fixed h-[80px]   z-50 w-full"
+        className="fixed h-[80px]   z-40 w-full"
       >
         <NavbarContent className=" ">
           <NavbarMenuToggle
@@ -100,11 +150,11 @@ export default function NavBar() {
             <Button
               variant="flat"
               onClick={toggleCar}
-              className="relative flex items-center bg-[#67d4768e]"
+              className="relative flex items-center bg-[#67d4768e] pt-1"
             >
               <div className="flex items-center ">
                 <img src={car} alt="LogoC" className="w-[25px] h-[23px] " />
-                <span className="rounded-xl text-xs px-2 py-1 text-black ml-1">
+                <span className=" absolute right-2 top-0 rounded-xl px-[8px] text-gray-600 ml-1 bg-gray-100 text-[12px]">
                   {cartItems.length}
                 </span>
               </div>
@@ -113,17 +163,24 @@ export default function NavBar() {
           {carBuy && (
             <div
               ref={cartRef}
-              className="rounded-md bg-white shadow-md absolute right-9 top-28 z-50 p-4"
+              className="rounded-md bg-white shadow-md absolute right-9 top-[110px] z-50 p-4"
             >
-              <h4 className="px-6 py-2 text-lg font-bold">
-                Carrito de Compras
-              </h4>
+              <div className="flex items-center justify-between">
+                <h4 className="px-6 py-2 text-lg font-bold">
+                  Carrito de Compras
+                </h4>
+                <p className="pr-14">
+                  Total: Q <strong>{totalCarrito}</strong>
+                </p>
+              </div>
               <hr />
-              <div className="grid grid-cols-3 items-center gap-6 px-4 py-4">
+              <div className="grid grid-cols-3 items-center gap-6 px-4 py-4 overflow-y-auto max-h-[400px] resultados-container">
                 {cartItems.map((item, index) => (
-                  <div key={index} className="bg-green-200 rounded-2xl w-full">
+                  <div
+                    key={index}
+                    className="bg-green-200 rounded-2xl w-[200px] h-[280px] sm:w-[170px]  max-sm:w-[120px]"
+                  >
                     <h6 className="text-yellow-500 font-semibold w-full text-center">
-                      {" "}
                       {item.producto}
                     </h6>
                     <img
@@ -133,7 +190,6 @@ export default function NavBar() {
                     />
                     <div className="text-center">
                       <span className="font-bold text-center">Cantidad</span>
-
                       <div className="flex flex-row items-center justify-center">
                         <button
                           onClick={() => decreaseQuantity(item.id)}
@@ -174,8 +230,19 @@ export default function NavBar() {
                     </div>
                   </div>
                 ))}
+
                 <div></div>
               </div>
+              <div className="flex justify-end ">
+              <button 
+                className={`bg-red-500 hover:bg-red-600 text-white py-2 px-6 rounded-[10px] mt-4 hover:scale-[1.05]  transition duration-300 ease-in-out ${cartItems.length === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
+                onClick={generarPDF}
+                disabled={cartItems.length === 0}
+              >
+                CREAR PDF
+              </button>
+              </div>
+              
             </div>
           )}
         </NavbarContent>
