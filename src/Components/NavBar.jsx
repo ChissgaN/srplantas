@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import logo from "/logo.webp";
 import car from "/icon-cart.svg";
 
-import { jsPDF } from "jspdf";
+import jsPDF from "jspdf";
+
 import "jspdf-autotable";
 
 import {
@@ -74,33 +75,42 @@ export default function NavBar() {
 
   const generarPDF = () => {
     const doc = new jsPDF();
-    
-    doc.text('Datos de la Compra', 75, 20);
-    
-    const columns = ['ID', 'Producto', 'Precio unitario', 'Cantidad', 'Precio total'];
+
+    doc.text("Datos de la Compra", 75, 20);
+
+    const columns = [
+      "ID",
+      "Producto",
+      "Precio unitario",
+      "Cantidad",
+      "Precio total",
+    ];
     const data = cartItems.map((item, index) => {
       const cantidad = productQuantities[item.id] || 1;
       const precioTotal = item.precio * cantidad;
-      
+
       return [
         index + 1,
         item.producto,
         `Q${item.precio}`,
         cantidad,
-        `Q${precioTotal}`
+        `Q${precioTotal}`,
       ];
     });
-    
+
     doc.autoTable({
       head: [columns],
       body: data,
       startY: 30,
-      theme: 'grid',
-      
+      theme: "grid",
     });
-    
-    doc.text(`Total a Pagar: Q${totalCarrito}`, 10, doc.lastAutoTable.finalY + 10);
-    
+
+    doc.text(
+      `Total a Pagar: Q${totalCarrito}`,
+      10,
+      doc.lastAutoTable.finalY + 10
+    );
+
     doc.save("Agricultura Especializada.pdf");
   };
 
@@ -233,15 +243,18 @@ export default function NavBar() {
                 <div></div>
               </div>
               <div className="flex justify-end ">
-              <button 
-                className={`bg-red-500 hover:bg-red-600 text-white py-2 px-6 rounded-[10px] mt-4 hover:scale-[1.05]  transition duration-300 ease-in-out ${cartItems.length === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
-                onClick={generarPDF}
-                disabled={cartItems.length === 0}
-              >
-                CREAR PDF
-              </button>
+                <button
+                  className={`bg-red-500 hover:bg-red-600 text-white py-2 px-6 rounded-[10px] mt-4 hover:scale-[1.05]  transition duration-300 ease-in-out ${
+                    cartItems.length === 0
+                      ? "opacity-50 cursor-not-allowed"
+                      : ""
+                  }`}
+                  onClick={generarPDF}
+                  disabled={cartItems.length === 0}
+                >
+                  CREAR PDF
+                </button>
               </div>
-              
             </div>
           )}
         </NavbarContent>
