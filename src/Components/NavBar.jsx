@@ -4,7 +4,6 @@ import logo from "/logo.webp";
 import car from "/icon-cart.svg";
 
 import jsPDF from "jspdf/dist/jspdf.es.min.js";
-import autoTable from "jspdf-autotable";
 
 
 import {
@@ -98,13 +97,13 @@ export default function NavBar() {
       ];
     });
 
-    autoTable(doc, {
+    doc.autoTable({
       head: [columns],
       body: data,
       startY: 30,
-      theme: "grid",
-    });
+      theme: 'grid',
 
+    });
     doc.text(
       `Total a Pagar: Q${totalCarrito}`,
       10,
