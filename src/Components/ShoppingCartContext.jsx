@@ -8,7 +8,6 @@ const ShoppingCartProvider = ({ children }) => {
   const [selectedProductCart, setSelectedProductCart] = useState({
     quantity: 1,
   });
-
   const addToCart = (product) => {
     setCartItems((prevCartItems) => [...prevCartItems, product]);
   };
