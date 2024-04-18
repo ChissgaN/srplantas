@@ -3,10 +3,6 @@ import { Link } from "react-router-dom";
 import logo from "/logo.webp";
 import car from "/icon-cart.svg";
 
-import jsPDF from "jspdf";
-
-import "jspdf-autotable";
-
 import {
   Navbar,
   NavbarBrand,
@@ -64,14 +60,6 @@ export default function NavBar() {
   const totalCarrito = cartItems.reduce((total, item) => {
     return total + item.precio * (productQuantities[item.id] || 1);
   }, 0);
-
-  const dataPDF = {
-    ID: "as",
-    Nombre_Producto: "asdas",
-    Precio_Unidad: 22,
-    Cantidad: 3,
-    Precio_Total: 2343,
-  };
 
   const generarPDF = () => {
     const doc = new jsPDF();
