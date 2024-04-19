@@ -169,7 +169,7 @@ export default function NavBar() {
           {carBuy && (
             <div
               ref={cartRef}
-              className="rounded-md bg-white shadow-md absolute right-9 top-[110px] z-50 p-4"
+              className="rounded-md bg-white shadow-md absolute right-9 top-[85px] z-50 p-4 w-[90%] mx-auto"
             >
               <div className="flex items-center justify-between ">
                 <h4 className="px-6 py-2 text-lg font-bold">
@@ -180,7 +180,7 @@ export default function NavBar() {
                 </p>
               </div>
               <hr />
-              <div className="grid max-sm:grid-cols-1 md:grid-cols-3 items-center gap-6 px-4 py-4 overflow-y-auto max-h-[400px] resultados-container">
+              <div className="grid max-sm:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 items-center gap-6 px-4 py-4 overflow-y-auto max-h-[400px] resultados-container">
                 {cartItems.map((item, index) => (
                   <div
                     key={index}
