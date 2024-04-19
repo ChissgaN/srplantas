@@ -171,7 +171,7 @@ export default function NavBar() {
               ref={cartRef}
               className="rounded-md bg-white shadow-md absolute right-9 top-[110px] z-50 p-4"
             >
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between ">
                 <h4 className="px-6 py-2 text-lg font-bold">
                   Carrito de Compras.
                 </h4>
@@ -180,13 +180,13 @@ export default function NavBar() {
                 </p>
               </div>
               <hr />
-              <div className="grid grid-cols-3 items-center gap-6 px-4 py-4 overflow-y-auto max-h-[400px] resultados-container">
+              <div className="grid max-sm:grid-cols-1 md:grid-cols-3 items-center gap-6 px-4 py-4 overflow-y-auto max-h-[400px] resultados-container">
                 {cartItems.map((item, index) => (
                   <div
                     key={index}
-                    className="bg-green-200 rounded-2xl w-[200px] h-[280px] sm:w-[170px]  max-sm:w-[120px]"
+                    className="bg-green-200  mx-auto rounded-2xl w-[200px] h-[280px] sm:w-[170px]  max-sm:w-[175px]"
                   >
-                    <h6 className="text-yellow-500 font-semibold w-full text-center">
+                    <h6 className="text-yellow-500 font-semibold w-full truncate text-center">
                       {item.producto}
                     </h6>
                     <img

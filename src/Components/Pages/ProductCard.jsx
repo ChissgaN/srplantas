@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { Button } from "@nextui-org/react";
-import { ShoppingCartContext } from "../ShoppingCartContext";
+import { ShoppingCartContext} from "../ShoppingCartContext";
 
 const ProductCard = ({ product, openModal }) => {
   const { addToCart, cartItems, setCartItems, setSelectedProductCart } =
@@ -19,6 +19,7 @@ const ProductCard = ({ product, openModal }) => {
   };
 
   const handleAddToCart = (product) => {
+    console.log("aqui estoy:", selectedProduct);
     const existingProductIndex = cartItems.findIndex(
       (item) => item.id === product.id
     );
@@ -35,7 +36,7 @@ const ProductCard = ({ product, openModal }) => {
       addToCart({ ...product, quantity: 1 });
     }
   };
-
+  const {selectedProduct} = useContext(ShoppingCartContext)
   return (
     <div
       className="bg-white rounded-xl px-2 hover:scale-105 duration-500 ease-in-out mb-3 max-w-[240px] max-h-[434px] cursor-pointer"
