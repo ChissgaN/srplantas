@@ -3,9 +3,8 @@ import { Link } from "react-router-dom";
 import logo from "/logo.webp";
 import car from "/icon-cart.svg";
 
-import jsPDF from "jspdf/dist/jspdf.es.min.js";
-import 'jspdf-autotable';
-
+/* import jsPDF from "jspdf/dist/jspdf.es.min.js";
+import 'jspdf-autotable'; */
 
 import {
   Navbar,
@@ -18,7 +17,9 @@ import {
   Button,
 } from "@nextui-org/react";
 import { ShoppingCartContext } from "./ShoppingCartContext";
-import { compact } from "lodash";
+
+import jsPDF from "jspdf";
+import autoTable from "jspdf-autotable";
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -98,12 +99,11 @@ export default function NavBar() {
       ];
     });
 
-    doc.autoTable({
+    autoTable(doc, {
       head: [columns],
       body: data,
       startY: 30,
-      theme: 'grid',
-
+      theme: "grid",
     });
     doc.text(
       `Total a Pagar: Q${totalCarrito}`,
