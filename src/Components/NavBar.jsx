@@ -230,7 +230,7 @@ export default function NavBar() {
                         </button>
                         <input
                           type="number"
-                          value={productQuantities[item.id] || 1}
+                          value={ productQuantities[item.id] ? productQuantities[item.id] : ""}
                           onChange={(e) => {
                             const value = parseInt(e.target.value);
                             setProductQuantities((prevQuantities) => ({
@@ -261,7 +261,7 @@ export default function NavBar() {
                     </div>
                     <div className="w-full flex justify-center mt-2 ">
                       <button
-                        className="bg-red-500 w-8 hover:bg-red-700 rounded p-1 transition duration-100 ease-in-out  hover:scale-[1.1]"
+                        className="bg-red-500 w-8 hover:bg-red-600 rounded p-1 transition duration-100 ease-in-out  hover:scale-[1.1]"
                         onClick={() => removeFromCart(item.id)}
                       >
                         <img src={trash} alt="icon de basurero" className="" />
