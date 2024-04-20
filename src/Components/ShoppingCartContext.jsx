@@ -8,8 +8,14 @@ const ShoppingCartProvider = ({ children }) => {
   const [selectedProductCart, setSelectedProductCart] = useState({
     quantity: 1,
   });
+
   const addToCart = (product) => {
     setCartItems((prevCartItems) => [...prevCartItems, product]);
+  };
+
+  const removeFromCart = (productId) => {
+    const updatedCartItems = cartItems.filter(item => item.id !== productId);
+    setCartItems(updatedCartItems);
   };
 
   return (
@@ -18,6 +24,7 @@ const ShoppingCartProvider = ({ children }) => {
         cartItems,
         setCartItems,
         addToCart,
+        removeFromCart,
         selectedProduct,
         setSelectedProduct,
         selectedProductCart,
