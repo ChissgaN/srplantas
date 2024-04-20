@@ -1,7 +1,9 @@
 import React, { useContext, useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import logo from "/logo.webp";
+import logoBlanco from "/logoBlanco.jpg";
 import car from "/icon-cart.svg";
+import trash from "/trash.svg";
 
 import {
   Navbar,
@@ -20,7 +22,8 @@ import autoTable from "jspdf-autotable";
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { cartItems, addToCart } = useContext(ShoppingCartContext);
+  const { cartItems, addToCart, removeFromCart } =
+    useContext(ShoppingCartContext);
   const [carBuy, setCarBuy] = useState(false);
   const [productQuantities, setProductQuantities] = useState({});
   const cartRef = useRef(null);
@@ -63,18 +66,31 @@ export default function NavBar() {
     return total + item.precio * (productQuantities[item.id] || 1);
   }, 0);
 
-  const dataPDF = {
-    ID: "as",
-    Nombre_Producto: "asdas",
-    Precio_Unidad: 22,
-    Cantidad: 3,
-    Precio_Total: 2343,
-  };
-
   const generarPDF = () => {
     const doc = new jsPDF();
 
-    doc.text("Datos de la Compra", 75, 20);
+    // Definir tamaño y tipo de letra para el texto
+    const fontSize = 15; // Tamaño de letra
+    const fontType = "times"; // Tipo de letra ("times", "helvetica", "courier")
+    doc.setFontSize(fontSize); // Aplicar tamaño de letra
+    doc.setFont(fontType); // Aplicar tipo de letra
+
+    // Agregar imagen
+    const imgData = logoBlanco; // Reemplaza con la ruta de tu imagen
+    doc.addImage(imgData, "JPEG", 10, 10, 40, 40); // Ajusta las coordenadas y dimensiones según lo necesario
+
+    // Agregar texto "COTIZACION"
+    doc.text("COTIZACION", 130, 30); // Ajusta las coordenadas según lo necesario
+
+    doc.text("Fecha de Emisión: " + formatDate(new Date()), 10, 60); // Agregar fecha actual
+
+    // Calcular fecha válida hasta 10 días después
+    const fechaActual = new Date();
+    const fechaValidaHasta = new Date(fechaActual);
+    fechaValidaHasta.setDate(fechaValidaHasta.getDate() + 10);
+    doc.text("Valido hasta: " + formatDate(fechaValidaHasta), 120, 60);
+
+    doc.text("FACTURA DE LA COMPRA", 10, 70);
 
     const columns = [
       "ID",
@@ -99,16 +115,25 @@ export default function NavBar() {
     autoTable(doc, {
       head: [columns],
       body: data,
-      startY: 30,
+      startY: 80,
       theme: "grid",
     });
+
     doc.text(
       `Total a Pagar: Q${totalCarrito}`,
-      10,
+      140,
       doc.lastAutoTable.finalY + 10
     );
 
     doc.save("Agricultura Especializada.pdf");
+
+    // Función para formatear la fecha como "DD/MM/YYYY"
+    function formatDate(date) {
+      const day = date.getDate().toString().padStart(2, "0");
+      const month = (date.getMonth() + 1).toString().padStart(2, "0");
+      const year = date.getFullYear();
+      return `${day}/${month}/${year}`;
+    }
   };
 
   return (
@@ -234,6 +259,14 @@ export default function NavBar() {
                         </span>
                       </span>
                     </div>
+                    <div className="w-full flex justify-center mt-2 ">
+                      <button
+                        className="bg-red-500 w-8 hover:bg-red-700 rounded p-1 transition duration-100 ease-in-out  hover:scale-[1.1]"
+                        onClick={() => removeFromCart(item.id)}
+                      >
+                        <img src={trash} alt="icon de basurero" className="" />
+                      </button>
+                    </div>
                   </div>
                 ))}
 
@@ -241,7 +274,7 @@ export default function NavBar() {
               </div>
               <div className="flex justify-end ">
                 <button
-                  className={`bg-red-500 hover:bg-red-600 text-white py-2 px-6 rounded-[10px] mt-4 hover:scale-[1.05]  transition duration-300 ease-in-out ${
+                  className={`bg-blue-400 hover:bg-blue-600 text-white py-2 px-6 rounded-[10px] mt-4 hover:scale-[1.05]  transition duration-300 ease-in-out ${
                     cartItems.length === 0
                       ? "opacity-50 cursor-not-allowed"
                       : ""
