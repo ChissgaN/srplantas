@@ -127,6 +127,20 @@ export default function NavBar() {
 
     doc.save("Agricultura Especializada.pdf");
 
+    // Compartir via WhatsApp
+    const url = doc.output("bloburl");
+    const message = `Hola, te envío la orden de tu compra. Haz clic en el siguiente enlace para descargarla: ${url}`;
+    const phoneNumber = "+50233332343";
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, "_blank");
+    const file = new File([doc.output("blob")], "Agricultura Especializada.pdf", { type: "application/pdf" });
+    const formData = new FormData();
+    formData.append("file", file);
+    fetch("https://api.whatsapp.com/send?phone=50233332343&text=Hola%20te%20envio%20la%20orden%20de%20tu%20compra", {
+      method: "POST",
+      body: formData,
+    });
+
     // Función para formatear la fecha como "DD/MM/YYYY"
     function formatDate(date) {
       const day = date.getDate().toString().padStart(2, "0");
