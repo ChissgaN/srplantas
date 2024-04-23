@@ -17,7 +17,7 @@ export default function Main() {
       <div className=" w-full">
         <div className="relative h-auto w-full ">
           <SliderImg />
-          <div className="absolute inset-0 flex w-full">
+          <div className="absolute inset-0 flex w-full z-20">
             <Beginning />
           </div>
         </div>
@@ -27,7 +27,7 @@ export default function Main() {
           <strong>Categorías:</strong>
         </h1>
 
-        <RedesSociales />
+        <RedesSociales className="z-30"/>
         <div className="flex justify-center   ">
           <div className=" grid  lg:gap-10 md:grid-cols-2 md:gap-6 w-[90%] ">
             <Categorias />
