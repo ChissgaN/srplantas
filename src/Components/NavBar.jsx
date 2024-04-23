@@ -4,6 +4,7 @@ import logo from "/logo.webp";
 import logoBlanco from "/logoBlanco.jpg";
 import car from "/icon-cart.svg";
 import trash from "/trash.svg";
+import Modal from 'react-modal';
 
 import {
   Navbar,
@@ -20,6 +21,17 @@ import { ShoppingCartContext } from "./ShoppingCartContext";
 import jsPDF from "jspdf";
 import autoTable from "jspdf-autotable";
 
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+  },
+};
+
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { cartItems, addToCart, removeFromCart } =
@@ -31,6 +43,16 @@ export default function NavBar() {
   const toggleCar = () => {
     setCarBuy(!carBuy);
   };
+  const [modalIsOpen, setIsOpen] = useState(false);
+
+  function openModal() {
+    setIsOpen(true);
+    toggleCar();
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
 
   useEffect(() => {
     const quantities = {};
@@ -129,7 +151,7 @@ export default function NavBar() {
 
     // Compartir via WhatsApp
     const url = doc.output("bloburl");
-    const message = `Hola, te envío la orden de tu compra. Haz clic en el siguiente enlace para descargarla: ${url}`;
+    const message = `Hola, te envío la orden de compra. Adjunto el archivo PDF con los detalles.`;
     const phoneNumber = "+50233332343";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
@@ -148,6 +170,7 @@ export default function NavBar() {
       const year = date.getFullYear();
       return `${day}/${month}/${year}`;
     }
+    closeModal();
   };
 
   return (
@@ -293,7 +316,8 @@ export default function NavBar() {
                       ? "opacity-50 cursor-not-allowed"
                       : ""
                   }`}
-                  onClick={generarPDF}
+                  //onClick={generarPDF
+                  onClick={openModal}
                   disabled={cartItems.length === 0}
                 >
                   CREAR PDF
@@ -302,6 +326,36 @@ export default function NavBar() {
             </div>
           )}
         </NavbarContent>
+        <Modal
+          isOpen={modalIsOpen}
+          onRequestClose={closeModal}
+          style={customStyles}
+          contentLabel="Descarga de Orden de compra PDF"
+        >
+          <form>
+            <input />
+            <h2>Gracias!</h2>
+            <div>Estamos listos para procesar su orden de compra y generarla en formato PDF.</div>
+            <div>Para generar el archivo y compartirlo con nosotros, por favor haga click "Enviar Via WhatsApp"</div>
+            <div>y adjunte al mensaje el archivo que acaba de descargar.</div>  
+            <div>
+              <button
+                className={`bg-blue-400 hover:bg-blue-600 text-white py-2 px-6 rounded-[10px] mt-4 hover:scale-[1.05]  transition duration-300 ease-in-out ${
+                  cartItems.length === 0
+                    ? "opacity-50 cursor-not-allowed"
+                    : ""
+                }`}
+                //onClick={generarPDF
+                onClick={generarPDF}
+                disabled={cartItems.length === 0}
+              >
+                Enviar Via WhatsApp
+              </button>
+            </div>
+            <div>
+            </div>
+          </form>
+        </Modal>
         <NavbarMenu className="">
           <NavbarMenuItem className="pt-5 flex flex-col">
             <Link
