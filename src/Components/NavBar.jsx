@@ -151,7 +151,7 @@ export default function NavBar() {
 
     // Compartir via WhatsApp
     const url = doc.output("bloburl");
-    const message = `Hola, te envío la orden de compra. Adjunto el archivo PDF con los detalles.`;
+    const message = `Hola Agricultura Especializada! esta es la cotización que acabo de generar en PDF y quiero finalizar mi compra!`;
     const phoneNumber = "+50233332343";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
