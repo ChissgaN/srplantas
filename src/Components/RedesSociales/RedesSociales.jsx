@@ -19,9 +19,9 @@ export const RedesSociales = () => {
           <a
             href="https://www.facebook.com/agriculturaespecializadagt"
             target="_blank"
-            className="block"
+            className="block z-10"
           >
-            <div className="group relative transition-all bg-[#4460A0] hover:bg-[#4460A0] hover:w-[140px] w-12 h-10 flex items-center justify-center hover:max-md:rounded-l-md hover:md:rounded-r-md hover:sm-rounded-l-md">
+            <div className=" group relative transition-all bg-[#4460A0] hover:bg-[#4460A0] hover:w-[140px] w-12 h-10 flex items-center justify-center hover:max-md:rounded-l-md hover:md:rounded-r-md hover:sm-rounded-l-md z-10">
               <span className="text-[0px] group-hover:text-[12px] group-hover:text-white pl-2 max-sm:pr-2 md:hidden ms:hidden max-sm:block  sm:pl-2 max-md:block sm:pr-2">
                 FACEBOOK
               </span>
@@ -30,7 +30,7 @@ export const RedesSociales = () => {
                 className=" relative transition-all w-6"
                 alt="red social Whatssap"
               />
-              <span className="text-[0px] group-hover:text-[12px] group-hover:text-white pl-2 md:block sm:hidden max-sm:hidden">
+              <span className="text-[0px] group-hover:text-[12px] group-hover:text-white pl-2 md:block sm:hidden max-sm:hidden z-10">
                 FACEBOOK
               </span>
             </div>
@@ -46,7 +46,7 @@ export const RedesSociales = () => {
             href="https://wa.me/+50233332343"
             target="_blank"
             rel="noopener noreferrer"
-            className=" block"
+            className=" block z-10"
           >
             <div
               className="group relative transition-all bg-[#67C15E] hover:bg-[#67C15E] hover:w-[140px] w-12 h-10 flex items-center justify-center
@@ -56,7 +56,7 @@ export const RedesSociales = () => {
             hover:sm-rounded-l-md
             "
             >
-              <span className="text-[0px] group-hover:text-[12px] group-hover:text-white pl-2 max-sm:pr-2 md:hidden ms:hidden max-sm:block  sm:pl-2 max-md:block sm:pr-2">
+              <span className="text-[0px] group-hover:text-[12px] group-hover:text-white pl-2 max-sm:pr-2 md:hidden ms:hidden max-sm:block  sm:pl-2 max-md:block sm:pr-2 z-10">
                 WHATSAPP
               </span>
               <img
@@ -64,7 +64,7 @@ export const RedesSociales = () => {
                 className=" relative transition-all w-6"
                 alt="red social Whatssap"
               />
-              <span className="text-[0px] group-hover:text-[12px] group-hover:text-white pl-2 md:block sm:hidden max-sm:hidden">
+              <span className="text-[0px] group-hover:text-[12px] group-hover:text-white pl-2 md:block sm:hidden max-sm:hidden z-10">
                 WHATSAPP
               </span>
             </div>
@@ -74,7 +74,7 @@ export const RedesSociales = () => {
       )}
       
       <button
-        className="fixed md:left-0 top-[349px] z-50 max-sm:right-0 sm:right-0 bg-slate-300 hover:bg-slate-400 w-4 hover:w-8 transition-all"
+        className="fixed md:left-0 top-[349px] z-30 max-sm:right-0 sm:right-0 bg-slate-300 hover:bg-slate-400 w-4 hover:w-8 transition-all"
         onClick={toggleVisibility}
       >
         <img src={arrow} alt="flecha Desplegable Redes Sociales" className="w-6" />

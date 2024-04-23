@@ -223,9 +223,9 @@ export default function NavBar() {
                 {cartItems.map((item, index) => (
                   <div
                     key={index}
-                    className="bg-green-200  mx-auto rounded-2xl w-[200px] h-[280px] sm:w-[170px]  max-sm:w-[175px]"
+                    className="bg-green-200  mx-auto rounded-2xl w-[200px] h-[290px] sm:w-[190px]  max-sm:w-[195px] p-3"
                   >
-                    <h6 className="text-yellow-500 font-semibold w-full truncate text-center">
+                    <h6 className="text-yellow-500 font-semibold w-full truncate text-center mb-2">
                       {item.producto}
                     </h6>
                     <img
@@ -266,8 +266,8 @@ export default function NavBar() {
                           +
                         </button>
                       </div>
-                      <span>
-                        Precio:
+                      <span className="font-bold">
+                        Precio: Q
                         <span className="font-bold">
                           {item.precio * (productQuantities[item.id] || 1)}
                         </span>
