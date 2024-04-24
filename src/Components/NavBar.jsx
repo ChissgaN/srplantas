@@ -99,12 +99,12 @@ export default function NavBar() {
 
     // Agregar imagen
     const imgData = logoBlanco; // Reemplaza con la ruta de tu imagen
-    doc.addImage(imgData, "JPEG", 10, 10, 40, 40); // Ajusta las coordenadas y dimensiones según lo necesario
+    doc.addImage(imgData, "JPEG", 15, 10, 35, 35); // Ajusta las coordenadas y dimensiones según lo necesario
 
     // Agregar texto "COTIZACION"
     doc.text("COTIZACION", 130, 30); // Ajusta las coordenadas según lo necesario
 
-    doc.text("Fecha de Emisión: " + formatDate(new Date()), 10, 60); // Agregar fecha actual
+    doc.text("Fecha de Emisión: " + formatDate(new Date()), 15, 60); // Agregar fecha actual
 
     // Calcular fecha válida hasta 10 días después
     const fechaActual = new Date();
@@ -112,7 +112,7 @@ export default function NavBar() {
     fechaValidaHasta.setDate(fechaValidaHasta.getDate() + 10);
     doc.text("Valido hasta: " + formatDate(fechaValidaHasta), 120, 60);
 
-    doc.text("FACTURA DE LA COMPRA", 10, 70);
+    doc.text("COTIZACION DE LA COMPRA", 15, 70);
 
     const columns = [
       "ID",
@@ -141,10 +141,13 @@ export default function NavBar() {
       theme: "grid",
     });
 
+doc.text("¡Envío a domicilio! Tarifas dinámicas según la distancia", 50, doc.lastAutoTable.finalY + 10);
+
+   
     doc.text(
       `Total a Pagar: Q${totalCarrito}`,
-      140,
-      doc.lastAutoTable.finalY + 10
+      130, 
+      doc.lastAutoTable.finalY + 20
     );
 
     doc.save("Agricultura Especializada.pdf");
