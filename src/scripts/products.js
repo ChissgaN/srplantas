@@ -132,6 +132,15 @@ import sustratoOrquideas from "../assets/categorias/sustratos/ORQUIDEAS.webp";
 import sustratoOrquideasBolsaPequena from "../assets/categorias/sustratos/ORQUIDEAS.webp";
 import sustratoBocashi from "../assets/categorias/sustratos/BOCASHI.webp";
 import gravaOrnamentalFina from "../assets/categorias/sustratos/GRAVA ORNAMENTAL FINA.webp";
+import bgrande from "../assets/categorias/contenedores/BANDEJA 50 CAVIDADES 1.webp"
+import bmediana from "../assets/categorias/contenedores/BANDEJA 200 CAVIDADES.webp"
+import bpequena  from "../assets/categorias/contenedores/BANDEJA 338 CAVIDADES.webp"
+import veinticinco from "../assets/categorias/contenedores/25 UNIDADES GRANDES.webp"
+import cincuentaGra from "../assets/categorias/contenedores/50 UNIDADES GRANDES.webp"
+import cincuentaPe from "../assets/categorias/contenedores/50 UNIDADES PPEQUEÑAS.webp"
+import cien from "../assets/categorias/contenedores/100 unidades PEQUEÑAS.webp"
+import mGrande from "../assets/categorias/contenedores/GRANDE-MACETA ORQUIDEAS_.webp"
+import mPequena from "../assets/categorias/contenedores/PEQUEÑA-MACETA ORQUIDEA.webp"
 
 const categorias = [
   {
@@ -1492,6 +1501,108 @@ const categorias = [
           "Perfecto para decorar macetas y jardines de interior. Agrega un toque decorativo y ayuda a mantener la humedad del suelo. También es ideal para proyectos de paisajismo y diseño de jardines.",
       },
     ],
+
+    contenedores : [
+      {
+        id: 144,
+        producto: "BANDEJA GRANDE",
+        codigo_de_barras: "#VALUE!",
+        codigo: 336,
+        precio: 20.00,
+        imagen: bgrande,
+        descripcion: "Bandeja grande para sembrar plantas."
+      },
+      {
+        id: 145,
+        producto: "BANDEJA MEDIANA",
+        codigo_de_barras: "#VALUE!",
+        codigo: 337,
+        precio: 20.00,
+        imagen: bmediana,
+        descripcion: "Bandeja mediana para sembrar plantas."
+      },
+      {
+        id: 146,
+        producto: "BANDEJA PEQUEÑA",
+        codigo_de_barras: "#VALUE!",
+        codigo: 338,
+        precio: 20.00,
+        imagen: bpequena,
+        descripcion: "Bandeja pequeña para sembrar plantas."
+      },
+      {
+        id: 147,
+        producto: "BOLSAS PARA ALMACIGO DE 25X35 25 UNIDADES",
+        codigo_de_barras: "#VALUE!",
+        codigo: 417,
+        precio: 23.00,
+        imagen: veinticinco,
+        descripcion: "Bolsas para almacigo de 25x35, paquete de 25 unidades."
+      },
+      {
+        id: 148,
+        producto: "BOLSAS PARA ALMACIGO DE 25X35 50 UNID.",
+        codigo_de_barras: "#VALUE!",
+        codigo: 418,
+        precio: 40.00,
+        imagen: cincuentaGra,
+        descripcion: "Bolsas para almacigo de 25x35, paquete de 50 unidades."
+      },
+      {
+        id: 149,
+        producto: "BOLSAS PARA ALMACIGO DE 6X10X3 50 UNIDADES",
+        codigo_de_barras: "#VALUE!",
+        codigo: 419,
+        precio: 20.00,
+        imagen: cincuentaPe,
+        descripcion: "Bolsas para almacigo de 6x10x3, paquete de 50 unidades."
+      },
+      {
+        id: 150,
+        producto: "BOLSAS PARA ALMACIGO DE 6X10X3 100 UNIDADES",
+        codigo_de_barras: "#VALUE!",
+        codigo: 420,
+        precio: 35.00,
+        imagen: cien,
+        descripcion: "Bolsas para almacigo de 6x10x3, paquete de 100 unidades."
+      },
+      {
+        id: 151,
+        producto: "MACETA P/ORQUIDEAS REDONDA TRANSPARENTE PEQUEÑA",
+        codigo_de_barras: "#VALUE!",
+        codigo: 421,
+        precio: 19.00,
+        imagen: mPequena,
+        descripcion: "Maceta redonda transparente pequeña para orquídeas."
+      },
+      {
+        id: 152,
+        producto: "MACETA P/ORQUIDEAS, REDONDA TRANSPARENTE GRANDE",
+        codigo_de_barras: "#VALUE!",
+        codigo: 422,
+        precio: 23.00,
+        imagen: mGrande,
+        descripcion: "Maceta redonda transparente grande para orquídeas."
+      },
+      {
+        id: 153,
+        producto: "MACETA P/ORQUIDEAS, REDONDA TRANSPARENTE PEQUEÑA + SUSTRATO",
+        codigo_de_barras: "#VALUE!",
+        codigo: 423,
+        precio: 24.00,
+        imagen: mPequena,
+        descripcion: "Maceta redonda transparente pequeña para orquídeas con sustrato."
+      },
+      {
+        id: 154,
+        producto: "MACETA P/ORQUIDEAS, REDONDA TRANSPARENTE GRANDE + SUSTRATO",
+        codigo_de_barras: "#VALUE!",
+        codigo: 424,
+        precio: 28.00,
+        imagen: mGrande,
+        descripcion: "Maceta redonda transparente grande para orquídeas con sustrato."
+      }
+    ]
   },
 ];
 export default categorias;
