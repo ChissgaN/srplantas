@@ -170,6 +170,7 @@ const PagesCards = () => {
     aromaticas: "/categoria/aromaticas.webp",
     bulbos: "/categoria/bulbos.webp",
     cesped: "/categoria/cesped.webp",
+    contenedores: "/categoria/contenedores.webp",
     hortalizas: "/categoria/hortalizas.webp",
     ornamentales: "/categoria/hornamentales.webp",
     sustratos: "/categoria/sustrato.webp",
