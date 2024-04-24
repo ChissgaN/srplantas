@@ -19,7 +19,7 @@ const PagesCards = () => {
   const categoriaURL = params.id;
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedProduct, setSelectedProduct] = useState(null);
-  const [selectedCategory, setSelectedCategory] = useState(categoriaURL);
+  const [selectedCategory, setSelectedCategory] = useState(categoriaURL) || "";
   const [selectedSortOption, setSelectedSortOption] = useState("default");
   const [showAllProducts, setShowAllProducts] = useState(false);
   const [loadedCards, setLoadedCards] = useState(6);
