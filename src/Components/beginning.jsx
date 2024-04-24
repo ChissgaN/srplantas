@@ -72,11 +72,9 @@ export default function Beginning() {
               onChange={handleInputChange}
             />
           </div>
-
           <Link
-            to={`/pages/${selectedCategory}?search=${encodeURIComponent(
-              JSON.stringify(searchResults[0])
-            )}`}
+            to={`/pages/${selectedCategory}?product=${searchResults.length > 0 ? searchResults[0].producto : ''}`}
+          
           >
             <Button
               color="success"

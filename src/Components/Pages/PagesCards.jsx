@@ -3,7 +3,7 @@ import NavBar from "../NavBar";
 import todo from "/procesoSiembra/semillas.webp";
 import ProductCard from "./ProductCard";
 import categorias from "../../scripts/products";
-
+import { Link } from "react-router-dom";
 import categoria from "../../../public/categorias.json";
 import { Button } from "@nextui-org/react";
 import ScrollToTopButton from "../ScrollToTop";
@@ -11,16 +11,9 @@ import { ShoppingCartContext } from "../ShoppingCartContext";
 import { useParams, useLocation } from "react-router-dom";
 
 const PagesCards = () => {
-
   const location = useLocation();
-
-  useEffect(() => {
-    const searchParams = new URLSearchParams(location.search);
-    const searchProduct = searchParams.get("search");
-    if (searchProduct) {
-      setSelectedProduct(JSON.parse(decodeURIComponent(searchProduct)));
-    }
-  }, [location]);
+  const searchParams = new URLSearchParams(location.search);
+  const productName = searchParams.get("product");
 
   const params = useParams();
   const categoriaURL = params.id;
@@ -136,6 +129,13 @@ const PagesCards = () => {
     default:
       sortedProducts = categorias[0][selectedCategory];
       break;
+  }
+
+  // Filtrar los productos por nombre si hay un nombre de producto en la URL
+  if (productName) {
+    sortedProducts = sortedProducts.filter(
+      (product) => product.producto === productName
+    );
   }
 
   const openModal = (product) => {
@@ -283,6 +283,13 @@ const PagesCards = () => {
                       setSelectedProductCart={setSelectedProductCart}
                     />
                   ))}
+            </div>
+            <div className="flex justify-center my-4 mx-auto max-sm:w-[120px]">
+            {productName && (
+              <div className="cursor-pointer border border-green-600 rounded-lg max-sm:p-2 p-3 text-green-600 hover:bg-green-500 transition-colors duration-1000 hover:text-white hover:shadow-md">
+                <Link to="/pages/aromaticas">Mostrar todos los productos</Link>
+              </div>
+            )}
             </div>
             {loading && (
               <div className="flex justify-center">
