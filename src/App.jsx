@@ -13,7 +13,6 @@ function App() {
             <Route path="/" element={<Main />} />
             <Route path="/pages" element={<PagesCards />} />
             <Route path="/pages/:id" element={<PagesCards />} />
-            <Route path={`/pages/${selectedCategory}?product=${searchResults.length > 0 ? searchResults[0].producto : ''}`} element={<PagesCards />} />
           </Routes>
         </ShoppingCartProvider>
       </BrowserRouter>
