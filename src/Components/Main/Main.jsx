@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import { NextUIProvider } from "@nextui-org/react";
 import NavBar from "../NavBar";
 import SliderImg from "../Slider";
@@ -9,11 +9,19 @@ import { Categorias } from "../CatalogoSemillas";
 import { Informacion } from "../InformacionSiembra/Informacion";
 
 import { RedesSociales } from "../RedesSociales/RedesSociales";
+import { AboutUs } from "../AboutUs";
 
 export default function Main() {
+
+  const [robotExpanded, setRobotExpanded] = useState(false);
+
+
   return (
     <NextUIProvider>
-      <NavBar />
+      <NavBar 
+      robotExpanded={robotExpanded}
+      setRobotExpanded={setRobotExpanded}
+      />
       <div className=" w-full">
         <div className="relative h-auto w-full ">
           <SliderImg />
@@ -23,6 +31,14 @@ export default function Main() {
         </div>
       </div>
       <div className="my-10">
+      
+        {/* <AboutUs/> */}
+        {robotExpanded && (
+          <section id="about" className=" ">
+            <AboutUs />
+          </section>
+        )}
+        
         <h1 className=" text-[30px] w-[90%] mx-auto">
           <strong>Categorías:</strong>
         </h1>

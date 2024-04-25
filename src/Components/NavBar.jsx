@@ -36,7 +36,7 @@ const customStyles = {
   },
 };
 
-export default function NavBar() {
+export default function NavBar({ robotExpanded, setRobotExpanded }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { cartItems, addToCart, removeFromCart } =
     useContext(ShoppingCartContext);
@@ -198,6 +198,14 @@ export default function NavBar() {
     setMostrarOpciones(!mostrarOpciones);
   };
 
+
+  const handleContactClick = () => {
+   
+    setRobotExpanded(!robotExpanded);
+    
+  };
+
+
   return (
     <div>
       {carBuy && (
@@ -269,7 +277,7 @@ export default function NavBar() {
             </div>
           </NavbarItem>
           <NavbarItem className="hover:scale-110 hover:bg-[#67d4768e]  transition duration-300 ease-in-out hover:rounded-lg px-2 py-1 hover:font-semibold">
-            <Link color="foreground" href="#">
+            <Link color="foreground" to="#about" onClick={handleContactClick} className="transition duration-400 ease-in-out">
               Acerca de nosotros
             </Link>
           </NavbarItem>
@@ -477,9 +485,9 @@ export default function NavBar() {
               )}
             </div>
             <Link
-              to="/pages"
+              to="#about"
               className="w-full py-3 hover:scale-105 hover:bg-[#67d4768e]  transition duration-300 ease-in-out px-2 hover:rounded-[10px] hover:font-semibold"
-              href="#"
+             
               size="lg"
             >
               Acerca de nosotros
