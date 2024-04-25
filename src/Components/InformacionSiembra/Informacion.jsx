@@ -14,7 +14,7 @@ export const Informacion = () => {
         <Index
           procesoImg={preparaSuelo}
           tituloProceso="Preparación del suelo:"
-          descripcionProceso="Asegúrate de que el suelo esté bien drenado y suelto esto permitirá un buen crecimiento de las raíces. No olvides elimar las malas hierbas y trabaja el suelo para airearlo."
+          descripcionProceso="Asegúrate de que el suelo esté bien drenado y suelto, esto permitirá un buen crecimiento de las raíces. No olvides eliminar las malas hierbas y trabajar el suelo para airearlo."
         />
 
         <Index
@@ -32,10 +32,8 @@ export const Informacion = () => {
         <Index
           procesoImg={fumigar}
           tituloProceso="Precausiones y Cuidados:"
-          descripcionProceso="Después de la germinación, asegúrate de proporcionar suficiente agua y luz solar a las plántulas.
-    * Controla las malas hierbas y evita el exceso de competencia por nutrientes y agua 
-    * Inspecciona regularmente tus plantas en busca de signos de plagas y enfermedades.
-    * Utiliza métodos de control integrado de plagas, como la rotación de cultivos, el uso de insecticidas naturales y el manejo cultural."
+          descripcionProceso="Después de la germinación, asegúrate de proporcionar suficiente agua y luz solar a las plántulas. Controla las malas hierbas y evita el exceso de competencia por nutrientes y agua, además 
+     inspecciona regularmente tus plantas en busca de signos de plagas y enfermedades y utiliza métodos de control integrado de plagas, como la rotación de cultivos, el uso de insecticidas naturales y el manejo cultural."
         />
 
         <Index

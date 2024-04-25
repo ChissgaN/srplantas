@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import React from "react";
 import { Cards } from "./Cards";
 
-
 export const Categorias = () => {
   const [users, setUsers] = useState([]);
   async function getData() {
