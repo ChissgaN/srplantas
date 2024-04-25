@@ -4,7 +4,11 @@ import logo from "/logo.webp";
 import logoBlanco from "/logoBlanco.jpg";
 import car from "/icon-cart.svg";
 import trash from "/trash.svg";
-import Modal from 'react-modal';
+import Modal from "react-modal";
+import gmail from "../../public/contactos/gmail.svg";
+import facebook from "../../public/contactos/facebook.svg";
+import whatsapp from "../../public/contactos/whatsapp.svg";
+import opinions from "../../public/contactos/opinions.svg";
 
 import {
   Navbar,
@@ -23,12 +27,12 @@ import autoTable from "jspdf-autotable";
 
 const customStyles = {
   content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
   },
 };
 
@@ -141,12 +145,15 @@ export default function NavBar() {
       theme: "grid",
     });
 
-doc.text("¡Envío a domicilio! Tarifas dinámicas según la distancia", 50, doc.lastAutoTable.finalY + 10);
+    doc.text(
+      "¡Envío a domicilio! Tarifas dinámicas según la distancia",
+      50,
+      doc.lastAutoTable.finalY + 10
+    );
 
-   
     doc.text(
       `Total a Pagar: Q${totalCarrito}`,
-      130, 
+      130,
       doc.lastAutoTable.finalY + 20
     );
 
@@ -156,15 +163,24 @@ doc.text("¡Envío a domicilio! Tarifas dinámicas según la distancia", 50, doc
     const url = doc.output("bloburl");
     const message = `Hola Agricultura Especializada! esta es la cotización que acabo de generar en PDF y quiero finalizar mi compra!`;
     const phoneNumber = "+50233332343";
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      message
+    )}`;
     window.open(whatsappUrl, "_blank");
-    const file = new File([doc.output("blob")], "Agricultura Especializada.pdf", { type: "application/pdf" });
+    const file = new File(
+      [doc.output("blob")],
+      "Agricultura Especializada.pdf",
+      { type: "application/pdf" }
+    );
     const formData = new FormData();
     formData.append("file", file);
-    fetch("https://api.whatsapp.com/send?phone=50233332343&text=Hola%20te%20envio%20la%20orden%20de%20tu%20compra", {
-      method: "POST",
-      body: formData,
-    });
+    fetch(
+      "https://api.whatsapp.com/send?phone=50233332343&text=Hola%20te%20envio%20la%20orden%20de%20tu%20compra",
+      {
+        method: "POST",
+        body: formData,
+      }
+    );
 
     // Función para formatear la fecha como "DD/MM/YYYY"
     function formatDate(date) {
@@ -174,6 +190,12 @@ doc.text("¡Envío a domicilio! Tarifas dinámicas según la distancia", 50, doc
       return `${day}/${month}/${year}`;
     }
     closeModal();
+  };
+
+  const [mostrarOpciones, setMostrarOpciones] = useState(false);
+
+  const toggleOpciones = () => {
+    setMostrarOpciones(!mostrarOpciones);
   };
 
   return (
@@ -206,9 +228,45 @@ doc.text("¡Envío a domicilio! Tarifas dinámicas según la distancia", 50, doc
           </NavbarItem>
 
           <NavbarItem className="hover:scale-110 hover:bg-[#67d4768e]  transition duration-300 ease-in-out hover:rounded-lg px-2 py-1 hover:font-semibold">
-            <Link href="#" aria-current="page">
-              Contacto
-            </Link>
+            <div className="cursor-pointer" onClick={toggleOpciones}>
+              Contactos
+              {mostrarOpciones && (
+                <div className="absolute top-full bg-white shadow-md px-6 py-2 rounded-md w-[200px] hover:border hover:border-[#67d4768e]">
+                  <div
+                    className="flex justify-between items-center mb-3 hover:bg-[#67d4768e] rounded-lg cursor:pointer p-1"
+                    onClick={() => window.open("mailto:agriculturaespecializada@yahoo.es")}
+                  >
+                    <img className="w-[25%]" src={gmail} alt="email" />
+                    <p className="cursor-pointer">Email</p>
+                  </div>
+                  <div
+                    className="flex justify-between items-center mb-3 hover:bg-[#67d4768e] rounded-lg cursor:pointer p-1"
+                    onClick={() =>
+                      window.open(
+                        "https://www.facebook.com/agriculturaespecializadagt"
+                      )
+                    }
+                  >
+                    <img className="w-[25%]" src={facebook} alt="facebook" />
+                    <p className="cursor-pointer">Facebook</p>
+                  </div>
+                  <div
+                    className="flex justify-between items-center mb-3 hover:bg-[#67d4768e] rounded-lg cursor:pointer p-1"
+                    onClick={() => window.open("https://wa.me/50233332343")}
+                  >
+                    <img className="w-[25%]" src={whatsapp} alt="whatsapp" />
+                    <p className="cursor-pointer">WhatsApp</p>
+                  </div>
+                  <div
+                    className="flex justify-between items-center mb-3 hover:bg-[#67d4768e] rounded-lg cursor:pointer p-1"
+                    onClick={() => window.open("/opiniones")}
+                  >
+                    <img className="w-[25%]" src={opinions} alt="opiniones" />
+                    <p className="cursor-pointer">Opiniones</p>
+                  </div>
+                </div>
+              )}
+            </div>
           </NavbarItem>
           <NavbarItem className="hover:scale-110 hover:bg-[#67d4768e]  transition duration-300 ease-in-out hover:rounded-lg px-2 py-1 hover:font-semibold">
             <Link color="foreground" href="#">
@@ -270,7 +328,11 @@ doc.text("¡Envío a domicilio! Tarifas dinámicas según la distancia", 50, doc
                         </button>
                         <input
                           type="number"
-                          value={ productQuantities[item.id] ? productQuantities[item.id] : ""}
+                          value={
+                            productQuantities[item.id]
+                              ? productQuantities[item.id]
+                              : ""
+                          }
                           onChange={(e) => {
                             const value = parseInt(e.target.value);
                             setProductQuantities((prevQuantities) => ({
@@ -338,15 +400,19 @@ doc.text("¡Envío a domicilio! Tarifas dinámicas según la distancia", 50, doc
           <form>
             <input />
             <h2>Gracias!</h2>
-            <div>Estamos listos para procesar su orden de compra y generarla en formato PDF.</div>
-            <div>Para generar el archivo y compartirlo con nosotros, por favor haga click "Enviar Via WhatsApp"</div>
-            <div>y adjunte al mensaje el archivo que acaba de descargar.</div>  
+            <div>
+              Estamos listos para procesar su orden de compra y generarla en
+              formato PDF.
+            </div>
+            <div>
+              Para generar el archivo y compartirlo con nosotros, por favor haga
+              click "Enviar Via WhatsApp"
+            </div>
+            <div>y adjunte al mensaje el archivo que acaba de descargar.</div>
             <div>
               <button
                 className={`bg-blue-400 hover:bg-blue-600 text-white py-2 px-6 rounded-[10px] mt-4 hover:scale-[1.05]  transition duration-300 ease-in-out ${
-                  cartItems.length === 0
-                    ? "opacity-50 cursor-not-allowed"
-                    : ""
+                  cartItems.length === 0 ? "opacity-50 cursor-not-allowed" : ""
                 }`}
                 //onClick={generarPDF
                 onClick={generarPDF}
@@ -355,8 +421,7 @@ doc.text("¡Envío a domicilio! Tarifas dinámicas según la distancia", 50, doc
                 Enviar Via WhatsApp
               </button>
             </div>
-            <div>
-            </div>
+            <div></div>
           </form>
         </Modal>
         <NavbarMenu className="">
@@ -369,15 +434,48 @@ doc.text("¡Envío a domicilio! Tarifas dinámicas según la distancia", 50, doc
             >
               Productos
             </Link>
-
-            <Link
-              to="/pages"
-              className="w-full py-3 hover:scale-105 hover:bg-[#67d4768e]  transition duration-300 ease-in-out px-2 hover:rounded-[10px] hover:font-semibold"
-              href="#"
-              size="lg"
+            <div
+              className="w-full py-3 hover:scale-105 hover:bg-[#67d4768e] transition duration-300 ease-in-out px-2 hover:rounded-[10px] hover:font-semibold"
+              onClick={toggleOpciones}
             >
               Contactos
-            </Link>
+              {mostrarOpciones && (
+                <div className="absolute top-full bg-white shadow-md px-6 rounded-md w-[200px]">
+                  <div
+                    className="flex justify-between items-center mb-3 hover:bg-[#67d4768e] rounded-lg cursor:pointer p-1"
+                    onClick={() => window.open("mailto:chissgan.13@gmail.com")}
+                  >
+                    <img className="w-[25%]" src={gmail} alt="email" />
+                    <p className="cursor-pointer">Gmail</p>
+                  </div>
+                  <div
+                    className="flex justify-between items-center mb-3 hover:bg-[#67d4768e] rounded-lg cursor:pointer p-1"
+                    onClick={() =>
+                      window.open(
+                        "https://www.facebook.com/agriculturaespecializadagt"
+                      )
+                    }
+                  >
+                    <img className="w-[25%]" src={facebook} alt="facebook" />
+                    <p className="cursor-pointer">Facebook</p>
+                  </div>
+                  <div
+                    className="flex justify-between items-center mb-3 hover:bg-[#67d4768e] rounded-lg cursor:pointer p-1"
+                    onClick={() => window.open("https://wa.me/50233332343")}
+                  >
+                    <img className="w-[25%]" src={whatsapp} alt="whatsapp" />
+                    <p className="cursor-pointer">WhatsApp</p>
+                  </div>
+                  <div
+                    className="flex justify-between items-center mb-3 hover:bg-[#67d4768e] rounded-lg cursor:pointer p-1"
+                    onClick={() => window.open("/opiniones")}
+                  >
+                    <img className="w-[25%]" src={opinions} alt="opiniones" />
+                    <p className="cursor-pointer">Opiniones</p>
+                  </div>
+                </div>
+              )}
+            </div>
             <Link
               to="/pages"
               className="w-full py-3 hover:scale-105 hover:bg-[#67d4768e]  transition duration-300 ease-in-out px-2 hover:rounded-[10px] hover:font-semibold"
