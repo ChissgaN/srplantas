@@ -1,6 +1,5 @@
 import React from "react";
 import "./Botones.css";
-import PagesCards from "../Pages/PagesCards";
 import { Link } from "react-router-dom";
 
 export const Cards = ({ imgProyect, tituloCategoria }) => {
