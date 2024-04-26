@@ -91,7 +91,7 @@ export default function Beginning() {
   return (
     <section className="beginning-container w-full max-sm:w-screen max-md:w-full md:mt-12">
       <div className="my-8 w-full relative px-10 p-5 max-sm:w-screen max-sm:px-5 max-md:w-[80%] ">
-        <h1 className="font-medium text-3xl md:text-[34px] lg:text-[40px] mb-3 text-red-500">¡Comienza a sembrar hoy!</h1>
+        <h1 className="font-medium text-3xl md:text-[34px] lg:text-[40px] mb-3 text-white">¡Comienza a sembrar hoy!</h1>
         <div className="flex gap-5 ">
           <div className="flex items-center w-[55%] sm:w-[79%] max-sm:w-[100%] bg-white px-3 rounded-[10px] transition-[5s] hover:scale-105  duration-200 ease-in-out max-w-[640px]">
             <img src={searchIcon} alt="Search" className="mr-2 p-2 " />
