@@ -68,7 +68,7 @@ export default function Beginning() {
     
     localStorage.setItem("productoNombre", nombreCat);
   };
-
+  console.log("Selected Category:", selectedCategory);
  
   
 
@@ -104,8 +104,7 @@ export default function Beginning() {
             />
           </div>
           <Link
-            to={`/pages/${selectedCategory}`}
-           
+            to={`/pages/${selectedCategory.toLowerCase()}`}
           >
             <Button
               color="success"
