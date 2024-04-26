@@ -251,42 +251,42 @@ console.log(isMenuOpen)
             <Link to="/pages/aromaticas">Productos</Link>
           </NavbarItem>
 
-          <NavbarItem className="hover:scale-110 hover:bg-[#67d4768e]  transition duration-300 ease-in-out hover:rounded-lg px-2 py-1 hover:font-semibold">
+          <NavbarItem className="hover:bg-[#67d4768e]  transition duration-300 ease-in-out hover:rounded-lg px-2 py-1 hover:font-semibold">
             <div className="cursor-pointer" onClick={toggleOpciones}>
               Contactos
               {mostrarOpciones && (
-                <div className="absolute top-full bg-white shadow-md px-6 py-2 rounded-md w-[200px] hover:border hover:border-[#67d4768e]">
+                <div className="absolute top-16 left-[38%] md:left-[34%] lg:left-[38%] bg-white shadow-md px-6 py-2 rounded-md w-[200px] hover:border hover:border-[#67d4768e]">
                   <div
-                    className="flex justify-between items-center mb-3 hover:bg-[#67d4768e] rounded-lg cursor:pointer p-1"
+                    className="flex justify-between items-center mb-3 hover:bg-[#67d4768e] rounded-lg cursor:pointer p-2"
                     onClick={() => window.open("mailto:agriculturaespecializada@yahoo.es")}
                   >
-                    <img className="w-[25%]" src={gmail} alt="email" />
                     <p className="cursor-pointer">Email</p>
+                    <img className="w-[25%]" src={gmail} alt="email" />
                   </div>
                   <div
-                    className="flex justify-between items-center mb-3 hover:bg-[#67d4768e] rounded-lg cursor:pointer p-1"
+                    className="flex justify-between items-center mb-3 hover:bg-[#67d4768e] rounded-lg cursor:pointer p-2"
                     onClick={() =>
                       window.open(
                         "https://www.facebook.com/agriculturaespecializadagt"
                       )
                     }
                   >
-                    <img className="w-[25%]" src={facebook} alt="facebook" />
                     <p className="cursor-pointer">Facebook</p>
+                    <img className="w-[25%]" src={facebook} alt="facebook" />
                   </div>
                   <div
-                    className="flex justify-between items-center mb-3 hover:bg-[#67d4768e] rounded-lg cursor:pointer p-1"
+                    className="flex justify-between items-center mb-3 hover:bg-[#67d4768e] rounded-lg cursor:pointer p-2"
                     onClick={() => window.open("https://wa.me/50233332343")}
                   >
-                    <img className="w-[25%]" src={whatsapp} alt="whatsapp" />
                     <p className="cursor-pointer">WhatsApp</p>
+                    <img className="w-[25%]" src={whatsapp} alt="whatsapp" />
                   </div>
                   <div
-                    className="flex justify-between items-center mb-3 hover:bg-[#67d4768e] rounded-lg cursor:pointer p-1"
+                    className="flex justify-between items-center mb-3 hover:bg-[#67d4768e] rounded-lg cursor:pointer p-2"
                     onClick={() => window.open("/opiniones")}
                   >
-                    <img className="w-[25%]" src={opinions} alt="opiniones" />
                     <p className="cursor-pointer">Opiniones</p>
+                    <img className="w-[25%]" src={opinions} alt="opiniones" />
                   </div>
                 </div>
               )}
@@ -463,38 +463,38 @@ console.log(isMenuOpen)
             >
               Contactos
               {mostrarOpciones && (
-                <div className="absolute top-full bg-white shadow-md px-6 rounded-md w-[200px]">
+                <div className="absolute top-full pt-3 bg-white shadow-md px-6 rounded-md w-[200px]">
                   <div
-                    className="flex justify-between items-center mb-3 hover:bg-[#67d4768e] rounded-lg cursor:pointer p-1"
+                    className="flex justify-between items-center mb-3 hover:bg-[#67d4768e] rounded-lg cursor:pointer p-2"
                     onClick={() => window.open("mailto:chissgan.13@gmail.com")}
                   >
-                    <img className="w-[25%]" src={gmail} alt="email" />
                     <p className="cursor-pointer">Gmail</p>
+                    <img className="w-[25%]" src={gmail} alt="email" />
                   </div>
                   <div
-                    className="flex justify-between items-center mb-3 hover:bg-[#67d4768e] rounded-lg cursor:pointer p-1"
+                    className="flex justify-between items-center mb-3 hover:bg-[#67d4768e] rounded-lg cursor:pointer p-2"
                     onClick={() =>
                       window.open(
                         "https://www.facebook.com/agriculturaespecializadagt"
                       )
                     }
                   >
-                    <img className="w-[25%]" src={facebook} alt="facebook" />
                     <p className="cursor-pointer">Facebook</p>
+                    <img className="w-[25%]" src={facebook} alt="facebook" />
                   </div>
                   <div
-                    className="flex justify-between items-center mb-3 hover:bg-[#67d4768e] rounded-lg cursor:pointer p-1"
+                    className="flex justify-between items-center mb-3 hover:bg-[#67d4768e] rounded-lg cursor:pointer p-2"
                     onClick={() => window.open("https://wa.me/50233332343")}
                   >
-                    <img className="w-[25%]" src={whatsapp} alt="whatsapp" />
                     <p className="cursor-pointer">WhatsApp</p>
+                    <img className="w-[25%]" src={whatsapp} alt="whatsapp" />
                   </div>
                   <div
-                    className="flex justify-between items-center mb-3 hover:bg-[#67d4768e] rounded-lg cursor:pointer p-1"
+                    className="flex justify-between items-center mb-3 hover:bg-[#67d4768e] rounded-lg cursor:pointer p-2"
                     onClick={() => window.open("/opiniones")}
                   >
-                    <img className="w-[25%]" src={opinions} alt="opiniones" />
                     <p className="cursor-pointer">Opiniones</p>
+                    <img className="w-[25%]" src={opinions} alt="opiniones" />
                   </div>
                 </div>
               )}
