@@ -6,13 +6,13 @@ const ProductCard = ({ product, openModal }) => {
   const { addToCart, cartItems, setCartItems, setSelectedProductCart } =
     useContext(ShoppingCartContext);
 
-  useEffect(() => {
+  /* useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
     const searchProduct = searchParams.get("search");
     if (searchProduct) {
       setSelectedProductCart(JSON.parse(decodeURIComponent(searchProduct)));
     }
-  }, [location]);
+  }, [location]); */
 
   const handleClick = () => {
     openModal(product);
