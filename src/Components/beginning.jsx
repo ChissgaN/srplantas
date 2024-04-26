@@ -104,7 +104,7 @@ export default function Beginning() {
             />
           </div>
           <Link
-            to={`/pages/${selectedCategory}`}
+            to={`/pages/${selectedCategory.toLowerCase()}`}
            
           >
             <Button
