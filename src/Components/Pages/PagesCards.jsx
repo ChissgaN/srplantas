@@ -31,15 +31,14 @@ const PagesCards = () => {
     selectedProductCart,
     setSelectedProductCart,
     productoNombre,
-    setProductoNombre
+    setProductoNombre,
   } = useContext(ShoppingCartContext);
 
   useEffect(() => {
-   
     const storedProductNombre = localStorage.getItem("productoNombre");
     if (storedProductNombre) {
       setProductoNombre(storedProductNombre);
-      setSearchTerm(storedProductNombre); 
+      setSearchTerm(storedProductNombre);
     }
   }, []);
 
@@ -214,21 +213,23 @@ const PagesCards = () => {
             {selectedCategory ? selectedCategory.toUpperCase() : ""}
           </h1>
           <div className=" max-sm:w-full w-full md:flex md:justify-end  ">
-          <input
-  type="text"
-  placeholder={`Buscar ${selectedCategory}...`}
-  value={searchTerm}
-  onChange={handleSearchChange}
-  className="h-fit px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400 w-full"
-/>
-    {searchTerm && (
-      <button
-        onClick={handleClearSearch}
-        className="ml-2 bg-gray-300 text-gray-600 px-2 py-1 rounded-md focus:outline-none hover:bg-gray-400"
-      >
-        Limpiar
-      </button>
-    )}
+            <input
+              type="text"
+              placeholder={`Buscar ${selectedCategory}...`}
+              value={searchTerm}
+              onChange={handleSearchChange}
+              className="h-fit px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400 w-full"
+            />
+            <div className="max-sm:flex max:sm:w-[100%]  max-sm:justify-center">
+            {searchTerm && (
+              <button
+                onClick={handleClearSearch}
+                className="ml-2 h-[100%]  max-sm:my-2 max-sm:mx-auto max-sm:inline-block bg-green-400 text-white px-2 py-1 rounded-md focus:outline-none hover:bg-green-500"
+              >
+                Limpiar
+              </button>
+            )}
+            </div>
           </div>
           <div className="md:flex md:items-end w-full   md:justify-end ">
             <select
@@ -310,11 +311,13 @@ const PagesCards = () => {
                   ))}
             </div>
             <div className="flex justify-center my-4 mx-auto max-sm:w-[120px]">
-            {productName && (
-              <div className="cursor-pointer border border-green-600 rounded-lg max-sm:p-2 p-3 text-green-600 hover:bg-green-500 transition-colors duration-1000 hover:text-white hover:shadow-md">
-                <Link to="/pages/aromaticas">Mostrar todos los productos</Link>
-              </div>
-            )}
+              {productName && (
+                <div className="cursor-pointer border border-green-600 rounded-lg max-sm:p-2 p-3 text-green-600 hover:bg-green-500 transition-colors duration-1000 hover:text-white hover:shadow-md">
+                  <Link to="/pages/aromaticas">
+                    Mostrar todos los productos
+                  </Link>
+                </div>
+              )}
             </div>
           </div>
         )}

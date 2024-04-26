@@ -288,7 +288,7 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
           <NavbarItem className="hover:scale-110 hover:bg-[#67d4768e]  transition duration-300 ease-in-out hover:rounded-lg px-2 py-1 hover:font-semibold">
             <a
               color="foreground"
-              href="#nosotros"
+              href="/#nosotros"
               onClick={handleContactClick}
               className="transition duration-400 ease-in-out"
             >
@@ -464,7 +464,7 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
                 <div className="absolute top-full pt-3 bg-white shadow-md px-6 rounded-md w-[200px]">
                   <div
                     className="flex justify-between items-center mb-3 hover:bg-[#67d4768e] rounded-lg cursor:pointer p-2"
-                    onClick={() => window.open("mailto:chissgan.13@gmail.com")}
+                    onClick={() => window.open("mailto:agriculturaespecializada@yahoo.es")}
                   >
                     <p className="cursor-pointer">Gmail</p>
                     <img className="w-[25%]" src={gmail} alt="email" />
@@ -498,7 +498,7 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
               )}
             </div>
 
-            <Link
+            {/* <Link
               to="#about"
               className="w-full py-3 hover:scale-105 hover:bg-[#67d4768e]  transition duration-300 ease-in-out px-2 hover:rounded-[10px] hover:font-semibold"
               onClick={handleContactClick}
@@ -510,7 +510,7 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
               >
                 Acerca de nosotros
               </a>
-            </Link>
+            </Link> */}
           </NavbarMenuItem>
         </NavbarMenu>
       </Navbar>
