@@ -22,7 +22,7 @@ const PagesCards = () => {
   const [selectedCategory, setSelectedCategory] = useState(categoriaURL) || "";
   const [selectedSortOption, setSelectedSortOption] = useState("default");
   const [showAllProducts, setShowAllProducts] = useState(false);
-  const [loadedCards, setLoadedCards] = useState(6);
+  const [loadedCards, setLoadedCards] = useState(60);
   const [loading, setLoading] = useState(false);
   const {
     addToCart,
@@ -71,7 +71,7 @@ const PagesCards = () => {
       setSelectedCategory(categoria);
       setShowAllProducts(false);
     }
-    setLoadedCards(6);
+    setLoadedCards(60);
   };
 
   useEffect(() => {
