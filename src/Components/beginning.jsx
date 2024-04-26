@@ -1,24 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Button } from "@nextui-org/react";
 import searchIcon from "/search.svg";
 import categorias from "../scripts/products";
 import { Link } from "react-router-dom";
+
 import "../App.css";
+import { NombreCatContext } from "./NewContext";
 
 export default function Beginning() {
   const [inputValue, setInputValue] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("");
-
-  const {
-    productoNombre,
-        setProductoNombre,
-  } = useContext(ShoppingCartContext);
-
+  const { nombreCat, setNombreCat } = useContext(NombreCatContext); // Utilizamos el contexto
 
   const handleInputChange = (e) => {
-    console.log(inputValue)
-
     const value = e.target.value;
     setInputValue(value);
 
@@ -39,24 +34,22 @@ export default function Beginning() {
 
     setSearchResults(filteredResults);
   };
-
   const handleResultClick = (producto) => {
     setInputValue(producto.producto);
     const category = getCategoryOfProduct(producto);
     setSelectedCategory(category);
-    /* console.log("Selected Product Category:", category); */
     setSearchResults([producto]);
-   /*  console.log("Selected Product Product:", producto); */
-  const nombreCat =  searchResults[0].producto;
-  setProductoNombre(nombreCat)
 
-   console.log("valueFinal", searchResults[0].producto);
-   console.log("categoria",category);
-   
+
+    const nombreProduct = searchResults;
+    setNombreCat(nombreProduct); // Establecemos el nombre de la categoría en el contexto
+
+
+
+
   };
 
-  console.log("categoria",selectedCategory);
-
+  console.log(nombreCat)
   const getCategoryOfProduct = (product) => {
     const productName = product.producto.toLowerCase();
 

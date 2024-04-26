@@ -9,7 +9,6 @@ const ShoppingCartProvider = ({ children }) => {
     quantity: 1,
   });
 
-  const [productoNombre, setProductoNombre] = useState("");
 
   const addToCart = (product) => {
     setCartItems((prevCartItems) => [...prevCartItems, product]);
@@ -31,8 +30,7 @@ const ShoppingCartProvider = ({ children }) => {
         setSelectedProduct,
         selectedProductCart,
         setSelectedProductCart,
-        productoNombre,
-        setProductoNombre,
+
       }}
     >
       {children}
