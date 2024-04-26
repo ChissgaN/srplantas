@@ -7,7 +7,7 @@ import { ShoppingCartProvider } from "./Components/ShoppingCartContext";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <ShoppingCartProvider>
           <Routes>
             <Route path="/" element={<Main />} />
