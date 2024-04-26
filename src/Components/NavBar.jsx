@@ -203,7 +203,7 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
     setIsMenuOpen(false);
 
     setRobotExpanded(!robotExpanded);
-    console.log(isMenuOpen, "aqui estoy");
+   
   };
 
   const handleCloseModal = () => {

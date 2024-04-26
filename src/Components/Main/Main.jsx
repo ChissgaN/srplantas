@@ -30,15 +30,6 @@ export default function Main() {
       </div>
       <div className="my-10">
 
-        {/* <AboutUs/> */}
-        {robotExpanded && (
-          <section id="about" className="">
-            <AboutUs />
-          </section>
-        )}
-        
-        
-
         <h1 className=" text-[30px] w-[90%] mx-auto mt-20 mb-6 flex justify-center">
 
           <strong>Categorías:</strong>
