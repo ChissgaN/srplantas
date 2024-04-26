@@ -104,10 +104,10 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
 
     // Agregar imagen
     const imgData = logoBlanco; // Reemplaza con la ruta de tu imagen
-    doc.addImage(imgData, "JPEG", 15, 10, 35, 35); // Ajusta las coordenadas y dimensiones según lo necesario
+    doc.addImage(imgData, "JPEG", 20, 15, 35, 25); // Ajusta las coordenadas y dimensiones según lo necesario
 
     // Agregar texto "COTIZACION"
-    doc.text("COTIZACION", 130, 30); // Ajusta las coordenadas según lo necesario
+    doc.text("COTIZACION", 160, 30); // Ajusta las coordenadas según lo necesario
 
     doc.text("Fecha de Emisión: " + formatDate(new Date()), 15, 60); // Agregar fecha actual
 
@@ -115,16 +115,16 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
     const fechaActual = new Date();
     const fechaValidaHasta = new Date(fechaActual);
     fechaValidaHasta.setDate(fechaValidaHasta.getDate() + 10);
-    doc.text("Valido hasta: " + formatDate(fechaValidaHasta), 120, 60);
+    doc.text("Valido hasta: " + formatDate(fechaValidaHasta), 140, 60);
 
-    doc.text("COTIZACION DE LA COMPRA", 15, 70);
+    /* doc.text("COTIZACION DE LA COMPRA", 15, 70); */
 
     const columns = [
       "ID",
       "Producto",
       "Precio unitario",
       "Cantidad",
-      "Precio total",
+      "Total",
     ];
     const data = cartItems.map((item, index) => {
       const cantidad = productQuantities[item.id] || 1;
@@ -133,29 +133,29 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
       return [
         index + 1,
         item.producto,
-        `Q${item.precio}`,
+        `Q ${item.precio}`,
         cantidad,
-        `Q${precioTotal}`,
+        `Q ${precioTotal}`,
       ];
     });
 
     autoTable(doc, {
       head: [columns],
       body: data,
-      startY: 80,
+      startY: 70,
       theme: "grid",
     });
 
     doc.text(
       "¡Envío a domicilio! Tarifas dinámicas según la distancia",
-      50,
-      doc.lastAutoTable.finalY + 10
+      75,
+      doc.lastAutoTable.finalY + 15
     );
 
     doc.text(
-      `Total a Pagar: Q${totalCarrito}`,
-      130,
-      doc.lastAutoTable.finalY + 20
+      `Total a Pagar: Q ${totalCarrito}`,
+      150,
+      doc.lastAutoTable.finalY + 28
     );
 
     doc.save("Agricultura Especializada.pdf");
@@ -276,7 +276,7 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
                   </div>
                   <div
                     className="flex justify-between items-center mb-3 hover:bg-[#67d4768e] rounded-lg cursor:pointer p-2"
-                    onClick={() => window.open("/opiniones")}
+                    onClick={() => window.open("https://forms.gle/FGpZriNrtmFEuqcaA")}
                   >
                     <p className="cursor-pointer">Opiniones</p>
                     <img className="w-[25%]" src={opinions} alt="opiniones" />

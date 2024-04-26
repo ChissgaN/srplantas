@@ -7,20 +7,13 @@ import { ShoppingCartProvider } from "./Components/ShoppingCartContext";
 function App() {
   return (
     <>
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <BrowserRouter>
         <ShoppingCartProvider>
           <Routes>
             <Route path="/" element={<Main />} />
             <Route path="/pages" element={<PagesCards />} />
             <Route path="/pages/:id" element={<PagesCards />} />
-            {/* <Route
-              path="/pages"
-              element={<PagesCards productoNombre={productoNombre} />}
-            />
-            <Route
-              path="/pages/:id"
-              element={<PagesCards productoNombree={productoNombre} />}
-            /> */}
+            
           </Routes>
         </ShoppingCartProvider>
       </BrowserRouter>
