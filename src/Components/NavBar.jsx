@@ -205,6 +205,12 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
     
   };
 
+  const handleCloseModal = () => {
+    setIsMenuOpen(false);
+    console.log('aqui', isMenuOpen)
+  };
+
+  
 
   return (
     <div>
@@ -487,7 +493,7 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
             <Link
               to="#about"
               className="w-full py-3 hover:scale-105 hover:bg-[#67d4768e]  transition duration-300 ease-in-out px-2 hover:rounded-[10px] hover:font-semibold"
-             
+              onMenuOpenChange={setIsMenuOpen}
               size="lg"
             >
               Acerca de nosotros

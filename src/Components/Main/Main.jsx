@@ -34,7 +34,7 @@ export default function Main() {
       
         {/* <AboutUs/> */}
         {robotExpanded && (
-          <section id="about" className=" ">
+          <section id="about" className="">
             <AboutUs />
           </section>
         )}
