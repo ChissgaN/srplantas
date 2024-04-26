@@ -11,6 +11,8 @@ export default function Beginning() {
   const [selectedCategory, setSelectedCategory] = useState("");
 
   const handleInputChange = (e) => {
+    console.log(inputValue)
+    
     const value = e.target.value;
     setInputValue(value);
 
@@ -74,11 +76,12 @@ export default function Beginning() {
           </div>
           <Link
             to={`/pages/${selectedCategory}?product=${searchResults.length > 0 ? searchResults[0].producto : ''}`}
-          
+            onChange={""}
           >
             <Button
               color="success"
               className="bg-green-100 h-full hover:bg-green-200 transition-[5s] hover:scale-110 duration-300 ease-in-out rounded-[10px] py-[13px] px-6 text-gray-500"
+              onClick={""}
             >
               Buscar
             </Button>
