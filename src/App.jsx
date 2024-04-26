@@ -12,15 +12,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Main />} />
             <Route path="/pages" element={<PagesCards />} />
-            <Route path="/pages/:id" element={<PagesCards />} />
-            {/* <Route
-              path="/pages"
-              element={<PagesCards productoNombre={productoNombre} />}
-            />
-            <Route
-              path="/pages/:id"
-              element={<PagesCards productoNombree={productoNombre} />}
-            /> */}
+            <Route path="/pages/:selectedCategory" element={<PagesCards />} />
+            
           </Routes>
         </ShoppingCartProvider>
       </BrowserRouter>

@@ -16,7 +16,7 @@ const PagesCards = () => {
   const productName = searchParams.get("product");
 
   const params = useParams();
-  const categoriaURL = params.id;
+  const categoriaURL = params.selectedCategory;
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState(categoriaURL) || "";
@@ -33,7 +33,8 @@ const PagesCards = () => {
     productoNombre,
     setProductoNombre
   } = useContext(ShoppingCartContext);
-
+/* console.log(categoriaURL)
+console.log(params) */
   useEffect(() => {
    
     const storedProductNombre = localStorage.getItem("productoNombre");
