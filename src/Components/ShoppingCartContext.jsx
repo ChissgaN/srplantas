@@ -9,12 +9,14 @@ const ShoppingCartProvider = ({ children }) => {
     quantity: 1,
   });
 
+  const [productoNombre, setProductoNombre] = useState("");
+
   const addToCart = (product) => {
     setCartItems((prevCartItems) => [...prevCartItems, product]);
   };
 
   const removeFromCart = (productId) => {
-    const updatedCartItems = cartItems.filter(item => item.id !== productId);
+    const updatedCartItems = cartItems.filter((item) => item.id !== productId);
     setCartItems(updatedCartItems);
   };
 
@@ -29,6 +31,8 @@ const ShoppingCartProvider = ({ children }) => {
         setSelectedProduct,
         selectedProductCart,
         setSelectedProductCart,
+        productoNombre,
+        setProductoNombre,
       }}
     >
       {children}

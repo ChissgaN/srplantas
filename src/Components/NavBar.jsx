@@ -211,7 +211,7 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
     console.log("aqui", isMenuOpen);
   };
 
-  console.log(isMenuOpen);
+/*   console.log(isMenuOpen); */
 
   return (
     <div>
