@@ -52,10 +52,9 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
   function openModal() {
     setIsOpen(true);
     toggleCar();
-    
   }
-  console.log(openModal)
-  
+  /*  console.log(openModal) */
+
   function closeModal() {
     setIsOpen(false);
   }
@@ -200,27 +199,19 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
     setMostrarOpciones(!mostrarOpciones);
   };
 
-
   const handleContactClick = () => {
-   
-    
-      setIsMenuOpen(!isMenuOpen);
-    
- isMenuOpen(false);
+    setIsMenuOpen(false);
+
     setRobotExpanded(!robotExpanded);
-    console.log(isMenuOpen, "aqui estoy")
-   
+    console.log(isMenuOpen, "aqui estoy");
   };
 
   const handleCloseModal = () => {
     setIsMenuOpen(false);
-    console.log('aqui', isMenuOpen)
+    console.log("aqui", isMenuOpen);
   };
 
-  
-
-console.log(isMenuOpen)
-
+  console.log(isMenuOpen);
 
   return (
     <div>
@@ -258,7 +249,9 @@ console.log(isMenuOpen)
                 <div className="absolute top-16 left-[38%] md:left-[34%] lg:left-[38%] bg-white shadow-md px-6 py-2 rounded-md w-[200px] hover:border hover:border-[#67d4768e]">
                   <div
                     className="flex justify-between items-center mb-3 hover:bg-[#67d4768e] rounded-lg cursor:pointer p-2"
-                    onClick={() => window.open("mailto:agriculturaespecializada@yahoo.es")}
+                    onClick={() =>
+                      window.open("mailto:agriculturaespecializada@yahoo.es")
+                    }
                   >
                     <p className="cursor-pointer">Email</p>
                     <img className="w-[25%]" src={gmail} alt="email" />
@@ -293,7 +286,12 @@ console.log(isMenuOpen)
             </div>
           </NavbarItem>
           <NavbarItem className="hover:scale-110 hover:bg-[#67d4768e]  transition duration-300 ease-in-out hover:rounded-lg px-2 py-1 hover:font-semibold">
-            <a color="foreground" href="#nosotros" onClick={handleContactClick} className="transition duration-400 ease-in-out">
+            <a
+              color="foreground"
+              href="#nosotros"
+              onClick={handleContactClick}
+              className="transition duration-400 ease-in-out"
+            >
               Acerca de nosotros
             </a>
           </NavbarItem>
@@ -503,15 +501,15 @@ console.log(isMenuOpen)
             <Link
               to="#about"
               className="w-full py-3 hover:scale-105 hover:bg-[#67d4768e]  transition duration-300 ease-in-out px-2 hover:rounded-[10px] hover:font-semibold"
-              onMenuOpenChange={setIsMenuOpen}>
-
-            <a href="#nosotros" onClick={handleContactClick} 
-              className="w-full py-3 hover:scale-105 hover:bg-[#67d4768e]  transition duration-300 ease-in-out px-2 hover:rounded-[10px] hover:font-semibold cursor-pointer"
-
-              size="lg"
+              onClick={handleContactClick}
             >
-              Acerca de nosotros
-            </a>
+              <a
+                href="#nosotros"
+                className="w-full py-3 hover:scale-105 hover:bg-[#67d4768e]  transition duration-300 ease-in-out px-2 hover:rounded-[10px] hover:font-semibold cursor-pointer"
+                size="lg"
+              >
+                Acerca de nosotros
+              </a>
             </Link>
           </NavbarMenuItem>
         </NavbarMenu>
