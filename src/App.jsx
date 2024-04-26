@@ -3,18 +3,21 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Main from "./Components/Main/Main";
 import PagesCards from "./Components/Pages/PagesCards";
 import { ShoppingCartProvider } from "./Components/ShoppingCartContext";
+import { NombreCatProvider } from "./Components/NewContext";
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <ShoppingCartProvider>
+
           <Routes>
             <Route path="/" element={<Main />} />
             <Route path="/pages" element={<PagesCards />} />
             <Route path="/pages/:selectedCategory" element={<PagesCards />} />
             
           </Routes>
+
         </ShoppingCartProvider>
       </BrowserRouter>
     </>

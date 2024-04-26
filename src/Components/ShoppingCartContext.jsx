@@ -12,6 +12,7 @@ const ShoppingCartProvider = ({ children }) => {
   const [productoNombre, setProductoNombre] = useState("");
   console.log("Valor inicial de productoNombre:", productoNombre);
 
+
   const addToCart = (product) => {
     setCartItems((prevCartItems) => [...prevCartItems, product]);
   };
@@ -32,8 +33,7 @@ const ShoppingCartProvider = ({ children }) => {
         setSelectedProduct,
         selectedProductCart,
         setSelectedProductCart,
-        productoNombre,
-        setProductoNombre,
+
       }}
     >
       {children}

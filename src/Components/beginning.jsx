@@ -105,7 +105,7 @@ export default function Beginning() {
           </div>
           <Link
             to={`/pages/${selectedCategory.toLowerCase()}`}
-          >
+            >
             <Button
               color="success"
               className="bg-green-100 h-full hover:bg-green-200 transition-[5s] hover:scale-110 duration-300 ease-in-out rounded-[10px] py-[13px] px-6 text-gray-500"
@@ -113,6 +113,7 @@ export default function Beginning() {
             >
               Buscar
             </Button>
+          {/* </Link> */}
           </Link>
         </div>
 
