@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
 import Main from "./Components/Main/Main";
 import PagesCards from "./Components/Pages/PagesCards";
 import { ShoppingCartProvider } from "./Components/ShoppingCartContext";
@@ -7,8 +7,18 @@ import { ShoppingCartProvider } from "./Components/ShoppingCartContext";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <ShoppingCartProvider>
+      <HashRouter>
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/pages" element={<PagesCards />} />
+          <Route path="/pages/:id" element={<PagesCards />} />
+        </Routes>
+      </HashRouter>
+    </ShoppingCartProvider>
+      {/* <BrowserRouter>
         <ShoppingCartProvider>
+          
           <Routes>
             <Route path="/" element={<Main />} />
             <Route path="/pages" element={<PagesCards />} />
@@ -16,7 +26,7 @@ function App() {
             
           </Routes>
         </ShoppingCartProvider>
-      </BrowserRouter>
+      </BrowserRouter> */}
     </>
   );
 }
