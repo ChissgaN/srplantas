@@ -10,9 +10,15 @@ export default function Beginning() {
   const [searchResults, setSearchResults] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("");
 
+  const {
+    productoNombre,
+        setProductoNombre,
+  } = useContext(ShoppingCartContext);
+
+
   const handleInputChange = (e) => {
     console.log(inputValue)
-    
+
     const value = e.target.value;
     setInputValue(value);
 
@@ -38,10 +44,18 @@ export default function Beginning() {
     setInputValue(producto.producto);
     const category = getCategoryOfProduct(producto);
     setSelectedCategory(category);
-    console.log("Selected Product Category:", category);
+    /* console.log("Selected Product Category:", category); */
     setSearchResults([producto]);
-    console.log("Selected Product Product:", producto);
+   /*  console.log("Selected Product Product:", producto); */
+  const nombreCat =  searchResults[0].producto;
+  setProductoNombre(nombreCat)
+
+   console.log("valueFinal", searchResults[0].producto);
+   console.log("categoria",category);
+   
   };
+
+  console.log("categoria",selectedCategory);
 
   const getCategoryOfProduct = (product) => {
     const productName = product.producto.toLowerCase();
@@ -75,8 +89,8 @@ export default function Beginning() {
             />
           </div>
           <Link
-            to={`/pages/${selectedCategory}?product=${searchResults.length > 0 ? searchResults[0].producto : ''}`}
-            onChange={""}
+            to={`/pages/${selectedCategory}`}
+           
           >
             <Button
               color="success"
