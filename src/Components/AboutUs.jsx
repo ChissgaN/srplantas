@@ -3,7 +3,7 @@ import React from "react";
 export const AboutUs = () => {
   return (
     <>
-      <section className="w-[70%] pl-20 py-10">
+      <section className="w-[70%] py-10">
         <h1 className="text-[35px] text-green-700 animate-pulse flex justify-center">
           <strong>NOSOTROS </strong>
         </h1>
