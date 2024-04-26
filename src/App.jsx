@@ -13,6 +13,14 @@ function App() {
             <Route path="/" element={<Main />} />
             <Route path="/pages" element={<PagesCards />} />
             <Route path="/pages/:id" element={<PagesCards />} />
+            {/* <Route
+              path="/pages"
+              element={<PagesCards productoNombre={productoNombre} />}
+            />
+            <Route
+              path="/pages/:id"
+              element={<PagesCards productoNombree={productoNombre} />}
+            /> */}
           </Routes>
         </ShoppingCartProvider>
       </BrowserRouter>
@@ -21,7 +29,6 @@ function App() {
 }
 
 export default App;
-
 
 {
   /* <Route path="/Register" element={<Register />} />

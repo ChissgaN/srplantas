@@ -1,19 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Button } from "@nextui-org/react";
 import searchIcon from "/search.svg";
 import categorias from "../scripts/products";
 import { Link } from "react-router-dom";
 import "../App.css";
+import { ShoppingCartContext } from "./ShoppingCartContext";
 
 export default function Beginning() {
   const [inputValue, setInputValue] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("");
-
-  const {
-    productoNombre,
-        setProductoNombre,
-  } = useContext(ShoppingCartContext);
+ const {productoNombre, setProductoNombre} = useContext(ShoppingCartContext);
 
 
   const handleInputChange = (e) => {
@@ -40,22 +37,40 @@ export default function Beginning() {
     setSearchResults(filteredResults);
   };
 
+  // const handleResultClick = (producto) => {
+  //   setInputValue(producto.producto);
+  //   const category = getCategoryOfProduct(producto);
+  //   setSelectedCategory(category);
+  //   /* console.log("Selected Product Category:", category); */
+  //   setSearchResults([producto]);
+  //  /*  console.log("Selected Product Product:", producto.producto); */
+  // const nombreCat =  producto.producto;
+  // setProductoNombre(nombreCat)
+
+  //  console.log("valueFinal", searchResults[0].producto);
+  //  console.log("categoria",category);
+   
+  // };
+
+  // useEffect(() => {
+  //   console.log("productoNombre actualizado:", productoNombre);
+  // }, [productoNombre]);
+
   const handleResultClick = (producto) => {
     setInputValue(producto.producto);
     const category = getCategoryOfProduct(producto);
     setSelectedCategory(category);
-    /* console.log("Selected Product Category:", category); */
     setSearchResults([producto]);
-   /*  console.log("Selected Product Product:", producto); */
-  const nombreCat =  searchResults[0].producto;
-  setProductoNombre(nombreCat)
 
-   console.log("valueFinal", searchResults[0].producto);
-   console.log("categoria",category);
-   
+    const nombreCat = producto.producto;
+    setProductoNombre(nombreCat);
+
+    
+    localStorage.setItem("productoNombre", nombreCat);
   };
 
-  console.log("categoria",selectedCategory);
+ 
+  
 
   const getCategoryOfProduct = (product) => {
     const productName = product.producto.toLowerCase();

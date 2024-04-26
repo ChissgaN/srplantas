@@ -30,7 +30,21 @@ const PagesCards = () => {
     setCartItems,
     selectedProductCart,
     setSelectedProductCart,
+    productoNombre,
+    setProductoNombre
   } = useContext(ShoppingCartContext);
+
+  useEffect(() => {
+   
+    const storedProductNombre = localStorage.getItem("productoNombre");
+    if (storedProductNombre) {
+      setProductoNombre(storedProductNombre);
+      setSearchTerm(storedProductNombre); 
+    }
+  }, []);
+
+  console.log("Valor de productoNombre en PagesCards:", productoNombre);
+  /* console.log(setProductoNombre); */
 
   const handleAddToCart = () => {
     console.log("aqui estoy:", selectedProductCart);
@@ -199,8 +213,8 @@ const PagesCards = () => {
           <div className=" max-sm:w-full w-full md:flex md:justify-end  ">
             <input
               type="text"
-              placeholder={`Buscar ${selectedCategory}...`}
-              value={searchTerm}
+              placeholder={`Buscar ${setSelectedProductCart}...`}
+              value={productoNombre}
               onChange={handleSearchChange}
               className="h-fit px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400  w-full"
             />
