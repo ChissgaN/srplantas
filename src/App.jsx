@@ -10,13 +10,14 @@ function App() {
     <>
       <BrowserRouter>
         <ShoppingCartProvider>
-          <NombreCatProvider>
-            <Routes>
-              <Route path="/" element={<Main />} />
-              <Route path="/pages" element={<PagesCards />} />
-              <Route path="/pages/:id" element={<PagesCards />} />
-            </Routes>
-          </NombreCatProvider>
+
+          <Routes>
+            <Route path="/" element={<Main />} />
+            <Route path="/pages" element={<PagesCards />} />
+            <Route path="/pages/:selectedCategory" element={<PagesCards />} />
+            
+          </Routes>
+
         </ShoppingCartProvider>
       </BrowserRouter>
     </>
@@ -24,8 +25,6 @@ function App() {
 }
 
 export default App;
-
-
 
 {
   /* <Route path="/Register" element={<Register />} />

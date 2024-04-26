@@ -9,6 +9,11 @@ const ShoppingCartProvider = ({ children }) => {
     quantity: 1,
   });
 
+<<<<<<< HEAD
+=======
+  const [productoNombre, setProductoNombre] = useState("");
+  console.log("Valor inicial de productoNombre:", productoNombre);
+>>>>>>> 978124eaabbeb961c983f5e55454b157a7376d5e
 
   const addToCart = (product) => {
     setCartItems((prevCartItems) => [...prevCartItems, product]);

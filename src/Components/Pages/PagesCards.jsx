@@ -9,14 +9,14 @@ import { Button } from "@nextui-org/react";
 import ScrollToTopButton from "../ScrollToTop";
 import { ShoppingCartContext } from "../ShoppingCartContext";
 import { useParams, useLocation } from "react-router-dom";
-import { NombreCatContext } from "../NewContext";
 
 const PagesCards = () => {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const productName = searchParams.get("product");
+
   const params = useParams();
-  const categoriaURL = params.id;
+  const categoriaURL = params.selectedCategory;
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState(categoriaURL) || "";
@@ -30,12 +30,23 @@ const PagesCards = () => {
     setCartItems,
     selectedProductCart,
     setSelectedProductCart,
+    productoNombre,
+    setProductoNombre
   } = useContext(ShoppingCartContext);
+/* console.log(categoriaURL)
+console.log(params) */
+  useEffect(() => {
+   
+    const storedProductNombre = localStorage.getItem("productoNombre");
+    if (storedProductNombre) {
+      setProductoNombre(storedProductNombre);
+      setSearchTerm(storedProductNombre); 
+    }
+  }, []);
 
-  const { nombreCat, setNombreCat } = useContext(NombreCatContext); // Utilizamos el contexto
+  console.log("Valor de productoNombre en PagesCards:", productoNombre);
+  /* console.log(setProductoNombre); */
 
-  console.log(setNombreCat);
-  
   const handleAddToCart = () => {
     console.log("aqui estoy:", selectedProductCart);
     const existingProductIndex = cartItems.findIndex(
@@ -181,12 +192,10 @@ const PagesCards = () => {
     "Mostrar Todo": "/procesoSiembra/semillas.webp",
   };
   const imageSrc = categoryImages[selectedCategory];
-  
-  // Establecemos el nombre de la categoría en el contexto
- /*  useEffect(() => {
-    setNombreCat(selectedCategory);
-  }, [selectedCategory, setNombreCat]); */
-
+  const handleClearSearch = () => {
+    setSearchTerm("");
+    localStorage.removeItem("productoNombre");
+  };
   return (
     <>
       <NavBar />
@@ -206,13 +215,21 @@ const PagesCards = () => {
             {selectedCategory ? selectedCategory.toUpperCase() : ""}
           </h1>
           <div className=" max-sm:w-full w-full md:flex md:justify-end  ">
-            <input
-              type="text"
-              placeholder="Buscar..."
-              value={searchTerm}
-              onChange={handleSearchChange}
-              className="h-fit px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400  w-full"
-            />
+          <input
+  type="text"
+  placeholder={`Buscar ${selectedCategory}...`}
+  value={searchTerm}
+  onChange={handleSearchChange}
+  className="h-fit px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400 w-full"
+/>
+    {searchTerm && (
+      <button
+        onClick={handleClearSearch}
+        className="ml-2 bg-gray-300 text-gray-600 px-2 py-1 rounded-md focus:outline-none hover:bg-gray-400"
+      >
+        Limpiar
+      </button>
+    )}
           </div>
           <div className="md:flex md:items-end w-full   md:justify-end ">
             <select
@@ -296,7 +313,7 @@ const PagesCards = () => {
             <div className="flex justify-center my-4 mx-auto max-sm:w-[120px]">
             {productName && (
               <div className="cursor-pointer border border-green-600 rounded-lg max-sm:p-2 p-3 text-green-600 hover:bg-green-500 transition-colors duration-1000 hover:text-white hover:shadow-md">
-                <Link to={`/pages/${nombreCat}`}>Mostrar todos los productos</Link>
+                <Link to="/pages/aromaticas">Mostrar todos los productos</Link>
               </div>
             )}
             </div>
