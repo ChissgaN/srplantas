@@ -14,7 +14,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Main />} />
             <Route path="/pages" element={<PagesCards />} />
-            <Route path="/pages/:selectedCategory" element={<PagesCards />} />
+            <Route path="/pages/:id" element={<PagesCards />} />
             
           </Routes>
 
