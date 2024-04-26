@@ -43,7 +43,7 @@ export default function Main() {
       </div>
 
       {robotExpanded && (
-        <section id="about" className="flex justify-center">
+        <section id="nosotros" className="flex justify-center">
           <AboutUs />
         </section>
       )}
