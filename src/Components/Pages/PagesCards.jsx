@@ -30,7 +30,21 @@ const PagesCards = () => {
     setCartItems,
     selectedProductCart,
     setSelectedProductCart,
+    productoNombre,
+    setProductoNombre
   } = useContext(ShoppingCartContext);
+
+  useEffect(() => {
+   
+    const storedProductNombre = localStorage.getItem("productoNombre");
+    if (storedProductNombre) {
+      setProductoNombre(storedProductNombre);
+      setSearchTerm(storedProductNombre); 
+    }
+  }, []);
+
+  console.log("Valor de productoNombre en PagesCards:", productoNombre);
+  /* console.log(setProductoNombre); */
 
   const handleAddToCart = () => {
     console.log("aqui estoy:", selectedProductCart);
@@ -177,7 +191,10 @@ const PagesCards = () => {
     "Mostrar Todo": "/procesoSiembra/semillas.webp",
   };
   const imageSrc = categoryImages[selectedCategory];
-
+  const handleClearSearch = () => {
+    setSearchTerm("");
+    localStorage.removeItem("productoNombre");
+  };
   return (
     <>
       <NavBar />
@@ -197,13 +214,21 @@ const PagesCards = () => {
             {selectedCategory ? selectedCategory.toUpperCase() : ""}
           </h1>
           <div className=" max-sm:w-full w-full md:flex md:justify-end  ">
-            <input
-              type="text"
-              placeholder={`Buscar ${selectedCategory}...`}
-              value={searchTerm}
-              onChange={handleSearchChange}
-              className="h-fit px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400  w-full"
-            />
+          <input
+  type="text"
+  placeholder={`Buscar ${selectedCategory}...`}
+  value={searchTerm}
+  onChange={handleSearchChange}
+  className="h-fit px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400 w-full"
+/>
+    {searchTerm && (
+      <button
+        onClick={handleClearSearch}
+        className="ml-2 bg-gray-300 text-gray-600 px-2 py-1 rounded-md focus:outline-none hover:bg-gray-400"
+      >
+        Limpiar
+      </button>
+    )}
           </div>
           <div className="md:flex md:items-end w-full   md:justify-end ">
             <select
