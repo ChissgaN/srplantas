@@ -503,16 +503,16 @@ console.log(isMenuOpen)
             <Link
               to="#about"
               className="w-full py-3 hover:scale-105 hover:bg-[#67d4768e]  transition duration-300 ease-in-out px-2 hover:rounded-[10px] hover:font-semibold"
-              onMenuOpenChange={setIsMenuOpen}
+              onMenuOpenChange={setIsMenuOpen}>
 
             <a href="#nosotros" onClick={handleContactClick} 
               className="w-full py-3 hover:scale-105 hover:bg-[#67d4768e]  transition duration-300 ease-in-out px-2 hover:rounded-[10px] hover:font-semibold cursor-pointer"
-             
 
               size="lg"
             >
               Acerca de nosotros
             </a>
+            </Link>
           </NavbarMenuItem>
         </NavbarMenu>
       </Navbar>
