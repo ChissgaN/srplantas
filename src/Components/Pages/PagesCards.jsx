@@ -36,16 +36,16 @@ const PagesCards = () => {
 console.log(categoriaURL)
 console.log(params)
 
-  useEffect(() => {
+useEffect(() => {
    
-    const storedProductNombre = localStorage.getItem("productoNombre");
-    if (storedProductNombre) {
-      setProductoNombre(storedProductNombre);
-      setSearchTerm(storedProductNombre); 
-    }
-  }, []);
+  const storedProductNombre = localStorage.getItem("productoNombre");
+  if (storedProductNombre) {
+    setProductoNombre(storedProductNombre);
+    setSearchTerm(storedProductNombre); 
+  }
+}, []);
 
-  console.log("Valor de productoNombre en PagesCards:", productoNombre);
+console.log("Valor de productoNombre en PagesCards:", productoNombre);
   /* console.log(setProductoNombre); */
 
   const handleAddToCart = () => {
