@@ -14,7 +14,7 @@ export const Index = ({ procesoImg, tituloProceso, descripcionProceso }) => {
           {" "}
           <strong>{tituloProceso}</strong>
         </h2>
-        <p className="flex text-center px-2 text-pretty  max-w-[630px] h-[120px] truncate max-sm:w-full sm:w-full  md:w-full  lg:w-full  xl:w-full ">
+        <p className="flex text-center px-2 text-pretty  max-w-[630px] h-[120px]  max-sm:w-full sm:w-full  md:w-full  lg:w-full  xl:w-full truncate"  style={{ whiteSpace: "normal" }}>
           {descripcionProceso}
         </p>
       </div>
