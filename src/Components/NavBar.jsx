@@ -52,8 +52,10 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
   function openModal() {
     setIsOpen(true);
     toggleCar();
+    
   }
-
+  console.log(openModal)
+  
   function closeModal() {
     setIsOpen(false);
   }
@@ -201,10 +203,15 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
 
   const handleContactClick = () => {
    
-    setRobotExpanded(!robotExpanded);
     
+      setIsMenuOpen(!isMenuOpen);
+    
+ isMenuOpen(false);
+    setRobotExpanded(!robotExpanded);
+    console.log(isMenuOpen, "aqui estoy")
+   
   };
-
+console.log(isMenuOpen)
 
   return (
     <div>
@@ -277,9 +284,9 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
             </div>
           </NavbarItem>
           <NavbarItem className="hover:scale-110 hover:bg-[#67d4768e]  transition duration-300 ease-in-out hover:rounded-lg px-2 py-1 hover:font-semibold">
-            <Link color="foreground" to="#about" onClick={handleContactClick} className="transition duration-400 ease-in-out">
+            <a color="foreground" href="#nosotros" onClick={handleContactClick} className="transition duration-400 ease-in-out">
               Acerca de nosotros
-            </Link>
+            </a>
           </NavbarItem>
         </NavbarContent>
         <NavbarContent justify="end" className="max-sm:mt-3 ">
@@ -429,7 +436,6 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
                 Enviar Via WhatsApp
               </button>
             </div>
-            <div></div>
           </form>
         </Modal>
         <NavbarMenu className="">
@@ -484,14 +490,13 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
                 </div>
               )}
             </div>
-            <Link
-              to="#about"
-              className="w-full py-3 hover:scale-105 hover:bg-[#67d4768e]  transition duration-300 ease-in-out px-2 hover:rounded-[10px] hover:font-semibold"
+            <a href="#nosotros" onClick={handleContactClick} 
+              className="w-full py-3 hover:scale-105 hover:bg-[#67d4768e]  transition duration-300 ease-in-out px-2 hover:rounded-[10px] hover:font-semibold cursor-pointer"
              
               size="lg"
             >
               Acerca de nosotros
-            </Link>
+            </a>
           </NavbarMenuItem>
         </NavbarMenu>
       </Navbar>
