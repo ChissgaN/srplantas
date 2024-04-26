@@ -33,6 +33,8 @@ const ShoppingCartProvider = ({ children }) => {
         setSelectedProduct,
         selectedProductCart,
         setSelectedProductCart,
+        productoNombre, 
+        setProductoNombre
 
       }}
     >

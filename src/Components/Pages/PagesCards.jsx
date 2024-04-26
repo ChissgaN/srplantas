@@ -193,6 +193,10 @@ console.log("Valor de productoNombre en PagesCards:", productoNombre);
     "Mostrar Todo": "/procesoSiembra/semillas.webp",
   };
   const imageSrc = categoryImages[selectedCategory];
+  const handleClearSearch = () => {
+    setSearchTerm("");
+    localStorage.removeItem("productoNombre");
+  };
 
   return (
     <>
@@ -213,13 +217,21 @@ console.log("Valor de productoNombre en PagesCards:", productoNombre);
             {selectedCategory ? selectedCategory.toUpperCase() : ""}
           </h1>
           <div className=" max-sm:w-full w-full md:flex md:justify-end  ">
-            <input
-              type="text"
-              placeholder={`Buscar ${setSelectedProductCart}...`}
-              value={productoNombre}
-              onChange={handleSearchChange}
-              className="h-fit px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400  w-full"
-            />
+          <input
+  type="text"
+  placeholder={`Buscar ${selectedCategory}...`}
+  value={searchTerm}
+  onChange={handleSearchChange}
+  className="h-fit px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400 w-full"
+/>
+    {searchTerm && (
+      <button
+        onClick={handleClearSearch}
+        className="ml-2 bg-gray-300 text-gray-600 px-2 py-1 rounded-md focus:outline-none hover:bg-gray-400"
+      >
+        Limpiar
+      </button>
+    )}
           </div>
           <div className="md:flex md:items-end w-full   md:justify-end ">
             <select

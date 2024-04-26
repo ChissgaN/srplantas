@@ -66,9 +66,13 @@ export default function Beginning() {
     setProductoNombre(nombreCat);
 
     
-    localStorage.setItem("productoNombre", nombreCat);
+    localStorage.setItem("productoNombre", productoNombre);
+    console.log(producto.producto)
+  console.log("valueFinal", searchResults[0].producto);
   };
   console.log("Selected Category:", selectedCategory);
+  
+
  
   
 
