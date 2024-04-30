@@ -44,11 +44,11 @@ export default function Main() {
         </div>
       </div>
 
-      {robotExpanded && (
-        <section id="nosotros" className="flex justify-center">
+     {/*  {robotExpanded && ( */}
+        <section id="" className="flex justify-center">
           <AboutUs />
         </section>
-      )}
+  
 
       <div className="w-[90%] mx-auto ">
         <h1 className="text-green-700 text-[30px] max-sm:text-md flex justify-center">

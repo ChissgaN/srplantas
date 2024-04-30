@@ -326,6 +326,7 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
               </div>
               <hr />
               <div className="grid max-sm:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 items-center gap-6 px-4 py-4 overflow-y-auto max-h-[400px] resultados-container">
+                <p>TEXTO POR AGREGAR</p>
                 {cartItems.map((item, index) => (
                   <div
                     key={index}
@@ -407,7 +408,7 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
                   onClick={openModal}
                   disabled={cartItems.length === 0}
                 >
-                  CREAR PDF
+                  CREAR COTIZACIÓN
                 </button>
               </div>
             </div>
