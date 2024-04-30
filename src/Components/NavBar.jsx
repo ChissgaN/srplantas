@@ -321,7 +321,7 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
                   Carrito de Compras.
                 </h4>
                 <p className="pr-14">
-                  Total: Q <strong>{totalCarrito}</strong>
+                  Total: Q <strong>{totalCarrito}.00</strong>
                 </p>
               </div>
               <hr />
@@ -379,7 +379,7 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
                       <span className="font-bold">
                         Precio: Q
                         <span className="font-bold">
-                          {item.precio * (productQuantities[item.id] || 1)}
+                          {item.precio * (productQuantities[item.id] || 1)}.00
                         </span>
                       </span>
                     </div>

@@ -43,7 +43,6 @@ const PagesCards = () => {
   }, []);
 
   console.log("Valor de productoNombre en PagesCards:", productoNombre);
-  /* console.log(setProductoNombre); */
 
   const handleAddToCart = () => {
     console.log("aqui estoy:", selectedProductCart);
@@ -367,7 +366,7 @@ const PagesCards = () => {
                   {selectedProduct.producto}
                 </h2>
                 <p className="text-gray-600 ">
-                  Precio: Q {selectedProduct.precio}
+                  Precio: Q {selectedProduct.precio}.00
                 </p>
                 <p className="text-gray-600  w-full h-full overflow-hidden text-pretty mb-4">
                   Descripción: {selectedProduct.descripcion}

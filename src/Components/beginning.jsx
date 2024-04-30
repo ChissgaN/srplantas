@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import { Button } from "@nextui-org/react";
 import searchIcon from "/search.svg";
 import categorias from "../scripts/products";
@@ -10,13 +10,10 @@ export default function Beginning() {
   const [inputValue, setInputValue] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("");
- const {productoNombre, setProductoNombre} = useContext(ShoppingCartContext);
-
+  const { productoNombre, setProductoNombre } = useContext(ShoppingCartContext);
 
   const handleInputChange = (e) => {
-    console.log(inputValue)
-
-    const value = e.target.value;
+    const value = e.target.value.trim().toLowerCase();
     setInputValue(value);
 
     if (value.length < 2) {
@@ -26,35 +23,15 @@ export default function Beginning() {
 
     const filteredResults = categorias.flatMap((categoria) =>
       Object.values(categoria).flatMap((productos) =>
-        productos.filter(
-          (producto) =>
-            producto.producto &&
-            producto.producto.toLowerCase().startsWith(value.toLowerCase())
-        )
+        productos.filter((producto) => {
+          const productNameWords = producto.producto.toLowerCase().split(" ");
+          return productNameWords.some((word) => word.startsWith(value));
+        })
       )
     );
 
     setSearchResults(filteredResults);
   };
-
-  // const handleResultClick = (producto) => {
-  //   setInputValue(producto.producto);
-  //   const category = getCategoryOfProduct(producto);
-  //   setSelectedCategory(category);
-  //   /* console.log("Selected Product Category:", category); */
-  //   setSearchResults([producto]);
-  //  /*  console.log("Selected Product Product:", producto.producto); */
-  // const nombreCat =  producto.producto;
-  // setProductoNombre(nombreCat)
-
-  //  console.log("valueFinal", searchResults[0].producto);
-  //  console.log("categoria",category);
-   
-  // };
-
-  // useEffect(() => {
-  //   console.log("productoNombre actualizado:", productoNombre);
-  // }, [productoNombre]);
 
   const handleResultClick = (producto) => {
     setInputValue(producto.producto);
@@ -65,12 +42,8 @@ export default function Beginning() {
     const nombreCat = producto.producto;
     setProductoNombre(nombreCat);
 
-    
     localStorage.setItem("productoNombre", nombreCat);
   };
-
- 
-  
 
   const getCategoryOfProduct = (product) => {
     const productName = product.producto.toLowerCase();
@@ -105,7 +78,6 @@ export default function Beginning() {
           </div>
           <Link
             to={`/pages/${selectedCategory.toLowerCase()}`}
-           
           >
             <Button
               color="success"
