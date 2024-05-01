@@ -7,7 +7,12 @@ export default {
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        merriweather: ["Crimson Pro", "serif"],
+      },
+    },
+    
   },
   darkMode: "class",
   plugins: [nextui()],

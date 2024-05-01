@@ -218,21 +218,21 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
       )}
       <Navbar
         onMenuOpenChange={setIsMenuOpen}
-        className="fixed h-[80px]   z-40 w-full"
+        className="fixed h-[80px] z-40 w-full  "
       >
-        <NavbarContent className=" ">
+        <NavbarContent className="">
           <NavbarMenuToggle
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-            className="sm:hidden mt-5"
+            className="sm:hidden mt-5 "
           />
           <NavbarBrand>
             <Link to="/">
-              <img src={logo} alt="Logo" className="w-[120px] h-[55px]" />
+              <img src={logo} alt="Logo" className="w-[120px] h-[55px] " />
             </Link>
           </NavbarBrand>
         </NavbarContent>
 
-        <NavbarContent className="hidden sm:flex gap-10  " justify="center">
+        <NavbarContent className="hidden sm:flex gap-10 " justify="center">
           <NavbarItem className="hover:scale-110 hover:bg-[#67d4768e]  transition duration-300 ease-in-out hover:rounded-lg px-2 py-1 hover:font-semibold">
             <Link to="/pages/aromaticas">Productos</Link>
           </NavbarItem>
