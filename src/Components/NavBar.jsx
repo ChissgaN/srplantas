@@ -234,11 +234,11 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
 
         <NavbarContent className="hidden sm:flex gap-10 " justify="center">
           <NavbarItem className="hover:scale-110 hover:bg-[#67d4768e]  transition duration-300 ease-in-out hover:rounded-lg px-2 py-1 hover:font-semibold">
-            <Link to="/pages/aromaticas">Productos</Link>
+            <Link to="/pages/aromaticas" className="text-xl">Productos</Link>
           </NavbarItem>
 
           <NavbarItem className="hover:bg-[#67d4768e]  transition duration-300 ease-in-out hover:rounded-lg px-2 py-1 hover:font-semibold">
-            <div className="cursor-pointer" onClick={toggleOpciones}>
+            <div className="cursor-pointer text-xl" onClick={toggleOpciones}>
               Contactos
               {mostrarOpciones && (
                 <div className="absolute top-16 left-[38%] md:left-[34%] lg:left-[40%] bg-white shadow-md px-6 py-2 rounded-md w-[200px] hover:border-2 hover:border-[#67d4768e]">
@@ -284,7 +284,7 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
           </NavbarItem>
           <NavbarItem className=" hover:bg-[#67d4768e] transition duration-300 ease-in-out hover:rounded-lg px-2 py-1 hover:font-semibold relative">
             <div
-              className="cursor-pointer"
+              className="cursor-pointer text-xl "
               onClick={handleMayoristas}
             >
               Mayoristas
