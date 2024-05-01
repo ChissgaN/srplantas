@@ -250,7 +250,7 @@ const PagesCards = () => {
       </section>
 
       <section className="container mx-auto pr-4 w-[85%] flex max-md:w-full  max-sm:gap-0 gap-20  ">
-        <div className="container w-[40%] max-md:w-[37%] md:w-[34%] lg:w-[20%] max-sm:w-[140px] h-screen py-4 sticky top-[130px] max-sm:mr-[10%] max-sm:ml-3">
+        <div className="container w-[40%] max-md:w-[37%] md:w-[34%] lg:w-[20%] max-sm:w-[170px] h-screen py-4 sticky top-[130px] max-sm:mr-[10%] max-sm:ml-3">
           <h2 className="text-xl font-semibold mb-4 max-sm:text-sm max-sm:font-bold">
             Categorías
           </h2>

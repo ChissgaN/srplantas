@@ -20,7 +20,7 @@ export default function Main() {
         robotExpanded={robotExpanded}
         setRobotExpanded={setRobotExpanded}
       />
-      <div className=" w-full">
+      <div className=" w-full font-merriweather" >
         <div className="relative h-auto w-full ">
           <SliderImg />
           <div className="absolute inset-0 flex w-full">
@@ -28,7 +28,7 @@ export default function Main() {
           </div>
         </div>
       </div>
-      <div className="my-10">
+      <div className="my-10 font-merriweather">
 
         <h1 className=" text-[30px] w-[90%] mx-auto mt-20 mb-6 flex justify-center">
 
@@ -45,16 +45,16 @@ export default function Main() {
       </div>
 
      {/*  {robotExpanded && ( */}
-        <section id="" className="flex justify-center">
+        <section id="" className="flex items-center justify-center font-merriweather ">
           <AboutUs />
         </section>
   
 
-      <div className="w-[90%] mx-auto ">
+      <div className="w-[90%] mx-auto font-merriweather">
         <h1 className="text-green-700 text-[30px] max-sm:text-md flex justify-center">
           <strong>Proceso de Siembra y Recolección</strong>
         </h1>
-        <div className="flex justify-center pt-6 pb-20 w-full ">
+        <div className="flex justify-center pt-6 pb-20 w-full font-merriweather">
           <Informacion />
         </div>
       </div>
