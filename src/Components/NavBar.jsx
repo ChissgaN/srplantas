@@ -53,7 +53,6 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
     setIsOpen(true);
     toggleCar();
   }
-  /*  console.log(openModal) */
 
   function closeModal() {
     setIsOpen(false);
@@ -119,13 +118,7 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
 
     /* doc.text("COTIZACION DE LA COMPRA", 15, 70); */
 
-    const columns = [
-      "ID",
-      "Producto",
-      "Precio unitario",
-      "Cantidad",
-      "Total",
-    ];
+    const columns = ["ID", "Producto", "Precio unitario", "Cantidad", "Total"];
     const data = cartItems.map((item, index) => {
       const cantidad = productQuantities[item.id] || 1;
       const precioTotal = item.precio * cantidad;
@@ -194,16 +187,20 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
   };
 
   const [mostrarOpciones, setMostrarOpciones] = useState(false);
+  const [mayoristas, setMayoristas] = useState(false);
 
   const toggleOpciones = () => {
     setMostrarOpciones(!mostrarOpciones);
+    if (mayoristas) {
+      setMayoristas(false);
+    }
   };
 
-  const handleContactClick = () => {
-    setIsMenuOpen(false);
-
-    setRobotExpanded(!robotExpanded);
-   
+  const handleMayoristas = () => {
+    setMayoristas(!mayoristas);
+    if (mostrarOpciones) {
+      setMostrarOpciones(false);
+    }
   };
 
   const handleCloseModal = () => {
@@ -211,7 +208,6 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
     console.log("aqui", isMenuOpen);
   };
 
-/*   console.log(isMenuOpen); */
 
   return (
     <div>
@@ -246,7 +242,7 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
             <div className="cursor-pointer" onClick={toggleOpciones}>
               Contactos
               {mostrarOpciones && (
-                <div className="absolute top-16 left-[38%] md:left-[34%] lg:left-[38%] bg-white shadow-md px-6 py-2 rounded-md w-[200px] hover:border hover:border-[#67d4768e]">
+                <div className="absolute top-16 left-[38%] md:left-[34%] lg:left-[40%] bg-white shadow-md px-6 py-2 rounded-md w-[200px] hover:border-2 hover:border-[#67d4768e]">
                   <div
                     className="flex justify-between items-center mb-3 hover:bg-[#67d4768e] rounded-lg cursor:pointer p-2"
                     onClick={() =>
@@ -276,7 +272,9 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
                   </div>
                   <div
                     className="flex justify-between items-center mb-3 hover:bg-[#67d4768e] rounded-lg cursor:pointer p-2"
-                    onClick={() => window.open("https://forms.gle/FGpZriNrtmFEuqcaA")}
+                    onClick={() =>
+                      window.open("https://forms.gle/FGpZriNrtmFEuqcaA")
+                    }
                   >
                     <p className="cursor-pointer">Opiniones</p>
                     <img className="w-[25%]" src={opinions} alt="opiniones" />
@@ -285,15 +283,32 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
               )}
             </div>
           </NavbarItem>
-          <NavbarItem className="hover:scale-110 hover:bg-[#67d4768e]  transition duration-300 ease-in-out hover:rounded-lg px-2 py-1 hover:font-semibold">
-            <a
-              color="foreground"
-              href="/#nosotros"
-              onClick={handleContactClick}
-              className="transition duration-400 ease-in-out"
+          <NavbarItem className=" hover:bg-[#67d4768e] transition duration-300 ease-in-out hover:rounded-lg px-2 py-1 hover:font-semibold relative">
+            <div
+              className="cursor-pointer flex justify-center items-center "
+              onClick={handleMayoristas}
             >
-              Acerca de nosotros
-            </a>
+              Mayoristas
+              {mayoristas && (
+                <div className="absolute top-12 left-[50%] transform -translate-x-1/2 bg-white shadow-md px-6 py-4 rounded-md w-[340px] hover:border-2 hover:border-[#67d4768e]">
+                  <p className=" <text-sm text-gray-700">
+                    ¿Planeas comprar más de 100 productos?
+                  </p>
+                  <p
+                    className=" <text-sm text-gray-700 text-center"
+                    style={{ whiteSpace: "normal" }}
+                  >
+                    ¡Genial! Haz clic aquí para recibir asesoría personalizada y
+                    optimizar tu compra al por mayor.
+                  </p>
+                  <Link to="" className="flex justify-center items-center">
+                    <button className=" mt-2 px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:ring focus:ring-green-300 ">
+                      Registrar
+                    </button>
+                  </Link>
+                </div>
+              )}
+            </div>
           </NavbarItem>
         </NavbarContent>
         <NavbarContent justify="end" className="max-sm:mt-3 ">
@@ -462,12 +477,14 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
             >
               Contactos
               {mostrarOpciones && (
-                <div className="absolute top-full pt-3 bg-white shadow-md px-6 rounded-md w-[200px]">
+                <div className="absolute top-full left-10 pt-3 bg-white shadow-md px-6 rounded-md w-[200px]">
                   <div
                     className="flex justify-between items-center mb-3 hover:bg-[#67d4768e] rounded-lg cursor:pointer p-2"
-                    onClick={() => window.open("mailto:agriculturaespecializada@yahoo.es")}
+                    onClick={() =>
+                      window.open("mailto:agriculturaespecializada@yahoo.es")
+                    }
                   >
-                    <p className="cursor-pointer">Gmail</p>
+                    <p className="cursor-pointer">Email</p>
                     <img className="w-[25%]" src={gmail} alt="email" />
                   </div>
                   <div
@@ -499,19 +516,31 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
               )}
             </div>
 
-            {/* <Link
-              to="#about"
+            <div
               className="w-full py-3 hover:scale-105 hover:bg-[#67d4768e]  transition duration-300 ease-in-out px-2 hover:rounded-[10px] hover:font-semibold"
-              onClick={handleContactClick}
+              onClick={handleMayoristas}
             >
-              <a
-                href="#nosotros"
-                className="w-full py-3 hover:scale-105 hover:bg-[#67d4768e]  transition duration-300 ease-in-out px-2 hover:rounded-[10px] hover:font-semibold cursor-pointer"
-                size="lg"
-              >
-                Acerca de nosotros
-              </a>
-            </Link> */}
+                Mayoristas
+              {mayoristas && (
+                <div className="absolute top-12 left-[50%] transform -translate-x-1/2 bg-white shadow-md px-6 py-4 rounded-md w-[340px] hover:border-2 hover:border-[#67d4768e]">
+                  <p className=" <text-sm text-center text-gray-700">
+                    ¿Planeas comprar más de 100 productos?
+                  </p>
+                  <p
+                    className=" <text-sm text-gray-700 text-center"
+                    style={{ whiteSpace: "normal" }}
+                  >
+                    ¡Genial! Haz clic aquí para recibir asesoría personalizada y
+                    optimizar tu compra al por mayor.
+                  </p>
+                  <Link to="" className="flex justify-center items-center">
+                    <button className=" mt-2 px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:ring focus:ring-green-300 ">
+                      Registrar
+                    </button>
+                  </Link>
+                </div>
+              )}
+            </div>
           </NavbarMenuItem>
         </NavbarMenu>
       </Navbar>
