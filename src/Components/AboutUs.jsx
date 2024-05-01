@@ -7,7 +7,7 @@ export const AboutUs = () => {
       <section className="w-[80%] md:w-[90%] md:flex mb-10  max-sm:w-[90%] overflow-hidden " >
 
         <div className="max-sm:w-full my-4 sm:w-full  w-[75%] border-[2px] rounded-[10px]  transition duration-100 ease-in-out  hover:scale-[1.01] md:mr-6 px-4 lg:w-[80%] shadow-lg">
-          <h1 className="text-[35px] text-green-700  flex justify-center ">
+          <h1 className="text-[35px] text-green-700   flex justify-center ">
             <strong>NOSOTROS </strong>
           </h1>
           <p className="py-4 text-center">
@@ -24,7 +24,7 @@ export const AboutUs = () => {
         </div>
         <div className=" flex flex-col justify-between ">
           <div className="border-[2px] rounded-[10px]  transition duration-100 ease-in-out  hover:scale-[1.01] my-4  md:w-[350px] lg:w-[100%] px-4 h-[50%] shadow-lg">
-          <h2 className="text-[30px] text-green-700   flex justify-center">
+          <h2 className="text-[30px] text-green-700    flex justify-center">
             <strong>MISIÓN</strong>
           </h2>
           <p className="py-4 text-center">
@@ -35,7 +35,7 @@ export const AboutUs = () => {
           </div>
           <div className="border-[2px] rounded-[10px] px-6 transition duration-100 ease-in-out  hover:scale-[1.01] my-4 md:w-[350px] lg:w-[100%] h-[50%] shadow-lg">
 
-          <h2 className="text-[30px] text-green-700  flex justify-center ">
+          <h2 className="text-[30px] text-green-700   flex justify-center ">
             <strong>VISIÓN</strong>
           </h2>
           <p className="py-4 text-center">

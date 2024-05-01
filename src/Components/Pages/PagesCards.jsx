@@ -180,7 +180,7 @@ const PagesCards = () => {
 
   const categoryImages = {
     aromaticas: "/categoria/aromaticas.webp",
-    bulbos: "/categoria/bulbos.webp",
+    bulbos: "/categoria/bulbos_lili.webp",
     cesped: "/categoria/cesped.webp",
     contenedores: "/categoria/contenedores.webp",
     hortalizas: "/categoria/hortalizas.webp",
