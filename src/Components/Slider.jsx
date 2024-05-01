@@ -2,10 +2,10 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import sembrar from "../assets/agricultura/sembrar.webp";
-import vegetales from "../assets/agricultura/flores.webp";
+import fresas from "../assets/agricultura/fresas.webp";
+import maceta from "../assets/agricultura/maceta.webp";
 import girasoles from "../assets/agricultura/girasol.webp";
-import Verduras from "../assets/agricultura/verduras1.webp";
+import cesped from "../assets/agricultura/cesped.webp";
 
 
 
@@ -26,9 +26,9 @@ function SliderImg() {
 
         <div className="my-2 flex w-screen">
           <img
-            src={sembrar}
+            src={fresas}
              className="max-sm:h-[290px] sm:h-[380px] w-full h-[250px] md:h-[450px] lg:h-[500px] "
-            alt="verduras"
+            alt="fresas"
           />
         </div>
         <div className="my-2 flex">
@@ -40,16 +40,16 @@ function SliderImg() {
         </div>
         <div className="my-2 flex">
           <img
-            src={Verduras}
+            src={cesped}
              className="max-sm:h-[290px] sm:h-[380px] w-full h-[250px] md:h-[450px] lg:h-[500px] "
-            alt="verduras"
+            alt="cesped"
           />
         </div>
         <div className="my-2 flex">
           <img
-            src={vegetales}
+            src={maceta}
              className="max-sm:h-[290px] sm:h-[380px] w-full h-[250px] md:h-[450px] lg:h-[500px] "
-            alt="cultivar"
+            alt="maceta"
           />
         </div>
       </Slider>
