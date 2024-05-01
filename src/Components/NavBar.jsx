@@ -515,14 +515,14 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
               )}
             </div>
 
-            <div className="relative" style={{ minHeight: "3.5rem" }}>
+            <div className="" style={{ minHeight: "3.5rem" }}>
               <div
-                className="w-full py-3 hover:bg-[#67d4768e] transition duration-300 ease-in-out px-2 hover:rounded-[10px] hover:font-semibold z-30"
+                className=" w-full py-3 hover:bg-[#67d4768e] transition duration-300 ease-in-out px-2 hover:rounded-[10px] hover:font-semibold z-30"
                 onClick={handleMayoristas}
               >
                 Mayoristas
                 {mayoristas && (
-                  <div className="absolute top-full left-1/2 transform -translate-x-1/2 bg-white shadow-md px-6 py-4 rounded-md w-[330px] overflow-y-auto max-h-[300px] hover:border-2 hover:border-[#67d4768e]">
+                  <div className="absolute top-[185px] left-1/2 transform -translate-x-1/2 bg-white shadow-md px-6 py-4 rounded-md w-[320px] overflow-y-auto max-h-[300px] hover:border-2 hover:border-[#67d4768e]">
                     <p className="text-sm text-center text-gray-700">
                       ¿Planeas comprar más de 100 productos?
                     </p>
