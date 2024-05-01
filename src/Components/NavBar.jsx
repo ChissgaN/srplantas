@@ -208,7 +208,6 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
     console.log("aqui", isMenuOpen);
   };
 
-
   return (
     <div>
       {carBuy && (
@@ -477,9 +476,9 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
             >
               Contactos
               {mostrarOpciones && (
-                <div className="absolute top-full left-10 pt-3 bg-white shadow-md px-6 rounded-md w-[200px]">
+                <div className="absolute top-full left-10 pt-3 bg-white shadow-md px-6 rounded-md w-[200px] z-50">
                   <div
-                    className="flex justify-between items-center mb-3 hover:bg-[#67d4768e] rounded-lg cursor:pointer p-2"
+                    className="flex justify-between items-center mb-3 hover:bg-[#67d4768e] rounded-lg cursor:pointer p-2 z-50"
                     onClick={() =>
                       window.open("mailto:agriculturaespecializada@yahoo.es")
                     }
@@ -516,30 +515,32 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
               )}
             </div>
 
-            <div
-              className="w-full py-3 hover:scale-105 hover:bg-[#67d4768e]  transition duration-300 ease-in-out px-2 hover:rounded-[10px] hover:font-semibold"
-              onClick={handleMayoristas}
-            >
+            <div className="relative" style={{ minHeight: "3.5rem" }}>
+              <div
+                className="w-full py-3 hover:bg-[#67d4768e] transition duration-300 ease-in-out px-2 hover:rounded-[10px] hover:font-semibold z-30"
+                onClick={handleMayoristas}
+              >
                 Mayoristas
-              {mayoristas && (
-                <div className="absolute top-12 left-[50%] transform -translate-x-1/2 bg-white shadow-md px-6 py-4 rounded-md w-[340px] hover:border-2 hover:border-[#67d4768e]">
-                  <p className=" <text-sm text-center text-gray-700">
-                    ¿Planeas comprar más de 100 productos?
-                  </p>
-                  <p
-                    className=" <text-sm text-gray-700 text-center"
-                    style={{ whiteSpace: "normal" }}
-                  >
-                    ¡Genial! Haz clic aquí para recibir asesoría personalizada y
-                    optimizar tu compra al por mayor.
-                  </p>
-                  <Link to="" className="flex justify-center items-center">
-                    <button className=" mt-2 px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:ring focus:ring-green-300 ">
-                      Registrar
-                    </button>
-                  </Link>
-                </div>
-              )}
+                {mayoristas && (
+                  <div className="absolute top-full left-1/2 transform -translate-x-1/2 bg-white shadow-md px-6 py-4 rounded-md w-[340px] overflow-y-auto max-h-[300px] hover:border-2 hover:border-[#67d4768e]">
+                    <p className="text-sm text-center text-gray-700">
+                      ¿Planeas comprar más de 100 productos?
+                    </p>
+                    <p
+                      className="text-sm text-gray-700 text-center"
+                      style={{ whiteSpace: "normal" }}
+                    >
+                      ¡Genial! Haz clic aquí para recibir asesoría personalizada
+                      y optimizar tu compra al por mayor.
+                    </p>
+                    <Link to="" className="flex justify-center items-center">
+                      <button className="mt-2 px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:ring focus:ring-green-300">
+                        Registrar
+                      </button>
+                    </Link>
+                  </div>
+                )}
+              </div>
             </div>
           </NavbarMenuItem>
         </NavbarMenu>
