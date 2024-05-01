@@ -522,7 +522,7 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
               >
                 Mayoristas
                 {mayoristas && (
-                  <div className="absolute top-full left-1/2 transform -translate-x-1/2 bg-white shadow-md px-6 py-4 rounded-md w-[340px] overflow-y-auto max-h-[300px] hover:border-2 hover:border-[#67d4768e]">
+                  <div className="absolute top-full left-1/2 transform -translate-x-1/2 bg-white shadow-md px-6 py-4 rounded-md w-[330px] overflow-y-auto max-h-[300px] hover:border-2 hover:border-[#67d4768e]">
                     <p className="text-sm text-center text-gray-700">
                       ¿Planeas comprar más de 100 productos?
                     </p>
