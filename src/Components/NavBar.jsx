@@ -284,17 +284,17 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
           </NavbarItem>
           <NavbarItem className=" hover:bg-[#67d4768e] transition duration-300 ease-in-out hover:rounded-lg px-2 py-1 hover:font-semibold relative">
             <div
-              className="cursor-pointer flex justify-center items-center "
+              className="cursor-pointer"
               onClick={handleMayoristas}
             >
               Mayoristas
               {mayoristas && (
-                <div className="absolute top-12 left-[50%] transform -translate-x-1/2 bg-white shadow-md px-6 py-4 rounded-md w-[340px] hover:border-2 hover:border-[#67d4768e]">
-                  <p className=" <text-sm text-gray-700">
+                <div className="absolute top-12 left-[50%] transform -translate-x-1/2 bg-white shadow-md px-6 py-4 rounded-md w-[410px] h-[220px] hover:border-2 hover:border-[#67d4768e]">
+                  <p className=" < text-xl text-gray-700 text-center mb-3">
                     ¿Planeas comprar más de 100 productos?
                   </p>
                   <p
-                    className=" <text-sm text-gray-700 text-center"
+                    className=" < text-lg text-gray-700 text-center mb-3"
                     style={{ whiteSpace: "normal" }}
                   >
                     ¡Genial! Haz clic aquí para recibir asesoría personalizada y
