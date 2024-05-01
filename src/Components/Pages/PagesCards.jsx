@@ -182,7 +182,7 @@ const PagesCards = () => {
     aromaticas: "/categoria/aromaticas.webp",
     bulbos: "/categoria/bulbos_lili.webp",
     cesped: "/categoria/cesped.webp",
-    contenedores: "/categoria/contenedores.webp",
+    contenedores: "/categoria/contenedor.webp",
     hortalizas: "/categoria/hortalizas.webp",
     ornamentales: "/categoria/hornamentales.webp",
     sustratos: "/categoria/sustrato.webp",
@@ -202,7 +202,7 @@ const PagesCards = () => {
           src={imageSrc}
           alt={""}
         />
-        <div className="absolute text-white font-extrabold text-[60px] max-lg:text-[50px] max-md:text-[40px] max-sm:text-[30px] ">
+        <div className="absolute text-white font-extrabold text-[60px] max-lg:text-[50px] max-md:text-[40px] max-sm:text-[30px] bg-green-300 rounded-[10px] px-4 opacity-[0.9]">
           {selectedCategory ? selectedCategory.toUpperCase() : ""}
         </div>
       </section>

@@ -15,7 +15,7 @@ export const Cards = ({ imgProyect, tituloCategoria }) => {
           loading="lazy"
           className="w-full h-full absolute transition duration-500 ease-in-out transform hover:scale-[1.2]"
         />
-        <button className="absolute bg-green-300 px-4 py-2 rounded text-white boton">
+        <button className="absolute bg-green-300 max-md:text-lg max-md:w-[150px] max-md:h-[50px]  lg:w-[200px] lg:h-[70px] rounded-[10px] text-white boton lg:text-xl ">
           {tituloCategoria}
         </button>
       </div>

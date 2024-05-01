@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import facebook from "/footer/facebook.svg";
 import whatssap from "/footer/whatssap2.svg";
-import arrow from "/footer/arrowequal.svg";
+import arrow from "/footer/arrow.svg";
 
 export const RedesSociales = () => {
   const [visible, setVisible] = useState(true);
@@ -21,8 +21,8 @@ export const RedesSociales = () => {
               target="_blank"
               className="block"
             >
-              <div className="group relative transition-all bg-[#4460A0] hover:bg-[#4460A0] hover:w-[140px] w-12 h-10 flex items-center justify-center hover:max-md:rounded-l-md hover:md:rounded-r-md hover:sm-rounded-l-md">
-                <span className="text-[0px] group-hover:text-[12px] group-hover:text-white pl-2 max-sm:pr-2 md:hidden ms:hidden max-sm:block  sm:pl-2 max-md:block sm:pr-2">
+              <div className="group relative transition-all bg-[#4460A0] hover:bg-[#4460A0] hover:w-[140px]  w-12 max-sm:w-[44px] h-10 flex items-center justify-center hover:max-md:rounded-l-md hover:md:rounded-r-md hover:sm-rounded-l-md">
+                <span className="text-[0px] group-hover:text-[12px] group-hover:text-white pl-2 max-sm:pr-2 md:hidden ms:hidden max-sm:block  sm:pl-2 max-md:block sm:pr-2 max-sm:p-0">
                   FACEBOOK
                 </span>
                 <img
@@ -48,8 +48,8 @@ export const RedesSociales = () => {
               rel="noopener noreferrer"
               className=" block"
             >
-              <div className="group relative transition-all bg-[#67C15E] hover:bg-[#67C15E] hover:w-[140px] w-12 h-10 flex items-center justify-center hover:max-md:rounded-l-md hover:md:rounded-r-md hover:sm-rounded-l-md">
-                <span className="text-[0px] group-hover:text-[12px] group-hover:text-white pl-2 max-sm:pr-2 md:hidden ms:hidden max-sm:block  sm:pl-2 max-md:block sm:pr-2">
+              <div className="group relative transition-all bg-[#67C15E] hover:bg-[#67C15E] hover:w-[140px] w-12 h-10 max-sm:w-[44px] flex items-center justify-center hover:max-md:rounded-l-md hover:md:rounded-r-md hover:sm-rounded-l-md">
+                <span className="text-[0px] group-hover:text-[12px] group-hover:text-white pl-2 max-sm:pr-2 md:hidden ms:hidden max-sm:block  sm:pl-2 max-md:block sm:pr-2  max-sm:p-0">
                   WHATSAPP
                 </span>
                 <img
@@ -67,7 +67,7 @@ export const RedesSociales = () => {
       )}
 
       <button
-        className="fixed left-[0px] top-[349px] z-50 bg-slate-300 hover:bg-slate-400 w-4 hover:w-8 transition-all"
+        className="fixed left-[0px] top-[349px] z-50 bg-slate-200  hover:bg-slate-300 w-4 hover:w-6 transition-all "
         onClick={toggleVisibility}
       >
         <img
