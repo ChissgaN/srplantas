@@ -212,8 +212,13 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
     <div>
       {carBuy && (
         <div
-          className="fixed top-0 left-0 w-full h-full bg-black opacity-50 z-40"
+          className="fixed top-0 left-0 w-full h-full bg-black opacity-60 z-40"
           onClick={toggleCar}
+        ></div>
+      )}
+      {mayoristas &&(
+        <div className="fixed top-0 left-0 w-full h-full bg-black opacity-60 z-40" 
+        onClick={handleMayoristas}
         ></div>
       )}
       <Navbar
@@ -289,12 +294,12 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
             >
               Mayoristas
               {mayoristas && (
-                <div className="absolute top-12 left-[50%] transform -translate-x-1/2 bg-white shadow-md px-6 py-4 rounded-md w-[410px] h-[220px] hover:border-2 hover:border-[#67d4768e]">
-                  <p className=" < text-xl text-gray-700 text-center mb-3">
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-[85%] translate-y-[80%] bg-white shadow-md px-6 py-4 rounded-md w-[410px] h-[220px] hover:border-2 hover:border-[#67d4768e]">
+                  <p className=" < text-xl text-gray-700 text-center mb-2">
                     ¿Planeas comprar más de 100 productos?
                   </p>
                   <p
-                    className=" < text-lg text-gray-700 text-center mb-3"
+                    className=" < text-xl text-gray-700 text-center mb-3"
                     style={{ whiteSpace: "normal" }}
                   >
                     ¡Genial! Haz clic aquí para recibir asesoría personalizada y
@@ -340,7 +345,7 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
               </div>
               <hr />
               <div className="grid max-sm:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 items-center gap-6 px-4 py-4 overflow-y-auto max-h-[400px] resultados-container">
-                <p>TEXTO POR AGREGAR</p>
+                
                 {cartItems.map((item, index) => (
                   <div
                     key={index}
@@ -411,9 +416,10 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
 
                 <div></div>
               </div>
-              <div className="flex justify-end ">
+              <div className="flex justify-between items-center mt-2">
+                <p className=" mb-0 font-semibold">Productos disponibles según inventario y temporada.</p>
                 <button
-                  className={`bg-blue-400 hover:bg-blue-600 text-white py-2 px-6 rounded-[10px] mt-4 hover:scale-[1.05]  transition duration-300 ease-in-out ${
+                  className={`bg-blue-400 hover:bg-blue-600 text-white py-2 px-6 rounded-[10px] hover:scale-[1.05]  transition duration-300 ease-in-out ${
                     cartItems.length === 0
                       ? "opacity-50 cursor-not-allowed"
                       : ""
