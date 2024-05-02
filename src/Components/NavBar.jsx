@@ -188,16 +188,26 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
 
   const [mostrarOpciones, setMostrarOpciones] = useState(false);
   const [mayoristas, setMayoristas] = useState(false);
+  const [mayoristasMovil, setMayoristasMovil] = useState(false);
 
   const toggleOpciones = () => {
     setMostrarOpciones(!mostrarOpciones);
     if (mayoristas) {
       setMayoristas(false);
+    } else if (mayoristasMovil) {
+      setMayoristasMovil(false);
     }
   };
 
   const handleMayoristas = () => {
     setMayoristas(!mayoristas);
+    if (mostrarOpciones) {
+      setMostrarOpciones(false);
+    }
+  };
+
+  const handleMayoristasMovil = () => {
+    setMayoristasMovil(!mayoristasMovil);
     if (mostrarOpciones) {
       setMostrarOpciones(false);
     }
@@ -216,9 +226,10 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
           onClick={toggleCar}
         ></div>
       )}
-      {mayoristas &&(
-        <div className="fixed top-0 left-0 w-full h-full bg-black opacity-60 z-40" 
-        onClick={handleMayoristas}
+      {mayoristas && (
+        <div
+          className="fixed top-0 left-0 w-full h-full bg-black opacity-60 z-40"
+          onClick={handleMayoristas}
         ></div>
       )}
       <Navbar
@@ -239,7 +250,9 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
 
         <NavbarContent className="hidden sm:flex gap-10 " justify="center">
           <NavbarItem className="hover:scale-110 hover:bg-[#67d4768e]  transition duration-300 ease-in-out hover:rounded-lg px-2 py-1 hover:font-semibold">
-            <Link to="/pages/aromaticas" className="text-xl">Productos</Link>
+            <Link to="/pages/aromaticas" className="text-xl">
+              Productos
+            </Link>
           </NavbarItem>
 
           <NavbarItem className="hover:bg-[#67d4768e]  transition duration-300 ease-in-out hover:rounded-lg px-2 py-1 hover:font-semibold">
@@ -288,10 +301,7 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
             </div>
           </NavbarItem>
           <NavbarItem className=" hover:bg-[#67d4768e] transition duration-300 ease-in-out hover:rounded-lg px-2 py-1 hover:font-semibold relative">
-            <div
-              className="cursor-pointer text-xl "
-              onClick={handleMayoristas}
-            >
+            <div className="cursor-pointer text-xl " onClick={handleMayoristas}>
               Mayoristas
               {mayoristas && (
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-[85%] translate-y-[80%] bg-white shadow-md px-6 py-4 rounded-md w-[410px] h-[220px] hover:border-2 hover:border-[#67d4768e]">
@@ -345,7 +355,6 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
               </div>
               <hr />
               <div className="grid max-sm:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 items-center gap-6 px-4 py-4 overflow-y-auto max-h-[400px] resultados-container">
-                
                 {cartItems.map((item, index) => (
                   <div
                     key={index}
@@ -417,7 +426,9 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
                 <div></div>
               </div>
               <div className="flex justify-between items-center mt-2">
-                <p className=" mb-0 font-semibold">Productos disponibles según inventario y temporada.</p>
+                <p className=" mb-0 font-semibold">
+                  Productos disponibles según inventario y temporada.
+                </p>
                 <button
                   className={`bg-blue-400 hover:bg-blue-600 text-white py-2 px-6 rounded-[10px] hover:scale-[1.05]  transition duration-300 ease-in-out ${
                     cartItems.length === 0
@@ -477,7 +488,7 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
               Productos
             </Link>
             <div
-              className="w-full py-3 hover:scale-105 hover:bg-[#67d4768e] transition duration-300 ease-in-out px-2 hover:rounded-[10px] hover:font-semibold"
+              className="w-full cursor-pointer py-3 hover:scale-105 hover:bg-[#67d4768e] transition duration-300 ease-in-out px-2 hover:rounded-[10px] hover:font-semibold"
               onClick={toggleOpciones}
             >
               Contactos
@@ -523,11 +534,11 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
 
             <div className="" style={{ minHeight: "3.5rem" }}>
               <div
-                className=" w-full py-3 hover:bg-[#67d4768e] transition duration-300 ease-in-out px-2 hover:rounded-[10px] hover:font-semibold z-30"
-                onClick={handleMayoristas}
+                className=" w-full cursor-pointer py-3 hover:bg-[#67d4768e] transition duration-300 ease-in-out px-2 hover:rounded-[10px] hover:font-semibold z-30"
+                onClick={handleMayoristasMovil}
               >
                 Mayoristas
-                {mayoristas && (
+                {mayoristasMovil && (
                   <div className="absolute top-[185px] left-1/2 transform -translate-x-1/2 bg-white shadow-md px-6 py-4 rounded-md w-[320px] overflow-y-auto max-h-[300px] hover:border-2 hover:border-[#67d4768e]">
                     <p className="text-sm text-center text-gray-700">
                       ¿Planeas comprar más de 100 productos?
