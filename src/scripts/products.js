@@ -136,11 +136,12 @@ import bgrande from "../assets/categorias/contenedores/BANDEJA 50 CAVIDADES 1.we
 import bmediana from "../assets/categorias/contenedores/BANDEJA 200 CAVIDADES.webp"
 import bpequena  from "../assets/categorias/contenedores/BANDEJA 338 CAVIDADES.webp"
 import veinticinco from "../assets/categorias/contenedores/25 UNIDADES GRANDES.webp"
-import cincuentaGra from "../assets/categorias/contenedores/50 UNIDADES GRANDES.webp"
-import cincuentaPe from "../assets/categorias/contenedores/50 UNIDADES PPEQUEÑAS.webp"
-import cien from "../assets/categorias/contenedores/100 unidades PEQUEÑAS.webp"
-import mGrande from "../assets/categorias/contenedores/GRANDE-MACETA ORQUIDEAS_.webp"
-import mPequena from "../assets/categorias/contenedores/PEQUEÑA-MACETA ORQUIDEA.webp"
+import cincuentaGra from "../assets/categorias/contenedores/ALMACIGO GRANDE 50UNID.webp"
+import cincuentaPe from "../assets/categorias/contenedores/ALMACIGO PEQUEÑA 50 UNID.webp"
+import cien from "../assets/categorias/contenedores/ALMACIGO PEQUEÑA 100 UNID.webp"
+import mGrande from "../assets/categorias/contenedores/MACETA ORQUIDEA GRANDE.webp"
+import mPequena from "../assets/categorias/contenedores/MACETA ORQUIDEA PEQUEÑA.webp"
+import macesus from "../assets/categorias/contenedores/MACETA+SUSTRATO.webp"
 
 const categorias = [
   {
@@ -1590,7 +1591,7 @@ const categorias = [
         codigo_de_barras: "#VALUE!",
         codigo: 423,
         precio: 24.00,
-        imagen: mPequena,
+        imagen: macesus,
         descripcion: "Maceta redonda transparente pequeña para orquídeas con sustrato."
       },
       {
@@ -1599,7 +1600,7 @@ const categorias = [
         codigo_de_barras: "#VALUE!",
         codigo: 424,
         precio: 28.00,
-        imagen: mGrande,
+        imagen: macesus,
         descripcion: "Maceta redonda transparente grande para orquídeas con sustrato."
       }
     ]
