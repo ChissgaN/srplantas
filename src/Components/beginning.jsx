@@ -68,6 +68,7 @@ export default function Beginning() {
         <div className="flex gap-5 ">
           <div className="flex items-center w-[55%] sm:w-[79%] max-sm:w-[100%] bg-white px-3 rounded-[10px] transition-[5s] hover:scale-105  duration-200 ease-in-out max-w-[640px]">
             <img src={searchIcon} alt="Search" className="mr-2 p-2 " />
+          </div>
             <input
               className="w-[100%] h-full bg-transparent focus:outline-none flex items-center justify-center content-center pt-0 mt-0 pb-1"
               type="text"
@@ -75,7 +76,6 @@ export default function Beginning() {
               value={inputValue}
               onChange={handleInputChange}
             />
-          </div>
           <Link
             to={`/pages/${selectedCategory.toLowerCase()}`}
           >

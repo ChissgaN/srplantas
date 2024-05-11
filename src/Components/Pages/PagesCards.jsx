@@ -396,6 +396,7 @@ const PagesCards = () => {
                     }
                     className="w-1/4 text-center h-full border border-gray-300 rounded-md focus:outline-none focus:border-blue-400"
                   />
+
                   <button
                     className="px-3 py-1 rounded-md bg-gray-200"
                     onClick={() =>
@@ -408,7 +409,6 @@ const PagesCards = () => {
                     +
                   </button>
                 </div>
-
                 <div className="flex">
                   <button
                     className="hover:bg-green-500 transition-colors duration-1000 text-white px-4 py-2 rounded-md bg-green-600 mx-auto max-sm:hidden"
