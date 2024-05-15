@@ -287,6 +287,7 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
                     <p className="cursor-pointer">WhatsApp</p>
                     <img className="w-[25%]" src={whatsapp} alt="whatsapp" />
                   </div>
+                  <a href="https://forms.gle/7AcmDnGL8Zzm1oSh8" target="_blank">
                   <div
                     className="flex justify-between items-center mb-3 hover:bg-[#67d4768e] rounded-lg cursor:pointer p-2"
                     onClick={() =>
@@ -296,6 +297,7 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
                     <p className="cursor-pointer">Opiniones</p>
                     <img className="w-[25%]" src={opinions} alt="opiniones" />
                   </div>
+                  </a>
                 </div>
               )}
             </div>
@@ -315,7 +317,7 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
                     ¡Genial! Haz clic aquí para recibir asesoría personalizada y
                     optimizar tu compra al por mayor.
                   </p>
-                  <Link to="" className="flex justify-center items-center">
+                  <Link to="https://forms.gle/6spq6Dgf59wFd14D6" target="_blank" className="flex justify-center items-center">
                     <button className=" mt-2 px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:ring focus:ring-green-300 ">
                       Registrar
                     </button>
@@ -521,13 +523,15 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
                     <p className="cursor-pointer">WhatsApp</p>
                     <img className="w-[25%]" src={whatsapp} alt="whatsapp" />
                   </div>
+                  
                   <div
                     className="flex justify-between items-center mb-3 hover:bg-[#67d4768e] rounded-lg cursor:pointer p-2"
-                    onClick={() => window.open("/opiniones")}
+                    onClick={() => window.open("https://forms.gle/7AcmDnGL8Zzm1oSh8")}
                   >
                     <p className="cursor-pointer">Opiniones</p>
                     <img className="w-[25%]" src={opinions} alt="opiniones" />
                   </div>
+                
                 </div>
               )}
             </div>
@@ -550,7 +554,7 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
                       ¡Genial! Haz clic aquí para recibir asesoría personalizada
                       y optimizar tu compra al por mayor.
                     </p>
-                    <Link to="" className="flex justify-center items-center">
+                    <Link to="https://forms.gle/6spq6Dgf59wFd14D6" target="_blank" className="flex justify-center items-center">
                       <button className="mt-2 px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:ring focus:ring-green-300">
                         Registrar
                       </button>
