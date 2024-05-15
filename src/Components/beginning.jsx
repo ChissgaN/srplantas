@@ -63,22 +63,23 @@ export default function Beginning() {
 
   return (
     <section className="beginning-container w-full max-sm:w-screen max-md:w-full md:mt-12">
-      <div className="my-8 w-full relative px-10 p-5 max-sm:w-screen max-sm:px-5 max-md:w-[80%] ">
-        <h1 className="font-medium text-3xl md:text-[34px] lg:text-[40px] mb-3 text-white">¡Comienza a sembrar hoy!</h1>
+      <div className="my-8 w-full relative px-16 p-5 max-sm:w-screen max-sm:px-5 max-md:w-[80%] ">
+        <h1 className="font-medium text-3xl md:text-[34px] lg:text-[40px] mb-3 text-white">
+          ¡Comienza a sembrar hoy!
+        </h1>
         <div className="flex gap-5 ">
           <div className="flex items-center w-[55%] sm:w-[79%] max-sm:w-[100%] bg-white px-3 rounded-[10px] transition-[5s] hover:scale-105  duration-200 ease-in-out max-w-[640px]">
             <img src={searchIcon} alt="Search" className="mr-2 p-2 " />
-          </div>
+
             <input
-              className="w-[100%] h-full bg-transparent focus:outline-none flex items-center justify-center content-center pt-0 mt-0 pb-1"
+              className="w-[100%] h-full focus:outline-none flex items-center justify-center content-center pt-0 mt-0 pb-1 "
               type="text"
               placeholder="¿Qué quieres sembrar?"
               value={inputValue}
               onChange={handleInputChange}
             />
-          <Link
-            to={`/pages/${selectedCategory.toLowerCase()}`}
-          >
+          </div>
+          <Link to={`/pages/${selectedCategory.toLowerCase()}`}>
             <Button
               color="success"
               className="bg-green-300 h-full hover:bg-green-400 transition-[5s] hover:scale-110 duration-300 ease-in-out rounded-[10px] py-[13px] px-6 text-gray-700"
