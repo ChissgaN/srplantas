@@ -215,7 +215,6 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
 
   const handleCloseModal = () => {
     setIsMenuOpen(false);
-    console.log("aqui", isMenuOpen);
   };
 
   return (

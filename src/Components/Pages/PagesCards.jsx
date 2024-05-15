@@ -42,10 +42,8 @@ const PagesCards = () => {
     }
   }, []);
 
-  console.log("Valor de productoNombre en PagesCards:", productoNombre);
 
   const handleAddToCart = () => {
-    console.log("aqui estoy:", selectedProductCart);
     const existingProductIndex = cartItems.findIndex(
       (item) => item.id === selectedProductCart.id
     );

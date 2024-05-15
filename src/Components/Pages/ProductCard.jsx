@@ -19,7 +19,6 @@ const ProductCard = ({ product, openModal }) => {
   };
 
   const handleAddToCart = (product) => {
-    console.log("aqui estoy:", selectedProduct);
     const existingProductIndex = cartItems.findIndex(
       (item) => item.id === product.id
     );

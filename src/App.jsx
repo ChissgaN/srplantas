@@ -7,7 +7,7 @@ import { ShoppingCartProvider } from "./Components/ShoppingCartContext";
 function App() {
   return (
     <>
-      {/* <ShoppingCartProvider>
+      <ShoppingCartProvider>
       <HashRouter>
         <Routes>
           <Route path="/" element={<Main />} />
@@ -15,8 +15,8 @@ function App() {
           <Route path="/pages/:id" element={<PagesCards />} />
         </Routes>
       </HashRouter>
-    </ShoppingCartProvider> */}
-      <BrowserRouter>
+    </ShoppingCartProvider>
+      {/* <BrowserRouter>
         <ShoppingCartProvider>
           
           <Routes>
@@ -26,7 +26,7 @@ function App() {
             
           </Routes>
         </ShoppingCartProvider>
-      </BrowserRouter>
+      </BrowserRouter> */}
     </>
   );
 }
