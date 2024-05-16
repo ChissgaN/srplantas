@@ -319,7 +319,7 @@ const PagesCards = () => {
           </div>
         )}
         {showAllProducts && (
-          <div className="w-fit py-4 mx-auto">
+          <div className="w-fit py-4 mx-auto ">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 w-fit  ">
               {Object.keys(categorias[0]).flatMap((category) =>
                 categorias[0][category]
@@ -339,7 +339,7 @@ const PagesCards = () => {
       </section>
       {selectedProduct && (
         <div
-          className={`fixed top-0 left-0 w-full h-full flex justify-center items-center bg-opacity-80 bg-black modal-background`}
+          className={`fixed top-0 left-0 w-full h-full flex justify-center items-center bg-opacity-80 bg-black modal-background `}
           onClick={handleModalClick}
         >
           <div className="bg-white py-8 px-6 rounded-lg w-[50%] h-[70%] flex gap-6 max-sm:w-[95%] max-sm:px-3 sm:w-[80%] sm:h-[70%] shadow-xl   ">
@@ -347,7 +347,7 @@ const PagesCards = () => {
               <img
                 src={selectedProduct.imagen}
                 alt={selectedProduct.nombre}
-                className="w-full h-full  object-cover rounded-md mb-4  max-sm:w-[224px]  max-sm:h-[304px] max-md:h-[390px] max-md:w-[276px]"
+                className="w-full h-full  object-cover rounded-md mb-4  max-sm:w-[224px]  max-sm:h-[304px] max-md:h-[390px] max-md:w-[276px] "
               />
               <div className="flex">
                 <button
