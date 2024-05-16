@@ -81,7 +81,7 @@ import calabacinImg from "../assets/categorias/hortalizas/CALABACIN 16 AGOSTO 20
 import cebollaBlancaImg from "../assets/categorias/hortalizas/CEBOLLA BLANCA 16 AGOSTO 2023.webp";
 import cebollaRojaImg from "../assets/categorias/hortalizas/CEBOLLA ROJA 05 MAYO 2022.webp";
 import cebollinImg from "../assets/categorias/hortalizas/CEBOLLIN 01MARZO2024.webp";
-import chileJalapenoImg from "../assets/categorias/hortalizas/JALAPEÑO 5JUNIO2023.webp";
+import chileJalapenoImg from "../assets/categorias/hortalizas/JALAPENO 5JUNIO2023.webp";
 import chileCayenneImg from "../assets/categorias/hortalizas/CHILE CAYENNE 13 OCTUBRE 2022.webp";
 import chilePimientoCortoImg from "../assets/categorias/hortalizas/PIMIENTO CORTO 2 OCT 2023.webp";
 import chilePimientoLargoImg from "../assets/categorias/hortalizas/PIMIENTO LARGO ENERO 2024.webp";
@@ -137,10 +137,10 @@ import bmediana from "../assets/categorias/contenedores/BANDEJA 200 CAVIDADES.we
 import bpequena  from "../assets/categorias/contenedores/BANDEJA 338 CAVIDADES.webp"
 import veinticinco from "../assets/categorias/contenedores/25 UNIDADES GRANDES.webp"
 import cincuentaGra from "../assets/categorias/contenedores/ALMACIGO GRANDE 50UNID.webp"
-import cincuentaPe from "../assets/categorias/contenedores/ALMACIGO PEQUEÑA 50 UNID.webp"
-import cien from "../assets/categorias/contenedores/ALMACIGO PEQUEÑA 100 UNID.webp"
+import cincuentaPe from "../assets/categorias/contenedores/ALMACIGO PEQUENA 50 UNID.webp"
+import cien from "../assets/categorias/contenedores/ALMACIGO PEQUENA 100 UNID.webp"
 import mGrande from "../assets/categorias/contenedores/MACETA ORQUIDEA GRANDE.webp"
-import mPequena from "../assets/categorias/contenedores/MACETA ORQUIDEA PEQUEÑA.webp"
+import mPequena from "../assets/categorias/contenedores/MACETA ORQUIDEA PEQUENA.webp"
 import macesus from "../assets/categorias/contenedores/MACETA+SUSTRATO.webp"
 
 const categorias = [
