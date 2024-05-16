@@ -38,7 +38,7 @@ const ProductCard = ({ product, openModal }) => {
   const {selectedProduct} = useContext(ShoppingCartContext)
   return (
     <div
-      className="bg-white rounded-xl px-2 hover:scale-105 duration-500 ease-in-out mb-3 max-w-[240px] max-h-[434px] cursor-pointer"
+      className="bg-white rounded-xl px-2 hover:scale-[1.02] duration-500 ease-in-out mb-3 max-w-[240px] max-h-[434px] cursor-pointer"
       onClick={handleClick}
     >
       <img
@@ -47,7 +47,7 @@ const ProductCard = ({ product, openModal }) => {
         className="w-full h-fit object-cover rounded-xl max-w-[230px] max-h-[306px]"
       />
 
-      <h3 className="text-md font-semibold mt-2  min-h-[20px] max-h-[70px] mb-2  text-wrap">
+      <h3 className="text-md sm:text-sm font-semibold mt-2  min-h-[20px] max-h-[70px] mb-2 text-wrap">
         {product.producto}
       </h3>
 
