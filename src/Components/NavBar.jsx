@@ -290,7 +290,7 @@ export default function NavBar({ robotExpanded, setRobotExpanded }) {
                   <div
                     className="flex justify-between items-center mb-3 hover:bg-[#67d4768e] rounded-lg cursor:pointer p-2"
                     onClick={() =>
-                      window.open("https://forms.gle/FGpZriNrtmFEuqcaA")
+                      window.open("https://forms.gle/7AcmDnGL8Zzm1oSh8")
                     }
                   >
                     <p className="cursor-pointer">Opiniones</p>

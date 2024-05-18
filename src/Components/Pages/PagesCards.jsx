@@ -194,9 +194,9 @@ const PagesCards = () => {
   return (
     <>
       <NavBar />
-      <section className="mt-28 w-[90%] mx-auto relative flex justify-center items-center">
+      <section className="mt-28 w-[90%] mx-auto relative flex justify-center items-center ">
         <img
-          className="bg-slate-700 rounded-2xl md:h-[420px] md:w-full"
+          className="bg-slate-700 rounded-2xl md:h-[420px] md:w-full xl:w-[1200px]"
           src={imageSrc}
           alt={""}
         />
@@ -347,7 +347,7 @@ const PagesCards = () => {
               <img
                 src={selectedProduct.imagen}
                 alt={selectedProduct.nombre}
-                className="w-full h-full  object-cover rounded-md mb-4  max-sm:w-[224px]  max-sm:h-[304px] max-md:h-[390px] max-md:w-[276px] "
+                className="w-full  h-full  object-cover rounded-md mb-4  max-sm:w-[224px]  max-sm:h-[304px] max-md:h-[390px] max-md:w-[276px] "
               />
               <div className="flex">
                 <button
