@@ -196,7 +196,7 @@ const PagesCards = () => {
       <NavBar />
       <section className="mt-28 w-[90%] mx-auto relative flex justify-center items-center ">
         <img
-          className="bg-slate-700 rounded-2xl md:h-[420px] md:w-full xl:w-[1200px]"
+          className="bg-slate-700 rounded-2xl md:h-[420px] md:w-full lg:w-[1000px]"
           src={imageSrc}
           alt={""}
         />
